@@ -1,0 +1,79 @@
+[
+  {
+    "title": "Machine-learning-assisted photonic device development: a multiscale approach from theory to characterization",
+    "authors": "Chen, Y., Montes McNeil, A., Park, T., Wilson, B., Iyer, V., Bezick, M., Choi, J., Ojha, R., Mahendran, P., Singh, D.K., Chitturi, G., Chen, P., Do, T., Kildishev, A., Shalaev, V., Moebius, M., Cai, W., Liu, Y., Boltasseva, A.",
+    "venue": "Nanophotonics, Vol. 14, Issue 23 (July 2025)",
+    "year": 2025,
+    "url": "https://doi.org/10.1515/nanoph-2025-0049"
+  },
+  {
+    "title": "Deep learning in photonic device development: nuances and opportunities",
+    "authors": "Iyer, V., Wilson, B.A., Chen, Y., Kildishev, A.V., Shalaev, V.M., Boltasseva, A.",
+    "venue": "npj Nanophotonics 3, 5 (2026)",
+    "year": 2026,
+    "url": "https://doi.org/10.1038/s44310-025-00097-y"
+  },
+  {
+    "title": "PearSAN: A Machine Learning Method for Inverse Design Using Pearson Correlated Surrogate Annealing",
+    "authors": "Bezick, M., Wilson, B.A., Iyer, V., Chen, Y., Shalaev, V.M., Kais, S., Kildishev, A.V., Lackey, B., Boltasseva, A.",
+    "venue": "Advanced Optical Materials (2026): e00249",
+    "year": 2026,
+    "url": "https://doi.org/10.1002/adom.202500249"
+  },
+  {
+    "title": "Authentication Through Residual, Attention-based Processing of Tampered Optical Responses",
+    "authors": "Wilson, B., Chen, Y., Singh, D.K., Ojha, R., Pottle, J., Bezick, M., Boltasseva, A., Shalaev, V., Kildishev, A.",
+    "venue": "Advanced Photonics, Vol. 6, Issue 5, 056002 (July 2024).",
+    "year": 2024,
+    "url": "https://doi.org/10.1117/1.AP.6.5.056002"
+  },
+  {
+    "title": "Non-native Quantum Generative Optimization with Adversarial Autoencoders",
+    "authors": "Wilson, B., Wurtz, J., Mkhitaryan, V., Bezick, M., Wang, S.T., Kais, S.,  Shalaev, V., Boltasseva, A.",
+    "venue": "arXiv preprint arXiv:2407.13830",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2407.13830",
+    "pdf": "https://arxiv.org/pdf/2407.13830.pdf"
+  },
+  {
+    "title": "A Relative Church-Turing-Deutsch Thesis from Special Relativity and Undecidability",
+    "authors": "Wilson, B., Dickey, E., Iyer, V., Kais, S.",
+    "venue": "In Peer-Review, arXiv:2206.06419",
+    "year": 2022,
+    "pdf": "https://arxiv.org/pdf/2206.06419.pdf"
+  },
+  {
+    "title": "Planning for Package Deliveries in Risky Environments Over Multiple Epochs",
+    "authors": "Wilson, B., Hudack, J., Sundaram, S.",
+    "venue": "American Controls Conference 2022, arXiv:2110.09917",
+    "year": 2022,
+    "pdf": "https://arxiv.org/pdf/2110.09917.pdf"
+  },
+  {
+    "title": "Machine Learning Framework for Quantum Sampling of Highly-Constrained, Continuous Optimization Problems",
+    "authors": "Wilson, B., Kudyshev, Z., Kildishev, A., Shalaev, V., Kais, S., Boltasseva, A.",
+    "venue": "Applied Physics Reviews, 8, 041418 (Impact Factor: 19.16)",
+    "year": 2021,
+    "pdf": "https://arxiv.org/pdf/2105.02396.pdf"
+  },
+  {
+    "title": "Metasurface Design Optimization via D-Wave based Sampling",
+    "authors": "Wilson, B., Kudyshev, Z., Kildishev, A., Shalaev, V., Kais, S., Boltasseva, A.",
+    "venue": "CLEO 2021",
+    "year": 2021
+  },
+  {
+    "title": "Bounds on Sweep-Covers by Raney Numbers",
+    "authors": "Wilson, B.",
+    "venue": "Preprint, arXiv:2009.08549",
+    "year": 2020,
+    "pdf": "https://arxiv.org/pdf/2009.08549.pdf"
+  },
+  {
+    "title": "Multiple Pursuers Under Partial Information from Sensors",
+    "authors": "Wilson, B., Prasad, A., Sundaram, S.",
+    "venue": "Preprint Revisement",
+    "year": 2022,
+    "url": "https://www.blakewilson.org/publications"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "purdue_logo.jpg": {
+    "name": "Purdue University",
+    "href": "https://www.purdue.edu"
+  },
+  "quantinuum.webp": {
+    "name": "Quantinuum",
+    "href": "https://www.quantinuum.com"
+  },
+  "quera.png": {
+    "name": "QuEra Computing",
+    "href": "https://quera.com"
+  },
+  "qsc.jpg": {
+    "name": "Quantum Science Center",
+    "href": "https://qsc.ornl.gov"
+  },
+  "oak-ridge-wide.svg": {
+    "name": "Oak Ridge National Lab",
+    "href": "https://ornl.gov"
+  },
+  "cambridge.svg": {
+    "name": "Cambridge University",
+    "href": "https://cam.ac.uk"
+  },
+  "oxford.svg": {
+    "name": "Oxford University",
+    "href": "https://ox.ac.uk"
+  },
+  "microsoft.svg": {
+    "name": "Microsoft",
+    "href": "https://microsoft.com"
+  },
+  "nvidia-wide.svg": {
+    "name": "NVIDIA",
+    "href": "https://nvidia.com"
+  },
+  "harvard.svg": {
+    "name": "Harvard University",
+    "href": "https://harvard.edu"
+  }
+}

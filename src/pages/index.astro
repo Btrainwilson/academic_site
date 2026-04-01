@@ -1,0 +1,75 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Hero from "@/components/landing/Hero.astro";
+import { CollaboratorCarousel } from "@/components/landing/CollaboratorCarousel";
+import LandingAnnouncements from "@/components/landing/LandingAnnouncements.astro";
+import LandingInTheNews from "@/components/landing/LandingInTheNews.astro";
+import PublicationList from "@/components/PublicationList.astro";
+import type {
+  CvProfile,
+  LandingAnnouncement,
+  LandingHero,
+  LandingNewsItem,
+} from "@/types/data";
+import profileData from "@/data/cv/profile.json";
+import heroData from "@/data/landing/hero.json";
+import announcementsData from "@/data/landing/announcements.json";
+import inTheNewsData from "@/data/landing/in-the-news.json";
+import { loadAffiliationsFromFolder } from "@/lib/affiliations";
+import { publications } from "@/lib/publications";
+
+const profile = profileData as CvProfile;
+const hero = heroData as LandingHero;
+const collaborators = loadAffiliationsFromFolder();
+const announcements = announcementsData as LandingAnnouncement[];
+const inTheNewsRaw = inTheNewsData as LandingNewsItem[];
+
+const description =
+  hero.description?.trim() ||
+  (hero.summaryKey
+    ? profile.summaries?.[hero.summaryKey]?.trim()
+    : undefined) ||
+  profile.summaries?.RS?.trim() ||
+  "";
+
+const pageTitle = profile.fullName?.trim() || "Research";
+const metaDescription =
+  description.length > 160 ? `${description.slice(0, 157)}…` : description;
+
+const inTheNewsSorted = [...inTheNewsRaw].sort((a, b) => {
+  const ta = Date.parse(a.date);
+  const tb = Date.parse(b.date);
+  if (Number.isFinite(tb) && Number.isFinite(ta)) return tb - ta;
+  return String(b.date).localeCompare(String(a.date));
+});
+---
+
+<BaseLayout title={pageTitle} description={metaDescription}>
+  <div class="mx-auto max-w-5xl px-4 py-14">
+    <Hero hero={hero} profile={profile} description={description} />
+
+    {
+      collaborators.length > 0 && (
+        <section class="not-prose mt-20" aria-labelledby="collab-heading">
+          <h2
+            id="collab-heading"
+            class="text-foreground mb-6 text-2xl font-semibold tracking-tight"
+          >
+            Collaborators &amp; affiliations
+          </h2>
+          <CollaboratorCarousel client:visible items={collaborators} />
+        </section>
+      )
+    }
+
+    <LandingAnnouncements items={announcements} />
+    <LandingInTheNews items={inTheNewsSorted} />
+
+    <section class="mt-20">
+      <PublicationList items={publications} limit={3} heading="Recent publications" />
+      <p class="text-muted-foreground mt-6 text-sm">
+        <a href="/publications" class="text-primary font-medium hover:underline">View all →</a>
+      </p>
+    </section>
+  </div>
+</BaseLayout>

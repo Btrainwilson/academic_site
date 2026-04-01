@@ -1,0 +1,601 @@
+---
+import SocialIconLinks from "@/components/SocialIconLinks.astro";
+import type {
+  CvExperienceData,
+  CvFundingData,
+  CvItem,
+  CvNewsItem,
+  CvPaper,
+  CvProfile,
+  CvService as CvServiceData,
+} from "@/types/data";
+
+interface Props {
+  profile: CvProfile;
+  summaryKey?: string;
+  education: CvItem[];
+  experience: CvExperienceData;
+  funding: CvFundingData;
+  service: CvServiceData;
+  papers: CvPaper[];
+  conferences: CvPaper[];
+  news: CvNewsItem[];
+  affiliations: CvItem[];
+  mentorship: CvItem[];
+  software: CvItem[];
+  references: CvItem[];
+}
+
+const {
+  profile,
+  summaryKey = "ceo",
+  education,
+  experience,
+  funding,
+  service,
+  papers,
+  conferences,
+  news,
+  affiliations,
+  mentorship,
+  software,
+  references,
+} = Astro.props;
+
+const summary = profile.summaries?.[summaryKey] ?? profile.summaries?.RS ?? "";
+
+const displayName = profile.fullName?.trim() || "Curriculum vitae";
+const positionLine = profile.currentPosition?.trim();
+
+const hasFunding =
+  (funding.grants?.length ?? 0) +
+    (funding.fellowships?.length ?? 0) +
+    (funding.funding?.length ?? 0) >
+  0;
+
+const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
+  { key: "leadership", title: "Leadership" },
+  { key: "speaking", title: "Speaking & panels" },
+  { key: "refereeRoles", title: "Reviewing & committees" },
+  { key: "teachingRoles", title: "Teaching & formal roles" },
+  { key: "competitions", title: "Competitions" },
+  { key: "extWork", title: "Additional appointments" },
+];
+---
+
+<div class="cv-panel not-prose space-y-10" data-panel="cv" data-active="true">
+  <header
+    class="not-prose flex flex-col gap-4 border-b border-border pb-6 sm:flex-row sm:items-start sm:justify-between sm:gap-6"
+  >
+    <div class="min-w-0 flex-1">
+      <h1 class="text-foreground text-2xl font-semibold tracking-tight sm:text-3xl">
+        {displayName}
+      </h1>
+      {
+        positionLine && (
+          <p class="text-muted-foreground mt-1.5 max-w-xl text-sm leading-relaxed sm:text-base">
+            {positionLine}
+          </p>
+        )
+      }
+    </div>
+    <SocialIconLinks urls={profile.urls} class="shrink-0 justify-end sm:justify-end" />
+  </header>
+
+  {
+    (summary ||
+      (profile.interests?.length ?? 0) > 0 ||
+      (profile.skillList?.length ?? 0) > 0) && (
+      <section class="not-prose space-y-6">
+        {summary && (
+          <p class="text-foreground text-sm leading-relaxed">{summary}</p>
+        )}
+        {(profile.interests?.length ?? 0) > 0 && (
+          <div>
+            <h2 class="text-foreground mb-2 text-sm font-semibold uppercase tracking-wide">
+              Research interests
+            </h2>
+            <ul class="text-muted-foreground list-disc space-y-1 pl-5 text-sm leading-relaxed">
+              {profile.interests.map((t) => (
+                <li>{t}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+        {(profile.skillList?.length ?? 0) > 0 && (
+          <div>
+            <h2 class="text-foreground mb-2 text-sm font-semibold uppercase tracking-wide">
+              Skills
+            </h2>
+            <p class="text-muted-foreground text-sm leading-relaxed">
+              {profile.skillList.join(" · ")}
+            </p>
+          </div>
+        )}
+      </section>
+    )
+  }
+
+  {
+    education.length > 0 && (
+      <section class="not-prose">
+        <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+          Education
+        </h2>
+        <ul class="text-foreground list-none space-y-4 p-0">
+          {education.map((item) => (
+            <li>
+              <div class="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                <div>
+                  <p class="font-medium leading-snug">{item.title}</p>
+                  {item.subtitle && (
+                    <p class="text-muted-foreground text-sm">{item.subtitle}</p>
+                  )}
+                  {item.detail && (
+                    <p class="text-muted-foreground mt-1 text-sm">{item.detail}</p>
+                  )}
+                </div>
+                {item.date && (
+                  <p class="text-muted-foreground shrink-0 text-sm tabular-nums sm:text-right">
+                    {item.date}
+                  </p>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    experience.roles.length > 0 && (
+      <section class="not-prose space-y-10">
+        <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+          Experience
+        </h2>
+        {experience.roles.map((role) => (
+          <div class="border-border/60 border-b border-dashed pb-8 last:border-0 last:pb-0">
+            <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+              <div>
+                <p class="text-foreground text-lg font-semibold leading-tight">
+                  {role.head.link ? (
+                    <a
+                      href={role.head.link}
+                      class="text-primary hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {role.head.title}
+                    </a>
+                  ) : (
+                    role.head.title
+                  )}
+                </p>
+                <p class="text-foreground text-sm font-medium">{role.head.subtitle}</p>
+                <p class="text-muted-foreground text-sm">{role.head.location}</p>
+              </div>
+              <p class="text-muted-foreground shrink-0 text-sm tabular-nums sm:text-right">
+                {role.head.date}
+              </p>
+            </div>
+            <ul class="text-foreground mt-4 list-disc space-y-3 pl-5 text-sm leading-relaxed">
+              {role.bullets.map((b) => (
+                <li>
+                  {b.text}
+                  {b.links && b.links.length > 0 && (
+                    <span class="text-muted-foreground mt-1 block text-xs">
+                      {b.links.map((href, i) => (
+                        <span>
+                          {i > 0 ? " · " : ""}
+                          <a
+                            href={href}
+                            class="text-primary hover:underline"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            [{i + 1}]
+                          </a>
+                        </span>
+                      ))}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+    )
+  }
+
+  {
+    papers.length > 0 && (
+      <section class="not-prose">
+        <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+          Publications
+        </h2>
+        <ol class="text-foreground list-none space-y-5 p-0">
+          {papers.map((p, i) => (
+            <li class="flex gap-3">
+              <span class="text-muted-foreground w-6 shrink-0 pt-0.5 text-right text-sm tabular-nums">
+                {i + 1}.
+              </span>
+              <div class="min-w-0 flex-1 text-sm leading-relaxed">
+                <p class="font-medium leading-snug">{p.title}</p>
+                <p class="text-muted-foreground mt-1">{p.authors}</p>
+                <p class="text-muted-foreground mt-0.5 italic">{p.citation}</p>
+                {p.additional_info && (
+                  <p class="text-muted-foreground mt-1 text-xs">{p.additional_info}</p>
+                )}
+                {p.link && (
+                  <p class="mt-1.5">
+                    <a
+                      href={p.link}
+                      class="text-primary text-xs hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Link
+                    </a>
+                  </p>
+                )}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )
+  }
+
+  {
+    conferences.length > 0 && (
+      <section class="not-prose">
+        <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+          Conference talks &amp; posters
+        </h2>
+        <ol class="text-foreground list-none space-y-5 p-0">
+          {conferences.map((p, i) => (
+            <li class="flex gap-3">
+              <span class="text-muted-foreground w-6 shrink-0 pt-0.5 text-right text-sm tabular-nums">
+                {i + 1}.
+              </span>
+              <div class="min-w-0 flex-1 text-sm leading-relaxed">
+                <p class="font-medium leading-snug">{p.title}</p>
+                <p class="text-muted-foreground mt-1">{p.authors}</p>
+                <p class="text-muted-foreground mt-0.5 italic">{p.citation}</p>
+                {p.additional_info && (
+                  <p class="text-muted-foreground mt-1 text-xs">{p.additional_info}</p>
+                )}
+                {p.link && (
+                  <p class="mt-1.5">
+                    <a
+                      href={p.link}
+                      class="text-primary text-xs hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Link
+                    </a>
+                  </p>
+                )}
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )
+  }
+
+  {
+    hasFunding && (
+      <div class="not-prose space-y-8">
+        {(funding.grants ?? []).length > 0 && (
+          <section class="not-prose">
+            <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+              Grants
+            </h2>
+            <ul class="text-foreground list-none space-y-4 p-0">
+              {(funding.grants ?? []).map((item) => (
+                <li>
+                  <div class="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                    <div>
+                      <p class="font-medium leading-snug">{item.title}</p>
+                      {item.subtitle && (
+                        <p class="text-muted-foreground text-sm">{item.subtitle}</p>
+                      )}
+                      {item.detail && (
+                        <p class="text-muted-foreground mt-1 text-sm">{item.detail}</p>
+                      )}
+                    </div>
+                    {item.date && (
+                      <p class="text-muted-foreground shrink-0 text-sm tabular-nums sm:text-right">
+                        {item.date}
+                      </p>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+        {(funding.fellowships ?? []).length > 0 && (
+          <section class="not-prose">
+            <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+              Fellowships
+            </h2>
+            <ul class="text-foreground list-none space-y-4 p-0">
+              {(funding.fellowships ?? []).map((item) => (
+                <li>
+                  <div class="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                    <div>
+                      <p class="font-medium leading-snug">{item.title}</p>
+                      {item.subtitle && (
+                        <p class="text-muted-foreground text-sm">{item.subtitle}</p>
+                      )}
+                      {item.detail && (
+                        <p class="text-muted-foreground mt-1 text-sm">{item.detail}</p>
+                      )}
+                    </div>
+                    {item.date && (
+                      <p class="text-muted-foreground shrink-0 text-sm tabular-nums sm:text-right">
+                        {item.date}
+                      </p>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+        {(funding.funding ?? []).length > 0 && (
+          <section class="not-prose">
+            <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+              Sponsors &amp; programs
+            </h2>
+            <ul class="text-foreground list-none space-y-4 p-0">
+              {(funding.funding ?? []).map((item) => (
+                <li>
+                  <div class="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                    <div>
+                      <p class="font-medium leading-snug">{item.title}</p>
+                      {item.subtitle && (
+                        <p class="text-muted-foreground text-sm">{item.subtitle}</p>
+                      )}
+                      {item.detail && (
+                        <p class="text-muted-foreground mt-1 text-sm">{item.detail}</p>
+                      )}
+                    </div>
+                    {item.date && (
+                      <p class="text-muted-foreground shrink-0 text-sm tabular-nums sm:text-right">
+                        {item.date}
+                      </p>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
+      </div>
+    )
+  }
+
+  {
+    serviceBlocks.some(({ key }) => (service[key] ?? []).length > 0) && (
+      <div class="not-prose space-y-8">
+        {serviceBlocks.map(({ key, title }) =>
+          (service[key] ?? []).length > 0 ? (
+            <section class="not-prose">
+              <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+                {title}
+              </h2>
+              <ul class="text-foreground list-none space-y-4 p-0">
+                {(service[key] ?? []).map((item) => (
+                  <li>
+                    <div class="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                      <div>
+                        <p class="font-medium leading-snug">{item.title}</p>
+                        {item.subtitle && (
+                          <p class="text-muted-foreground text-sm">{item.subtitle}</p>
+                        )}
+                        {item.detail && (
+                          <p class="text-muted-foreground mt-1 text-sm">{item.detail}</p>
+                        )}
+                      </div>
+                      {item.date && (
+                        <p class="text-muted-foreground shrink-0 text-sm tabular-nums sm:text-right">
+                          {item.date}
+                        </p>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null,
+        )}
+      </div>
+    )
+  }
+
+  {
+    mentorship.length > 0 && (
+      <section class="not-prose">
+        <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+          Student highlights &amp; mentorship
+        </h2>
+        <ul class="text-foreground list-none space-y-4 p-0">
+          {mentorship.map((item) => (
+            <li>
+              <div class="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                <div>
+                  <p class="font-medium leading-snug">{item.title}</p>
+                  {item.subtitle && (
+                    <p class="text-muted-foreground text-sm">{item.subtitle}</p>
+                  )}
+                  {item.detail && (
+                    <p class="text-muted-foreground mt-1 text-sm">{item.detail}</p>
+                  )}
+                </div>
+                {item.date && (
+                  <p class="text-muted-foreground shrink-0 text-sm tabular-nums sm:text-right">
+                    {item.date}
+                  </p>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    software.length > 0 && (
+      <section class="not-prose">
+        <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+          Software &amp; engineering projects
+        </h2>
+        <ul class="text-foreground list-none space-y-4 p-0">
+          {software.map((item) => (
+            <li>
+              <div class="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                <div>
+                  <p class="font-medium leading-snug">{item.title}</p>
+                  {item.subtitle && (
+                    <p class="text-muted-foreground text-sm">{item.subtitle}</p>
+                  )}
+                  {item.detail && (
+                    <p class="text-muted-foreground mt-1 text-sm">{item.detail}</p>
+                  )}
+                </div>
+                {item.date && (
+                  <p class="text-muted-foreground shrink-0 text-sm tabular-nums sm:text-right">
+                    {item.date}
+                  </p>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    news.length > 0 && (
+      <section class="not-prose">
+        <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+          Media &amp; highlights
+        </h2>
+        <ul class="text-foreground list-none space-y-4 p-0">
+          {news.map((n) => (
+            <li>
+              <div class="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                <div>
+                  {n.link ? (
+                    <a
+                      href={n.link}
+                      class="text-primary font-medium hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {n.title}
+                    </a>
+                  ) : (
+                    <p class="font-medium leading-snug">{n.title}</p>
+                  )}
+                  <p class="text-muted-foreground text-sm">{n.location}</p>
+                </div>
+                <p class="text-muted-foreground shrink-0 text-sm tabular-nums sm:text-right">
+                  {n.date}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    affiliations.length > 0 && (
+      <section class="not-prose">
+        <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+          Affiliations
+        </h2>
+        <ul class="text-foreground list-none space-y-4 p-0">
+          {affiliations.map((item) => (
+            <li>
+              <div class="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                <div>
+                  <p class="font-medium leading-snug">{item.title}</p>
+                  {item.subtitle && (
+                    <p class="text-muted-foreground text-sm">{item.subtitle}</p>
+                  )}
+                  {item.detail && (
+                    <p class="text-muted-foreground mt-1 text-sm">{item.detail}</p>
+                  )}
+                </div>
+                {item.date && (
+                  <p class="text-muted-foreground shrink-0 text-sm tabular-nums sm:text-right">
+                    {item.date}
+                  </p>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    references.length > 0 && (
+      <section class="not-prose">
+        <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+          References
+        </h2>
+        <p class="text-muted-foreground mb-4 text-xs">
+          Contact information is provided for academic use. Phone numbers are omitted on the public
+          site; see your private records if needed.
+        </p>
+        <ul class="text-foreground list-none space-y-3 p-0 text-sm">
+          {references.map((r) => (
+            <li>
+              <p class="font-medium">{r.title}</p>
+              {r.subtitle && <p class="text-muted-foreground text-xs">{r.subtitle}</p>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  <slot name="additionalNotes" />
+</div>
+
+<div class="cv-panel not-prose space-y-6" data-panel="research" data-active="false" hidden>
+  <h1 class="text-foreground not-prose mb-2 text-2xl font-semibold tracking-tight">
+    Research statement
+  </h1>
+  <slot name="research">
+    <p class="text-muted-foreground not-prose text-sm">
+      Add <code class="bg-muted rounded px-1">src/content/cv/research-statement.mdx</code> to edit
+      this section.
+    </p>
+  </slot>
+</div>
+
+<div class="cv-panel not-prose space-y-6" data-panel="teaching" data-active="false" hidden>
+  <h1 class="text-foreground not-prose mb-2 text-2xl font-semibold tracking-tight">
+    Teaching statement
+  </h1>
+  <slot name="teaching">
+    <p class="text-muted-foreground not-prose text-sm">
+      Add <code class="bg-muted rounded px-1">src/content/cv/teaching-statement.mdx</code> to edit
+      this section.
+    </p>
+  </slot>
+</div>

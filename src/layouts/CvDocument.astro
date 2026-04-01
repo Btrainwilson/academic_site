@@ -1,0 +1,30 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+  /** When false, omit the default page &lt;h1&gt; (e.g. CV uses per-section titles). */
+  showPageHeading?: boolean;
+}
+
+const { title, description, showPageHeading = true } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="mx-auto max-w-3xl px-4 py-10">
+    <slot name="toolbar" />
+    {
+      showPageHeading && (
+        <h1 class="text-foreground mb-8 text-2xl font-semibold tracking-tight">
+          {title}
+        </h1>
+      )
+    }
+    <article
+      class="prose prose-neutral dark:prose-invert cv-prose max-w-none text-[0.95rem] leading-snug prose-headings:mt-6 prose-headings:mb-2 prose-headings:text-base prose-headings:font-semibold prose-p:my-1.5 prose-li:my-0.5 prose-ul:my-2 prose-h1:text-xl prose-h2:text-base prose-h3:text-sm prose-a:text-primary"
+    >
+      <slot />
+    </article>
+  </div>
+</BaseLayout>

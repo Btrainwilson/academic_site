@@ -1,0 +1,61 @@
+---
+import type { Publication } from "@/types/data";
+
+interface Props {
+  items: Publication[];
+  /** If set, only show this many (after sort). */
+  limit?: number;
+  heading?: string;
+  showHeading?: boolean;
+}
+
+const { items: rawItems, limit, heading = "Publications", showHeading = true } = Astro.props;
+
+const items = Array.isArray(rawItems) ? rawItems : [];
+
+const sorted = [...items].sort((a, b) => b.year - a.year);
+const list = limit != null ? sorted.slice(0, limit) : sorted;
+---
+
+<section class="not-prose">
+  {
+    showHeading && (
+      <h2 class="text-foreground mb-4 text-lg font-semibold">{heading}</h2>
+    )
+  }
+  <ol class="text-foreground list-none space-y-4 p-0">
+    {
+      list.map((p) => (
+        <li class="border-border/60 border-b pb-4 last:border-0">
+          <p class="font-medium leading-snug">{p.title}</p>
+          <p class="text-muted-foreground mt-1 text-sm">{p.authors}</p>
+          <p class="text-muted-foreground mt-0.5 text-sm">
+            <em>{p.venue}</em>, {p.year}
+          </p>
+          <p class="mt-2 flex flex-wrap gap-3 text-sm">
+            {p.url && (
+              <a
+                href={p.url}
+                class="text-primary hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Link
+              </a>
+            )}
+            {p.pdf && (
+              <a
+                href={p.pdf}
+                class="text-primary hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                PDF
+              </a>
+            )}
+          </p>
+        </li>
+      ))
+    }
+  </ol>
+</section>

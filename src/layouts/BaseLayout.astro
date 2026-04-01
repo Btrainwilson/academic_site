@@ -1,0 +1,60 @@
+---
+import "@/styles/global.css";
+import SiteNav from "@/components/SiteNav.astro";
+import { ThemeToggle } from "@/components/ThemeToggle";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Research lab" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    {description && <meta name="description" content={description} />}
+    <title>{title}</title>
+    <script is:inline>
+      (function () {
+        var dark =
+          localStorage.getItem("theme") === "dark" ||
+          (localStorage.getItem("theme") !== "light" &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
+        var root = document.documentElement;
+        root.classList.toggle("dark", dark);
+        root.style.colorScheme = dark ? "dark" : "light";
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen antialiased">
+    <a
+      href="#main"
+      class="focus:bg-background focus:text-foreground sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded-md focus:border focus:px-3 focus:py-2 print:hidden"
+      >Skip to content</a
+    >
+    <header
+      class="border-border/80 bg-background/80 sticky top-0 z-40 border-b backdrop-blur-md print:hidden"
+    >
+      <div
+        class="mx-auto flex h-14 max-w-5xl items-center justify-between gap-4 px-4"
+      >
+        <SiteNav />
+        <ThemeToggle client:load />
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="border-border text-muted-foreground mt-16 border-t py-8 print:hidden">
+      <div class="mx-auto max-w-5xl px-4 text-center text-sm">
+        <p>Academic site — blog: <code class="text-xs">src/content/docs/blog/</code>; CV data: <code class="text-xs">src/data/cv/</code>.</p>
+      </div>
+    </footer>
+  </body>
+</html>

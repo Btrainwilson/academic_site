@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Ph.D. in Electrical and Computer Engineering",
+    "subtitle": "Purdue University",
+    "date": "2019–2024",
+    "detail": "Dissertation and research: machine learning for nanophotonics, quantum sampling, and optimization (NanoML / QSC). (Edit src/data/cv/education.json to match your record.)"
+  },
+  {
+    "title": "B.S. in Electrical and Computer Engineering (or related)",
+    "subtitle": "Purdue University",
+    "date": "2013–2017",
+    "detail": "Update degrees in education.json as needed."
+  }
+]

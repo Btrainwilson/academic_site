@@ -1,0 +1,118 @@
+---
+import { getCollection, render } from "astro:content";
+import CvDocument from "@/layouts/CvDocument.astro";
+import CV from "@/components/CV.astro";
+import { CvToolbar } from "@/components/CvToolbar";
+import type {
+  CvExperienceData,
+  CvFundingData,
+  CvItem,
+  CvNewsItem,
+  CvPaper,
+  CvProfile as CvProfileData,
+  CvService as CvServiceData,
+} from "@/types/data";
+
+import affiliationsData from "@/data/cv/affiliations.json";
+import conferencesData from "@/data/cv/conferences.json";
+import educationData from "@/data/cv/education.json";
+import experienceData from "@/data/cv/experience.json";
+import fundingData from "@/data/cv/funding.json";
+import mentorshipData from "@/data/cv/mentorship.json";
+import newsData from "@/data/cv/news.json";
+import papersData from "@/data/cv/papers.json";
+import profileData from "@/data/cv/profile.json";
+import referencesData from "@/data/cv/references.json";
+import serviceData from "@/data/cv/service.json";
+import softwareData from "@/data/cv/software.json";
+
+const profile = profileData as CvProfileData;
+const education = educationData as CvItem[];
+const experience = experienceData as CvExperienceData;
+const service = serviceData as CvServiceData;
+const funding = fundingData as CvFundingData;
+const papers = papersData as CvPaper[];
+const conferences = conferencesData as CvPaper[];
+const news = newsData as CvNewsItem[];
+const affiliations = affiliationsData as CvItem[];
+const mentorship = mentorshipData as CvItem[];
+const software = softwareData as CvItem[];
+const references = referencesData as CvItem[];
+
+const cvEntries = await getCollection("cv");
+const byId = (id: string) => cvEntries.find((e) => e.id === id);
+
+const bodyEntry = byId("body");
+const researchEntry = byId("research-statement");
+const teachingEntry = byId("teaching-statement");
+
+const bodyRendered = bodyEntry ? await render(bodyEntry) : null;
+const researchRendered = researchEntry ? await render(researchEntry) : null;
+const teachingRendered = teachingEntry ? await render(teachingEntry) : null;
+
+const CvBody = bodyRendered?.Content;
+const ResearchContent = researchRendered?.Content;
+const TeachingContent = teachingRendered?.Content;
+---
+
+<CvDocument
+  title="CV & statements"
+  description="Curriculum vitae, research statement, and teaching statement."
+  showPageHeading={false}
+>
+  <CvToolbar slot="toolbar" client:load />
+
+  <CV
+    profile={profile}
+    summaryKey="ceo"
+    education={education}
+    experience={experience}
+    funding={funding}
+    service={service}
+    papers={papers}
+    conferences={conferences}
+    news={news}
+    affiliations={affiliations}
+    mentorship={mentorship}
+    software={software}
+    references={references}
+  >
+    {
+      CvBody && (
+        <div
+          slot="additionalNotes"
+          class="border-border not-prose border-t pt-10"
+        >
+          <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+            Additional notes
+          </h2>
+          <div
+            class="prose prose-neutral dark:prose-invert cv-prose max-w-none text-[0.95rem] leading-snug prose-headings:mt-6 prose-headings:mb-2 prose-headings:text-base prose-headings:font-semibold prose-p:my-1.5 prose-li:my-0.5 prose-ul:my-2 prose-h1:text-xl prose-h2:text-base prose-h3:text-sm prose-a:text-primary"
+          >
+            <CvBody />
+          </div>
+        </div>
+      )
+    }
+    {
+      ResearchContent && (
+        <div
+          slot="research"
+          class="statement-prose prose prose-neutral dark:prose-invert prose-a:text-primary"
+        >
+          <ResearchContent />
+        </div>
+      )
+    }
+    {
+      TeachingContent && (
+        <div
+          slot="teaching"
+          class="statement-prose prose prose-neutral dark:prose-invert prose-a:text-primary"
+        >
+          <TeachingContent />
+        </div>
+      )
+    }
+  </CV>
+</CvDocument>

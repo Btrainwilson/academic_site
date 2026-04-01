@@ -1,0 +1,47 @@
+---
+import type { LandingAnnouncement } from "@/types/data";
+
+interface Props {
+  items: LandingAnnouncement[];
+}
+
+const { items } = Astro.props;
+---
+
+{
+  items.length > 0 && (
+    <section class="not-prose mt-20" aria-labelledby="announcements-heading">
+      <h2
+        id="announcements-heading"
+        class="text-foreground mb-6 text-2xl font-semibold tracking-tight"
+      >
+        Announcements
+      </h2>
+      <ul class="grid gap-4 sm:grid-cols-2">
+        {items.map((a) => (
+          <li class="border-border/80 bg-card text-card-foreground rounded-xl border p-5 shadow-sm">
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="text-foreground text-base font-semibold leading-snug">{a.title}</h3>
+              {a.date && (
+                <time
+                  class="text-muted-foreground shrink-0 text-xs tabular-nums"
+                  datetime={a.date}
+                >
+                  {a.date}
+                </time>
+              )}
+            </div>
+            <p class="text-muted-foreground mt-2 text-sm leading-relaxed">{a.body}</p>
+            {a.link && (
+              <p class="mt-3">
+                <a href={a.link} class="text-primary text-sm font-medium hover:underline">
+                  Learn more →
+                </a>
+              </p>
+            )}
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}

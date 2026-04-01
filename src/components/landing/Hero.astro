@@ -1,0 +1,95 @@
+---
+import SocialIconLinks from "@/components/SocialIconLinks.astro";
+import type { CvProfile, LandingHero } from "@/types/data";
+
+interface Props {
+  hero: LandingHero;
+  profile: CvProfile;
+  description: string;
+}
+
+const { hero, profile, description } = Astro.props;
+
+const sidebarBio = hero.sidebarBio;
+const name = profile.fullName?.trim() || "Name";
+const position = profile.currentPosition?.trim();
+const primaryCta =
+  "bg-primary text-primary-foreground hover:bg-primary/90 inline-flex h-9 items-center justify-center rounded-lg px-4 text-sm font-medium";
+const secondaryCta =
+  "border-input bg-background hover:bg-muted inline-flex h-9 items-center justify-center rounded-lg border px-4 text-sm font-medium";
+---
+
+<section class="not-prose">
+  <div class="flex flex-col gap-10 md:flex-row md:items-start md:gap-12">
+    <div class="flex flex-col items-center md:w-56 md:shrink-0">
+      <img
+        src={hero.profileImage}
+        alt={`Photo of ${name}`}
+        width={320}
+        height={320}
+        class="border-border bg-muted aspect-square w-full max-w-[220px] rounded-2xl border object-cover md:max-w-none"
+        loading="eager"
+        decoding="async"
+      />
+      <div class="mt-4 flex w-full justify-center">
+        <SocialIconLinks urls={profile.urls} class="justify-center" />
+      </div>
+      {
+        sidebarBio && (
+          <div class="text-muted-foreground mt-5 w-full max-w-[280px] space-y-2.5 text-center text-sm leading-snug">
+            {sidebarBio.education && (
+              <p class="text-foreground/90">{sidebarBio.education}</p>
+            )}
+            {sidebarBio.researchInterests && (
+              <p>
+                <span class="text-muted-foreground/80 font-medium uppercase tracking-wide">
+                  Interests
+                </span>
+                <br />
+                <span class="mt-0.5 inline-block">{sidebarBio.researchInterests}</span>
+              </p>
+            )}
+            {sidebarBio.role && <p class="text-foreground/90">{sidebarBio.role}</p>}
+            {sidebarBio.location && (
+              <p class="text-muted-foreground">{sidebarBio.location}</p>
+            )}
+          </div>
+        )
+      }
+    </div>
+    <div class="min-w-0 flex-1">
+      {
+        hero.tagline && (
+          <p class="text-muted-foreground mb-2 text-sm font-medium tracking-wide uppercase">
+            {hero.tagline}
+          </p>
+        )
+      }
+      <h1 class="text-foreground text-4xl font-semibold tracking-tight">
+        {name}
+      </h1>
+      {
+        position && (
+          <p class="text-muted-foreground mt-2 text-base leading-relaxed md:text-lg">{position}</p>
+        )
+      }
+      <p class="text-muted-foreground mt-4 text-lg leading-relaxed">
+        {description}
+      </p>
+      {
+        hero.cta && hero.cta.length > 0 && (
+          <div class="mt-8 flex flex-wrap gap-3">
+            {hero.cta.map((c) => (
+              <a
+                href={c.href}
+                class={c.variant === "primary" ? primaryCta : secondaryCta}
+              >
+                {c.label}
+              </a>
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</section>

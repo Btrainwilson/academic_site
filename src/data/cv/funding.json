@@ -1,0 +1,53 @@
+{
+  "grants": [
+    {
+      "title": "AWS Braket Research Grant",
+      "subtitle": "Amazon",
+      "date": "2023 - 2024"
+    },
+    {
+      "title": "ACC 2022 Student Travel Grant",
+      "subtitle": "ACC 2022",
+      "date": "2022"
+    },
+    {
+      "title": "Universities Space Research Association Quantum (Cycle 4)",
+      "subtitle": "NASA Ames Center",
+      "date": "2020 – 2021"
+    },
+    {
+      "title": "Leadership Computing Facility D-Wave",
+      "subtitle": "Oak Ridge",
+      "date": "2020"
+    }
+  ],
+  "fellowships": [
+    {
+      "title": "Summer Undergraduate Research Fellowship",
+      "subtitle": "Purdue University",
+      "date": "2017"
+    }
+  ],
+  "funding": [
+    {
+      "title": "Quantum Science Center",
+      "subtitle": "Oak Ridge",
+      "date": "2021 - 2024"
+    },
+    {
+      "title": "Purdue Elmore Emerging Frontiers Center",
+      "subtitle": "Elmore Family",
+      "date": "2022 - 2024"
+    },
+    {
+      "title": "QuEra Computing",
+      "subtitle": "Harvard/MIT",
+      "date": "2022"
+    },
+    {
+      "title": "Air Force Research Lab",
+      "subtitle": "AFRL",
+      "date": "2021"
+    }
+  ]
+}

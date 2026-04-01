@@ -1,0 +1,5 @@
+@import "katex/dist/katex.min.css";
+
+[data-theme="dark"] .katex {
+  color: var(--sl-color-text);
+}

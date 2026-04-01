@@ -1,0 +1,825 @@
+{
+  "summary_ceo" : "Co-Founder and Interim CEO of Zephram $20M Oxford-based R&D company building multi-agent and inference technology for scientific research. 12+ years in software engineering, algorithm design and analysis, and former research scientist at Quantinuum and QuEra using machine learning for physics-inspired generative modeling and optimization.",
+  "summary_RS" : "Electrical and Computer Engineering Ph.D. working on machine learning, physics-inspired generative models, and optimization. 12+ years of experience in software engineering and 9+ years in algorithm design and analysis.  ",
+  "summary_RS_cas" : "I mainly work on machine learning, physics-inspired generative models, and optimization. I occasionally work on computational physics and math too. 12+ years of experience in software engineering and 9+ years in algorithm design and analysis.  ",
+  "summary_op" : "Electrical and Computer Engineering Ph.D. with 12+ years of experience in software engineering and 9+ years in algorithm design and analysis. Leader of a team of 16 data scientists and engineers developing breakthroughs in machine learning assisted optimization algorithms for applications in computational electromagnetics and quantum optics.",
+  "summary_web" : "Machine Learning Ph.D. candidate with 12+ years of experience in software engineering and 8+ years in algorithm design and analysis. Leader of a team of 16 data scientists and engineers, developing breakthroughs in machine learning with applications in generative AI, computer vision, and quantum. ",
+  "summary_qml" : "Quantum machine learning Ph.D. candidate and founder of the NanoML team developing machine learning algorithms for quantum generative AI and photonics. 12+ years of experience in software engineering and 8+ years in algorithm design and analysis.  ",
+  "urls" : {
+    "github": "https://github.com/Btrainwilson",
+    "bluesky": "https://bsky.app/profile/blakeawilson.bsky.social",
+    "website": "https://blakeanthonywilson.com",
+    "linkedin": "https://www.linkedin.com/in/blake-wilson-406a8256/",
+    "googleScholar": "https://scholar.google.com/citations?user=7iZVKuoAAAAJ&hl=en"
+  },
+  "statementTeaching": "My teaching connects rigorous fundamentals in electrical engineering, computing, and machine learning with research-grounded examples from photonics, optimization, and quantum-adjacent systems. I emphasize clear explanations, hands-on computation, and inclusive mentorship.\n\nI have served in graduate and undergraduate instructional roles at Purdue (ECE courses and research mentorship) and have mentored 200+ researchers through SURF, SoCET, and independent projects, with many students earning first-time researcher and poster awards.",
+  "statementResearch": "My research spans machine learning, physics-informed modeling, and optimization for engineered systems—from nanophotonics and semiconductor verification to quantum circuit synthesis and multi-agent scientific inference.\n\nMethodologically I focus on scalable algorithms (including CUDA-accelerated workflows), generative and simulation-based modeling, and collaboration across disciplines. Affiliations and experience include Purdue NanoML, the Quantum Science Center, QuEra, Quantinuum, and industry R&D leadership.",
+  "interests" : [
+    "Machine Learning and Generative Modeling for Multiphysics and Design",
+    "Discrete Mathematics and Statistical Mechanics",
+    "Graph-Theoretic Analysis for Opimization",
+    "Nanophotonic Design for Quantum Computing",
+    "Software Engineering and Dev-Ops"
+  ],
+  "skillList": [
+    "C++","CUDA","Python", "PyTorch", "Numerical Simulations", "ML for Physics & Optimization", "Physics-Inspired Generative Modeling", "Device Design", "Multi-Agent Systems",
+    "SWE", "CloudOps", 
+    "Public Speaking","Grant Writing", "Research Leadership and Management"
+  ],
+  "experience": {
+    "startup": {
+      "head": {
+        "title": "Zephram",
+        "subtitle": "Co-Founder & Interim CEO (Former CTO)",
+        "location": "Oxford, UK",
+        "date": "2025 - "
+      },
+      "content": [
+        {
+          "text": "Appointed by the board (Abstract) to lead our $20M company during a $1.2M financial investigation and restructuring following insurmountable fiduciary breaches from previous leadership. Managed legal counsel and stakeholder communications to stabilize the entity. Initiated rebranding, stabilized operations, and pivoted to a new business model and product strategy. Brought in research partnerships with Cambridge, UC Berkeley, and Purdue."
+        },
+        {
+          "text": "As CTO, led a team of 8 Oxford-based engineers and scientists to build and deploy full-stack AI infrastructure for multi-agent systems and inference, spanning CUDA kernels, model serving, backend services, and web interfaces."
+        },
+        {
+          "text": "Proprietary Breakthroughs: Context compaction (5x speed-up + 80% cost reduction), simulated finetuning ($0.01 vs $1000x LORA), multi-agent swarm communication protocols (15% faster on small-medium scale models), CUDA kernels for multi-GPU optimization (300x speed-up over previous state-of-the-art), and more."
+        }
+      ]
+    },
+    "quantinuum": {
+      "head": {
+        "title": "AI for Quantum",
+        "subtitle": "Research Scientist III",
+        "location": "Quantinuum, Oxford & London",
+        "date": "2024 - 2025"
+      },
+      "content": [
+        {
+          "text": "Built and benchmarked multiGPU CUDA async kernels for UCCSD quantum circuits, achieving 4-20x speed-up for data collection. Modified token vocabulary and PPO/GRPO losses for better generative performance in GPT2 models."
+        },
+        {
+          "text": "Led RL infrastructure and algorithms for collaborating with Nvidia + Deepmind on generative modeling, quantum circuit generation, quantum chemistry and optimization that will fuel future publications and industry partnerships."
+        },
+        {
+          "text": "Developed generative AI for integrated photonics devices, new latent graph diffusion models for quantum circuit synthesis and transpilation, graph optimization for neural architecture search, and QNLP diagram generation."
+        }
+      ]
+    },
+    "ml": {
+      "head": {
+        "title": "NanoML",
+        "subtitle": "Team Lead and Founder",
+        "location": "Purdue University",
+        "link": "https://nanoml.org",
+        "date": "2021 - "
+      },
+      "content": [
+        {
+          "text": "Published machine learning algorithms for designing meta-optical devices, achieving a 16200% speed-up resulting in a major milestone for the Quantum Science Center with two news articles and 30 citations.",
+          "links": [
+            "https://pubs.aip.org/aip/sci/article/2021/53/531104/365746/Framework-maps-continuous-space-inverse-design",
+            "https://engineering.purdue.edu/ECE/News/2022/ece-researchers-develop-quantum-machine-learning-algorithm-for-optimizing-arbitrary-engineering-problems"
+          ]
+        },
+        {
+          "text": "Raised $27k in computing resources through grants, saved $40k in ML costs through server maintenance, and assisted in raising $200k+ for the QSC Summer Schools.",
+          "links": [
+            "https://www.ornl.gov/news/quantum-science-center-concludes-second-annual-summer-school-style"
+          ]
+        },
+        {
+          "text": "Led the development of attention-based models for tackling the $75B counterfeit chip market leading to a 55,000x speed-up and 41% accuracy increase in the verification of semiconductor devices.",
+          "links": [
+            "https://www.spiedigitallibrary.org/journals/advanced-photonics/volume-6/issue-5/056002/Authentication-through-residual-attention-based-processing-of-tampered-optical-responses/10.1117/1.AP.6.5.056002.full"
+          ]
+        }
+      ]
+    },
+    "quera": {
+      "head": {
+        "title": "Quantum Machine Learning",
+        "subtitle": "Algorithms Researcher",
+        "location": "QuEra Computing",
+        "date": "2022"
+      },
+      "content": [
+        {
+          "text": "Demonstrated comparative advantage on neutral atoms for generative AI sampling of photonic devices.",
+          "links": [
+            "https://arxiv.org/abs/2407.13830"
+          ]
+        },
+        {
+          "text": "Set team research objectives and wrote quantum simulation software in Python and Julia to simulate Rydberg atom systems for analysis.",
+          "links": [
+            "https://arxiv.org/abs/2407.13830"
+          ]
+        },
+        {
+          "text": "Verified early-access, open-source, flagship neutral atom simulation software Bloqade on machine learning sampling tasks.",
+          "links": [
+            "https://www.quera.com/bloqade/"
+          ]
+        }
+      ]
+    },
+    "uav": {
+      "head": {
+        "title": "UAV Routing Algorithms",
+        "subtitle": "Researcher",
+        "location": "Air Force Research Lab",
+        "date": "2017 - 2022"
+      },
+      "content": [
+        {
+          "text": "Derived optimal UAV routes for search and rescue missions to choose deliveries based on a tradeoff of risk of failure and reward.",
+          "links": [
+            "https://arxiv.org/pdf/2110.09917.pdf"
+          ]
+        },
+        {
+          "text": "Created sweep-covers for partitioning road-networks for multi-UAV routing to capture ground-vehicles.",
+          "links": [
+            "https://arxiv.org/abs/2009.08549"
+          ]
+        }
+      ]
+    },
+    "arm": {
+      "head": {
+        "title": "Computer Architecture Design",
+        "subtitle": "Software Engineer",
+        "location": "ARM",
+        "date": "2019"
+      },
+      "content": [
+        {
+          "text": "Engineered verification software in Python, XML, and C++ for ARMv8 instruction set coverage, leading to a 250% improvement in Chi-Square randomness and immediate positive feedback from customers for improving test consistency."
+        },
+        {
+          "text": "Rebuilt 2 ARMv8 debug instruction tests in ARM's verification suite to reduce the complexity of debugging for customers."
+        },
+        {
+          "text": "Designed a 32-Bit MIPS RISC processor in Verilog with L1-Cache and 5-stage pipeline. Compiled C to MIPS IS and benchmarked on FPGAs."
+        },
+        {
+          "text": "Developed Python to RISCV transpiler for generating Verilog Read-Only-Memory for RISCV-based System-on-Chip.",
+          "links": [
+            "https://engineering.purdue.edu/SoC-Team/AFTx-Previous"
+          ]
+        }
+      ]
+    }
+  },
+  "leadership" : [
+       ["Zephram Co-Founder, Former CTO & Interim CEO", "Zephram", "2025 - "],
+      ["NanoML Team Lead", "NanoML Team", "2021 - 2024"],
+      ["Quantum Science Center Summer School Committee", "Quantum Science Center", "2021 - 2023"],
+      ["DOE Quantum Science Center PGA Team Lead", "Quantum Science Center", "2021 - 2022"],
+      ["SURF Graduate Mentor", "Purdue SURF", "2022 - 2023"],
+      ["Elmore Center Poster Session Committee", "Elmore Center", "2022"],
+      ["Graduate Teaching Assistant", "Purdue ECE", "2020 - 2021"],
+      ["SURF Graduate Assistant", "Purdue SURF", "2020"],
+      ["SURF Symposium Planning Committee", "Purdue SURF", "2020"],
+      ["Stories of Success: Fireside Chat Host", "Purdue ECE", "2019 - 2020"],
+      ["ECE Shop Graduate Assistant", "Purdue ECE", "2019 - 2020"],
+      ["Software Team Lead", "SoCET Team, Purdue", "2018 - 2019"],
+      ["Resident Assistant", "Purdue University", "2020 - 2021"],
+      ["Volunteer Robotics Teacher", "Muslim Learning Society", "2014"],
+      ["First Robotics Software Team Lead", "Plainfield Earthquakers", "2013 - 2015"],
+      ["Video Game Lead Developer", "Wired Vision Games", "2012 - 2015"]
+  ],
+  "pubs" : [
+    {
+        "authors": "Iyer, V., Wilson, B.A., Chen, Y., Kildishev, A.V., Shalaev, V.M., Boltasseva, A.",
+        "title": "Deep learning in photonic device development: nuances and opportunities",
+        "citation": "npj Nanophotonics 3, 5 (2026)",
+        "link": "https://doi.org/10.1038/s44310-025-00097-y"
+    },
+    {
+        "authors": "Bezick, M., Wilson, B.A., Iyer, V., Chen, Y., Shalaev, V.M., Kais, S., Kildishev, A.V., Lackey, B., Boltasseva, A.",
+        "title": "PearSAN: A Machine Learning Method for Inverse Design Using Pearson Correlated Surrogate Annealing",
+        "citation": "Advanced Optical Materials (2026): e00249",
+        "link": "https://doi.org/10.1002/adom.202500249"
+    },
+    {
+        "authors": "Chen, Y., Montes McNeil, A., Park, T., Wilson, B., Iyer, V., Bezick, M., Choi, J., Ojha, R., Mahendran, P., Singh, D.K., Chitturi, G., Chen, P., Do, T., Kildishev, A., Shalaev, V., Moebius, M., Cai, W., Liu, Y., Boltasseva, A.",
+        "title": "Machine-learning-assisted photonic device development: a multiscale approach from theory to characterization",
+        "citation": "Nanophotonics, Vol. 14, Issue 23 (July 2025)",
+        "link": "https://doi.org/10.1515/nanoph-2025-0049"
+    },
+    {
+        "authors": "Wilson, B., Chen, Y., Singh, D.K., Ojha, R., Pottle, J., Bezick, M., Boltasseva, A., Shalaev, V., Kildishev, A.",
+        "title": "Authentication Through Residual, Attention-based Processing of Tampered Optical Responses",
+        "citation": "Advanced Photonics, Vol. 6, Issue 5, 056002 (July 2024).",
+        "link": "https://doi.org/10.1117/1.AP.6.5.056002"
+    },
+    {
+        "authors": "Wilson, B., Wurtz, J., Mkhitaryan, V., Bezick, M., Wang, S.T., Kais, S.,  Shalaev, V., Boltasseva, A.",
+        "title": "Non-native Quantum Generative Optimization with Adversarial Autoencoders",
+        "citation": "arXiv:2407.13830",
+        "link": "https://arxiv.org/abs/2407.13830"
+    },
+    {
+        "authors": "Wilson, B., Dickey, E., Iyer, V., Kais, S.",
+        "title": "A Relative Church-Turing-Deutsch Thesis from Special Relativity and Undecidability",
+        "citation": "In Peer-Review, arXiv:2206.06419",
+        "link": "https://arxiv.org/pdf/2206.06419.pdf"
+    },
+    {
+        "authors": "Wilson, B., Hudack, J., Sundaram, S.",
+        "title": "Planning for Package Deliveries in Risky Environments Over Multiple Epochs",
+        "citation": "American Controls Conference 2022, arXiv:2110.09917",
+        "link": "https://arxiv.org/pdf/2110.09917.pdf"
+    },
+    {
+        "authors": "Wilson, B., Kudyshev, Z., Kildishev, A., Shalaev, V., Kais, S., Boltasseva, A.",
+        "title": "Machine Learning Framework for Quantum Sampling of Highly-Constrained, Continuous Optimization Problems",
+        "citation": "Applied Physics Reviews, 8, 041418, (Impact Factor: 19.16)",
+        "link": "https://pubs.aip.org/aip/apr/article-abstract/8/4/041418/1076301/Machine-learning-framework-for-quantum-sampling-of?redirectedFrom=fulltext",
+        "additional_info": "Impact Factor: 19.16"
+    },
+    {
+        "authors": "Wilson, B., Kudyshev, Z., Kildishev, A., Shalaev, V., Kais, S., Boltasseva, A.",
+        "title": "Metasurface Design Optimization via D-Wave based Sampling",
+        "citation": "CLEO 2021",
+        "link": ""
+    },
+    {
+        "authors": "Wilson, B.",
+        "title": "Bounds on Sweep-Covers by Raney Numbers",
+        "citation": "Preprint, arXiv:2009.08549",
+        "link": "https://arxiv.org/pdf/2009.08549"
+    },
+    {
+        "authors": "Wilson, B., Prasad, A., Sundaram, S.",
+        "title": "Multiple Pursuers Under Partial Information from Sensors",
+        "citation": "Preprint Available",
+        "link": ""
+    }
+],
+
+"confs" : [
+    {
+        "authors": "Chen, Y., Bezick, M., Wilson, B., Kildishev, A., Shalaev, V., Boltasseva, A.",
+        "title": "Physics-Conditioned Diffusion Model for the Inverse-Design of High-efficiency Thermophotovoltaic Metasurface",
+        "citation": "CLEO (2025)",
+        "link": ""
+    },
+    {
+        "authors": "Bezick, M., Wilson, B., Iyer, V., Chen, Y., Shalaev, V., Kais, S., Kildishev, A., Boltasseva, A., Lackey, B.",
+        "title": "Photonic Inverse Design Through Machine Learning and Correlated Surrogate Annealing",
+        "citation": "CLEO (2025)",
+        "link": ""
+    },
+    {
+        "authors": "Bezick, M., Wilson, B., Iyer, V., Chen, Y., Shalaev, V., Kais, S., Kildishev, A., Boltasseva, A., Lackey, B.",
+        "title": "PearSAN: an inverse design framework for the latent optimization of photonic devices using Pearson Correlated Surrogate Annealing",
+        "citation": "APS Global Physics Summit March Meeting (2024)",
+        "link": "https://summit.aps.org/events/MAR-H00/523"
+    },
+    {
+        "authors": "Chen, Y., Bezick, M., Wilson, B., Kildishev, A., Boltasseva, A., Shalaev, V.",
+        "title": "Physics-conditioned deep generative model for high-efficiency metasurface thermal emitter design",
+        "citation": "APS Global Physics Summit March Meeting (2024)",
+        "link": "https://summit.aps.org/events/MAR-J29/7"
+    },
+    {
+        "authors": "Wilson, B., Chen, Y., Singh, D.K., Ojha, R., Pottle, J., Bezick, M., Boltasseva, A., Shalaev, V., Kildishev, A.",
+        "title": "Machine-learning-assisted optical authentication of chip tampering",
+        "citation": "Photonic Computing: From Materials and Devices to Systems and Applications (2024)",
+        "link": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/PC13113/PC131130E/Machine-learning-assisted-optical-authentication-of-chip-tampering/10.1117/12.3027858.short"
+    },
+    {
+        "authors": "Tandon, S., Welling, A., Wilson, B., Mkhitaryan, V., Shalaev, V., Boltasseva, A.",
+        "title": "Computational Electromagnetics and Green’s Function Source Optimization of Variational Quantum Algorithms",
+        "citation": "Purdue University Spring Undergraduate Research Conference (2024)",
+        "link": "https://www.purdue.edu/undergrad-research/conferences/spring/archive/documents/2024SpringAbstractBooklet.pdf"
+    },
+    {
+        "authors": "Tandon, S., Welling, A., Wilson, B., Mkhitaryan, V., Shalaev, V., Boltasseva, A.",
+        "title": "Discrete, Tunable Wavefront Engineering using Binary Quadratic Optimization",
+        "citation": "Purdue University Spring Undergraduate Research Conference (2024)",
+        "link": "https://www.purdue.edu/undergrad-research/conferences/spring/archive/documents/2024SpringAbstractBooklet.pdf"
+    },
+    {
+        "authors": "Chitturi, G., Do, T., Chen, Y., Wilson, B., Shalaev, V., Boltasseva, A., Senichev, A.",
+        "title": "Machine learning-assisted rapid clustering and mechanism exploration of single photon emitters",
+        "citation": "Purdue University Spring Undergraduate Research Conference (2024)",
+        "link": "https://www.purdue.edu/undergrad-research/conferences/spring/archive/documents/2024SpringAbstractBooklet.pdf"
+    },
+    {
+        "authors": "Malavathu, R., Wilson, B., Boltasseva, A.",
+        "title": "NanoMCMC and Polytensor",
+        "citation": "Purdue University Spring Undergraduate Research Conference (2024)",
+        "link": "https://www.purdue.edu/undergrad-research/conferences/spring/archive/documents/2024SpringAbstractBooklet.pdf"
+    },
+    {
+        "authors": "Bezick, M., Iyer, V., Wilson, B., Boltasseva, A.",
+        "title": "Applications of Variational Neural Annealing for Machine Learning-Assisted Topological Optimization",
+        "citation": "Purdue University Spring Undergraduate Research Conference (2024)",
+        "link": "https://www.purdue.edu/undergrad-research/conferences/spring/archive/documents/2024SpringAbstractBooklet.pdf"
+    },
+    {
+        "authors": "Singh, D.K., Ojha, R., Chen, Y., Wilson, B., Bezick, M., Boltasseva, A., Shalaev, V., Kildishev, A.",
+        "title": "Machine Learning Realization of PUFS with Random Plasmonic Systems",
+        "citation": "CI + AI Cyberinfrastructure Symposium (2023)",
+        "link": ""
+    },
+    {
+        "authors": "Bezick, M., Wilson, B., Boltasseva, A.",
+        "title": "Latent Diffusion for Material Topology Sampling",
+        "citation": "CI + AI Cyberinfrastructure Symposium (2023)",
+        "link" : ""
+    },
+    {
+        "authors": "Wilson, B., Iyer, V., Shalaev, V., Kildishev, A., Kais, S., Boltasseva, A.",
+        "title": "Learning Van der Waals Potentials in Surrogate Rydberg Hamiltonians",
+        "citation": "3rd Annual Quantum Summer School (2023)",
+        "link" : ""
+    },
+    {
+        "authors": "Bezick, M., Wilson, B., Boltasseva, A.",
+        "title": "Denoising Diffusion for Material Topology Sampling",
+        "citation": "Spring Undergraduate Research citation (2023)",
+        "link" : ""
+    },
+    {
+        "authors": "Singh, D.K., Chen, Y., Wilson, B., Boltasseva, A., Shalaev, V., Kildishev, A.",
+        "title": "Plasmonic nanoparticle densities for physical verification of unclonable spectral tags in microelectronics packaging",
+        "citation": "Spring Undergraduate Research citation (2023)",
+        "link" : ""
+    },
+    {
+        "authors": "Wilson, B., Chen, Y., Shalaev, V., Kildishev, A., Kais, S., Boltasseva, A.",
+        "title": "Empowering Quantum 2.0 Devices and Approaches with Machine Learning (QTu2A.13)",
+        "citation": "Quantum 2.0 (2022)",
+        "link" : ""
+    },
+    {
+        "authors": "Wilson, B., Iyer, V., Shalaev, V., Kildishev, A., Kais, S., Boltasseva, A.",
+        "title": "Metasurface Compression Analysis via bVAE Reconstruction Loss",
+        "citation": "ECE Elmore Emerging Frontiers Center Poster Session (2022)",
+        "link" : ""
+    },
+    {
+        "authors": "Boltasseva, A., Shalaev, V., Wilson, B.",
+        "title": "Machine learning for photonics Active Photonic Platforms",
+        "citation": "2022, PC121960T",
+        "link" : ""
+    },
+    {
+        "authors": "Wilson, B., Mkhitaryan, V., Shalaev, V., Kildishev, A., Kais, S., Boltasseva, A.",
+        "title": "Source Shaping for Electromagnetic Optimization via Higher-Order Variational Quantum Algorithms",
+        "citation": "2nd Annual Quantum Summer School (2022)",
+        "link" : ""
+    },
+    {
+        "authors": "Wilson, B., Chen, Y., Shalaev, V., Kildishev, A., Kais, S., Boltasseva, A.",
+        "title": "Machine Learning for Nanophotonic Design and Quantum Measurements",
+        "citation": "Purdue Elmore Center (2021)",
+        "link" : ""
+
+    }
+  ],
+  "news" : [
+    {
+        "title": "RAPTOR takes a bite out of global counterfeit semiconductor market",
+        "location": "Purdue Research Foundation",
+        "date": "2024",
+        "link": "https://stories.prf.org/raptor-takes-a-bite-out-of-global-counterfeit-semiconductor-market/"
+    },
+    {
+        "title": "Purdue Engineers Tackle Counterfeit Chips with AI-Powered RAPTOR",
+        "location": "Astute",
+        "date": "2024",
+        "link": "https://www.astutegroup.com/news/industrial/purdue-engineers-tackle-counterfeit-chips-with-ai-powered-raptor/"
+    },
+    {
+        "title": "RAPTOR Turns a Beady Eye Onto Counterfeit or Maliciously Modified Chips",
+        "location": "Hackster.io",
+        "date": "2024",
+        "link": "https://www.hackster.io/news/raptor-turns-a-beady-eye-onto-counterfeit-or-maliciously-modified-chips-8924edf2b108"
+    },
+    {
+        "title": "AI-powered optical detection to thwart counterfeit chips",
+        "location": "SPIE",
+        "date": "2024",
+        "link": "https://spie.org/news/ai-powered-optical-detection-to-thwart-counterfeit-chips"
+    },
+    {
+        "title": "ECE researchers develop quantum machine learning algorithm for optimizing arbitrary engineering problems",
+        "location": "Purdue ECE News",
+        "date": "2022",
+        "link": "https://engineering.purdue.edu/ECE/News/2022/ece-researchers-develop-quantum-machine-learning-algorithm-for-optimizing-arbitrary-engineering-problems"
+    },
+    {
+        "title": "Senior Design Spotlight - Team ABCD [Lumenodes Automatic Marching Band Lights]",
+        "location": "Purdue ECE News",
+        "date": "2019",
+        "link": "https://engineering.purdue.edu/ECE/News/2019/senior-design-team-abcd"
+    }
+  ],
+  "fellowships": [
+    ["Summer Undergraduate Research Fellowship", "Purdue University", "2017"]
+  ],
+  "grants": [
+    [
+      "AWS Braket Research Grant",
+      "Amazon",
+      "2023 - 2024"
+    ],
+    [
+      "ACC 2022 Student Travel Grant",
+      "ACC 2022",
+      "2022"
+    ],
+    [
+      "Universities Space Research Association Quantum (Cycle 4)",
+      "NASA Ames Center",
+      "2020 – 2021"
+    ],
+    [
+      "Leadership Computing Facility D-Wave",
+      "Oak Ridge",
+      "2020"
+    ]
+  ],
+  "speaking" : [
+    [
+      "Academic Research Panel Member",
+      "Qiskit Fall Fest",
+      "2023"
+    ],
+    [
+      "Panel Moderator",
+      "QSC Summer School",
+      "2022 - 2024"
+    ],
+    [
+      "American Controls Conference",
+      "ACC",
+      "2022"
+    ],
+    [
+      "SURF Graduate Mentor",
+      "Purdue University",
+      "2020 - 2023"
+    ],
+    [
+      "Fireside Chat Interviewer",
+      "Quantum Science Center",
+      "2021 - 2022"
+    ],
+    [
+      "Stories of Success Fireside Chat Host",
+      "Purdue University",
+      "2019 - 2020"
+    ]
+  ],
+  "competitions": [
+    [
+      "2nd Place National Rube Goldberg Competition",
+      "Purdue University",
+      "2016"
+    ],
+    [
+      "2nd Place Purdue First Robotics Regionals",
+      "Purdue University",
+      "2014"
+    ],
+    [
+      "3rd Place IUPUI Mathematics Competition",
+      "Indiana University Purdue University of Indianapolis",
+      "2014"
+    ]
+  ],
+
+  "extWork": [
+    [
+      "Graduate Research Assistant (Alexandra Boltasseva)",
+      "Purdue University",
+      "2019 - 2024"
+    ],
+    [
+      "Committee Member",
+      "QSC Summer School",
+      "2021 - 2023"
+    ],
+    [
+      "Advisor",
+      "Qiskit Fall Fest",
+      "2023"
+    ],
+    [
+      "Quantum Algorithms Researcher",
+      "QuEra Computing",
+      "2022"
+    ],
+    [
+      "Postdoctoral and Graduate Student Association Team Lead",
+      "Quantum Science Center",
+      "2021 - 2022"
+    ],
+    [
+      "Graduate Research Assistant (Shreyas Sundaram)",
+      "Purdue University",
+      "2021"
+    ],
+    [
+      "ECE Shop Graduate Assistant",
+      "Purdue University",
+      "2019 - 2020"
+    ],
+    [
+      "Verification Team Engineer",
+      "ARM",
+      "Summer 2019"
+    ],
+    [
+      "Software Team Lead",
+      "Purdue SoCET Team",
+      "2018 - 2019"
+    ],
+    [
+      "SURF Fellow",
+      "Purdue University",
+      "2017"
+    ],
+    [
+      "Undergraduate Research Assistant",
+      "Purdue University",
+      "2016 - 2019"
+    ]
+  ],
+  "refereeRoles": [
+    [
+      "Reviewer",
+      "Advanced Photonics",
+      "2024"
+    ],
+    [
+      "Reviewer",
+      "Quantum",
+      "2022 - 2024"
+    ],
+    [
+      "Reviewer",
+      "Nature Communications",
+      "2022"
+    ],
+    [
+      "Reviewer",
+      "Advanced Materials",
+      "2022"
+    ],
+    [
+      "Poster Session Committee",
+      "Elmore Center",
+      "2022"
+    ],
+    [
+      "Online Research Symposium",
+      "Purdue SURF",
+      "2020"
+    ]
+  ],
+  "teachingRoles": [
+    [
+      "First Time Researcher Fellowship Mentor",
+      "Purdue University",
+      "2022 - 2024"
+    ],
+    [
+      "Graduate Mentor",
+      "Purdue SURF",
+      "2020 - 2023"
+    ],
+    [
+      "Graduate Teaching Assistant (Data Structures and Algorithms)",
+      "Purdue University",
+      "2021"
+    ],
+    [
+      "Graduate Assistant",
+      "Purdue SURF",
+      "2020"
+    ],
+    [
+      "Graduate Teaching Assistant (Advanced C)",
+      "Purdue University",
+      "2020"
+    ],
+    [
+      "Resident Assistant",
+      "Purdue University",
+      "2016 - 2018"
+    ]
+  ],
+
+"extSWE": [
+    [
+      "Web Development",
+      "NanoML Team",
+      "2023 -"
+    ],
+    [
+      "Custom Arch Linux Setup",
+      "Linux",
+      "2022 -"
+    ],
+    [
+      "Neovim Personal Configuration",
+      "Linux",
+      "2022 -"
+    ],
+    [
+      "ClearML Server Management",
+      "Linux",
+      "2022 -"
+    ],
+    [
+      "Bloqade Rydberg Atom Simulations",
+      "QuEra Computing",
+      "2022 -"
+    ],
+    [
+      "NanoML Experiment Manager",
+      "Python",
+      "2023"
+    ],
+    [
+      "OpenAI Automatic Documentation Builder",
+      "OpenAI",
+      "2023"
+    ],
+    [
+      "OpenAI + Alexa API Integration",
+      "OpenAI",
+      "2022"
+    ],
+    [
+      "CEM Codes (Diffraction, Capacitor)",
+      "Purdue ECE",
+      "2021"
+    ],
+    [
+      "ECE Shop Sign (RGB LED + Web Server)",
+      "Purdue ECE",
+      "2019"
+    ],
+    [
+      "Bluetooth Controlled Powerstrip",
+      "Purdue ECE Embedded Sys.",
+      "2018"
+    ],
+    [
+      "32-bit MIPS Processor from scratch",
+      "Purdue ECE 437",
+      "2018"
+    ],
+    [
+      "VLSI Clock-Tree Synthesis Project",
+      "Purdue ECE 595",
+      "2018"
+    ],
+    [
+      "Ethernet Packet Sniffer",
+      "Purdue ECE 337",
+      "2018"
+    ],
+    [
+      "Multiple Pursuers and Sweep-Covers Enumeration",
+      "Purdue ECE Research",
+      "2017"
+    ],
+    [
+      "8-bit Breadboard PC - Synchronized Clock",
+      "Personal Hobby",
+      "2017"
+    ],
+    [
+      "Tanvas Image Processing and Material Analysis",
+      "Northwestern Hackathon",
+      "2016"
+    ],
+    [
+      "Zombie Video Game",
+      "Wired Vision Games",
+      "2014"
+    ],
+    [
+      "Falling Balls Android Game",
+      "Personal Hobby",
+      "2013"
+    ]
+  ],
+  "funding" : [
+    ["Quantum Science Center", "Oak Ridge", "2021 - 2024"],
+    ["Purdue Elmore Emerging Frontiers Center", "Elmore Family", "2022 - 2024"],
+    ["QuEra Computing", "Harvard/MIT", "2022"],
+    ["Air Force Research Lab", "AFRL", "2021"]
+  ],
+  "affiliations" : [
+    ["Optica", "Optica", "2021 -"],
+    ["Quantum Science Center", "Oak Ridge National Lab", "2020 - 2024"],
+    ["Elmore Emerging Frontiers Center", "Purdue University", "2020 - 2024"],
+    ["Purdue Quantum Science and Engineering Institute", "Purdue University", "2019 - 2024"],
+    ["QuEra Computing", "Harvard/MIT", "2022"],
+    ["IEEE Computer Society", "IEEE", "2020 - 2021"],
+    ["Purdue Society of Professional Engineers", "Purdue University", "2015 – 2016"],
+    ["Wired Vision Games", "Game Development Group", "2011 – 2015"],
+    ["First Robotics", "NASA", "2013 – 2015"],
+    ["Freedom Chairs (Charity Wheelchair Repair)", "Indiana Non-Profit", "2013 – 2015"],
+    ["Project Lead the Way", "Indiana Non-Profit", "2011 – 2013"]
+  ],
+
+  "mentees" : [
+    [
+        "First Time Researcher Fellowship",
+        "Advay Welling",
+        "EURO 2024"
+    ],
+    [
+        "First Time Researcher Fellowship",
+        "Sarthak Tandon",
+        "EURO 2024"
+    ],
+    [
+        "First Time Researcher Fellowship",
+        "Geetika Chitturi",
+        "EURO 2024"
+    ],
+    [
+        "Qiskit Fall Fest Lead",
+        "Vaishnavi Iyer",
+        "2023"
+    ],
+    [
+        "Best Poster Presentation",
+        "Daksh Kumar Singh",
+        "SURF 2023"
+    ],
+    [
+        "Summer Undergraduate Research Fellowship",
+        "Daksh Kumar Singh",
+        "SURF 2023"
+    ],
+    [
+        "First Time Researcher Fellowship",
+        "Daksh Kumar Singh",
+        "EURO 2023"
+    ],
+    [
+        "First Time Researcher Fellowship",
+        "Michael Bezick",
+        "EURO 2023"
+    ],
+    [
+        "IBM Watson Quantum Summer Internship",
+        "Vaishnavi Iyer",
+        "2023"
+    ],
+    [
+        "Summer Undergraduate Research Fellowship",
+        "Vaishnavi Iyer",
+        "2022"
+    ],
+    [
+        "Best First Time Researcher Award",
+        "David Czerwonki",
+        "SURF 2020"
+    ],
+    [
+        "Best First Time Researcher Award",
+        "Rachel Zhang",
+        "SURF 2020"
+    ]
+],
+  "references" : [
+    ["Stephen Clark (Quantinuum/Deepmind)", "cl.cam.ac.uk", ""],
+    ["Vladimir Shalaev (Purdue)", "shalaev@purdue.edu", "765-494-9855"],
+    ["Alexandra Boltasseva (Purdue)", "aeb@purdue.edu", "765-494-0301"],
+    ["Sabre Kais (Purdue)", "kais@purdue.edu", "765-494-5965"],
+    ["Travis Humble (ORNL)", "humblets@ornl.gov", ""],
+    ["Sheng-Tao Wang (QuEra)", "swang@quera.com", "617-291-2012"]
+],
+  "refsnophone" : [
+    ["Sabre Kais (Purdue)", "kais@purdue.edu", "765-494-5965"],
+    ["Alexandra Boltasseva (Purdue)", "aeb@purdue.edu", "765-494-0301"],
+    ["Travis Humble (ORNL)", "humblets@ornl.gov", ""],
+    ["Sheng-Tao Wang (QuEra)", "swang@quera.com", ""],
+    ["Stephen Clark (Quantinuum/Deepmind)", "cl.cam.ac.uk", ""],
+    ["Vladimir Shalaev (Purdue)", "shalaev@purdue.edu", "765-494-9855"]
+],
+  "banner" : [
+    { "imgsrc" : "icons/globe-solid.svg", "body" : "Website", "link": "https://www.blakeanthonywilson.com" },
+    { "imgsrc" : "icons/linkedin.svg", "body" : "LinkedIn", "link": "https://www.linkedin.com/in/blake-wilson-406a8256/" },
+    { "imgsrc" : "icons/envelope-solid.svg", "body" : "blake.anthony.wilson@pm.me", "link": "mailto:blake.anthony.wilson@pm.me" },
+    { "imgsrc" : "icons/github.svg", "body" : "Github", "link": "https://www.github.com/btrainwilson" },
+    { "imgsrc" : "icons/house-solid.svg", "body" : "Santa Barbara, CA", "link": "https://www.blakeanthonywilson.com" }
+
+  ]
+
+
+}

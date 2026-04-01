@@ -1,0 +1,70 @@
+{
+  "fullName": "Blake Anthony Wilson",
+  "currentPosition": "Co-Founder & Interim CEO, Zephram · Oxford, UK",
+  "urls": {
+    "github": "https://github.com/Btrainwilson",
+    "bluesky": "https://bsky.app/profile/blakeawilson.bsky.social",
+    "website": "https://blakeanthonywilson.com",
+    "linkedin": "https://www.linkedin.com/in/blake-wilson-406a8256/",
+    "googleScholar": "https://scholar.google.com/citations?user=7iZVKuoAAAAJ&hl=en"
+  },
+  "interests": [
+    "Machine Learning and Generative Modeling for Multiphysics and Design",
+    "Discrete Mathematics and Statistical Mechanics",
+    "Graph-Theoretic Analysis for Opimization",
+    "Nanophotonic Design for Quantum Computing",
+    "Software Engineering and Dev-Ops"
+  ],
+  "skillList": [
+    "C++",
+    "CUDA",
+    "Python",
+    "PyTorch",
+    "Numerical Simulations",
+    "ML for Physics & Optimization",
+    "Physics-Inspired Generative Modeling",
+    "Device Design",
+    "Multi-Agent Systems",
+    "SWE",
+    "CloudOps",
+    "Public Speaking",
+    "Grant Writing",
+    "Research Leadership and Management"
+  ],
+  "summaries": {
+    "ceo": "Co-Founder and Interim CEO of Zephram $20M Oxford-based R&D company building multi-agent and inference technology for scientific research. 12+ years in software engineering, algorithm design and analysis, and former research scientist at Quantinuum and QuEra using machine learning for physics-inspired generative modeling and optimization.",
+    "RS": "Electrical and Computer Engineering Ph.D. working on machine learning, physics-inspired generative models, and optimization. 12+ years of experience in software engineering and 9+ years in algorithm design and analysis.  ",
+    "RS_cas": "I mainly work on machine learning, physics-inspired generative models, and optimization. I occasionally work on computational physics and math too. 12+ years of experience in software engineering and 9+ years in algorithm design and analysis.  ",
+    "op": "Electrical and Computer Engineering Ph.D. with 12+ years of experience in software engineering and 9+ years in algorithm design and analysis. Leader of a team of 16 data scientists and engineers developing breakthroughs in machine learning assisted optimization algorithms for applications in computational electromagnetics and quantum optics.",
+    "web": "Machine Learning Ph.D. candidate with 12+ years of experience in software engineering and 8+ years in algorithm design and analysis. Leader of a team of 16 data scientists and engineers, developing breakthroughs in machine learning with applications in generative AI, computer vision, and quantum. ",
+    "qml": "Quantum machine learning Ph.D. candidate and founder of the NanoML team developing machine learning algorithms for quantum generative AI and photonics. 12+ years of experience in software engineering and 8+ years in algorithm design and analysis.  "
+  },
+  "statementsNote": "Long-form statements live in src/content/cv/research-statement.mdx and teaching-statement.mdx",
+  "contactBanner": [
+    {
+      "imgsrc": "icons/globe-solid.svg",
+      "body": "Website",
+      "link": "https://www.blakeanthonywilson.com"
+    },
+    {
+      "imgsrc": "icons/linkedin.svg",
+      "body": "LinkedIn",
+      "link": "https://www.linkedin.com/in/blake-wilson-406a8256/"
+    },
+    {
+      "imgsrc": "icons/envelope-solid.svg",
+      "body": "blake.anthony.wilson@pm.me",
+      "link": "mailto:blake.anthony.wilson@pm.me"
+    },
+    {
+      "imgsrc": "icons/github.svg",
+      "body": "Github",
+      "link": "https://www.github.com/btrainwilson"
+    },
+    {
+      "imgsrc": "icons/house-solid.svg",
+      "body": "Santa Barbara, CA",
+      "link": "https://www.blakeanthonywilson.com"
+    }
+  ]
+}

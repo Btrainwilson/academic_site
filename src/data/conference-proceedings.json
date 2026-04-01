@@ -1,0 +1,130 @@
+[
+  {
+    "title": "Physics-Conditioned Diffusion Model for the Inverse-Design of High-efficiency Thermophotovoltaic Metasurface",
+    "authors": "Chen, Y., Bezick, M., Wilson, B., Kildishev, A., Shalaev, V., Boltasseva, A.",
+    "venue": "CLEO (2025)",
+    "year": 2025
+  },
+  {
+    "title": "Photonic Inverse Design Through Machine Learning and Correlated Surrogate Annealing",
+    "authors": "Bezick, M., Wilson, B., Iyer, V., Chen, Y., Shalaev, V., Kais, S., Kildishev, A., Boltasseva, A., Lackey, B.",
+    "venue": "CLEO (2025)",
+    "year": 2025
+  },
+  {
+    "title": "PearSAN: an inverse design framework for the latent optimization of photonic devices using Pearson Correlated Surrogate Annealing",
+    "authors": "Bezick, M., Wilson, B., Iyer, V., Chen, Y., Shalaev, V., Kais, S., Kildishev, A., Boltasseva, A., Lackey, B.",
+    "venue": "APS Global Physics Summit March Meeting (2024)",
+    "year": 2024,
+    "url": "https://summit.aps.org/events/MAR-H00/523"
+  },
+  {
+    "title": "Physics-conditioned deep generative model for high-efficiency metasurface thermal emitter design",
+    "authors": "Chen, Y., Bezick, M., Wilson, B., Kildishev, A., Boltasseva, A., Shalaev, V.",
+    "venue": "APS Global Physics Summit March Meeting (2024)",
+    "year": 2024,
+    "url": "https://summit.aps.org/events/MAR-J29/7"
+  },
+  {
+    "title": "Machine-learning-assisted optical authentication of chip tampering",
+    "authors": "Wilson, B., Chen, Y., Singh, D.K., Ojha, R., Pottle, J., Bezick, M., Boltasseva, A., Shalaev, V., Kildishev, A.",
+    "venue": "Photonic Computing: From Materials and Devices to Systems and Applications (2024)",
+    "year": 2024,
+    "url": "https://www.spiedigitallibrary.org/conference-proceedings-of-spie/PC13113/PC131130E/Machine-learning-assisted-optical-authentication-of-chip-tampering/10.1117/12.3027858.short"
+  },
+  {
+    "title": "Computational Electromagnetics and Green’s Function Source Optimization of Variational Quantum Algorithms",
+    "authors": "Tandon, S., Welling, A., Wilson, B., Mkhitaryan, V., Shalaev, V., Boltasseva, A.",
+    "venue": "Purdue University Spring Undergraduate Research Conference (2024)",
+    "year": 2024,
+    "pdf": "https://www.purdue.edu/undergrad-research/conferences/spring/archive/documents/2024SpringAbstractBooklet.pdf"
+  },
+  {
+    "title": "Discrete, Tunable Wavefront Engineering using Binary Quadratic Optimization",
+    "authors": "Tandon, S., Welling, A., Wilson, B., Mkhitaryan, V., Shalaev, V., Boltasseva, A.",
+    "venue": "Purdue University Spring Undergraduate Research Conference (2024)",
+    "year": 2024,
+    "pdf": "https://www.purdue.edu/undergrad-research/conferences/spring/archive/documents/2024SpringAbstractBooklet.pdf"
+  },
+  {
+    "title": "Machine learning-assisted rapid clustering and mechanism exploration of single photon emitters",
+    "authors": "Chitturi, G., Do, T., Chen, Y., Wilson, B., Shalaev, V., Boltasseva, A., Senichev, A.",
+    "venue": "Purdue University Spring Undergraduate Research Conference (2024)",
+    "year": 2024,
+    "pdf": "https://www.purdue.edu/undergrad-research/conferences/spring/archive/documents/2024SpringAbstractBooklet.pdf"
+  },
+  {
+    "title": "NanoMCMC and Polytensor",
+    "authors": "Malavathu, R., Wilson, B., Boltasseva, A.",
+    "venue": "Purdue University Spring Undergraduate Research Conference (2024)",
+    "year": 2024,
+    "pdf": "https://www.purdue.edu/undergrad-research/conferences/spring/archive/documents/2024SpringAbstractBooklet.pdf"
+  },
+  {
+    "title": "Applications of Variational Neural Annealing for Machine Learning-Assisted Topological Optimization",
+    "authors": "Bezick, M., Iyer, V., Wilson, B., Boltasseva, A.",
+    "venue": "Purdue University Spring Undergraduate Research Conference (2024)",
+    "year": 2024,
+    "pdf": "https://www.purdue.edu/undergrad-research/conferences/spring/archive/documents/2024SpringAbstractBooklet.pdf"
+  },
+  {
+    "title": "Machine Learning Realization of PUFS with Random Plasmonic Systems",
+    "authors": "Singh, D.K., Ojha, R., Chen, Y., Wilson, B., Bezick, M., Boltasseva, A., Shalaev, V., Kildishev, A.",
+    "venue": "CI + AI Cyberinfrastructure Symposium (2023)",
+    "year": 2023
+  },
+  {
+    "title": "Latent Diffusion for Material Topology Sampling",
+    "authors": "Bezick, M., Wilson, B., Boltasseva, A.",
+    "venue": "CI + AI Cyberinfrastructure Symposium (2023)",
+    "year": 2023
+  },
+  {
+    "title": "Learning Van der Waals Potentials in Surrogate Rydberg Hamiltonians",
+    "authors": "Wilson, B., Iyer, V., Shalaev, V., Kildishev, A., Kais, S., Boltasseva, A.",
+    "venue": "3rd Annual Quantum Summer School (2023)",
+    "year": 2023
+  },
+  {
+    "title": "Denoising Diffusion for Material Topology Sampling",
+    "authors": "Bezick, M., Wilson, B., Boltasseva, A.",
+    "venue": "Spring Undergraduate Research citation (2023)",
+    "year": 2023
+  },
+  {
+    "title": "Plasmonic nanoparticle densities for physical verification of unclonable spectral tags in microelectronics packaging",
+    "authors": "Singh, D.K., Chen, Y., Wilson, B., Boltasseva, A., Shalaev, V., Kildishev, A.",
+    "venue": "Spring Undergraduate Research citation (2023)",
+    "year": 2023
+  },
+  {
+    "title": "Empowering Quantum 2.0 Devices and Approaches with Machine Learning (QTu2A.13)",
+    "authors": "Wilson, B., Chen, Y., Shalaev, V., Kildishev, A., Kais, S., Boltasseva, A.",
+    "venue": "Quantum 2.0 (2022)",
+    "year": 2022
+  },
+  {
+    "title": "Metasurface Compression Analysis via bVAE Reconstruction Loss",
+    "authors": "Wilson, B., Iyer, V., Shalaev, V., Kildishev, A., Kais, S., Boltasseva, A.",
+    "venue": "ECE Elmore Emerging Frontiers Center Poster Session (2022)",
+    "year": 2022
+  },
+  {
+    "title": "Machine learning for photonics Active Photonic Platforms",
+    "authors": "Boltasseva, A., Shalaev, V., Wilson, B.",
+    "venue": "2022, PC121960T",
+    "year": 2022
+  },
+  {
+    "title": "Source Shaping for Electromagnetic Optimization via Higher-Order Variational Quantum Algorithms",
+    "authors": "Wilson, B., Mkhitaryan, V., Shalaev, V., Kildishev, A., Kais, S., Boltasseva, A.",
+    "venue": "2nd Annual Quantum Summer School (2022)",
+    "year": 2022
+  },
+  {
+    "title": "Machine Learning for Nanophotonic Design and Quantum Measurements",
+    "authors": "Wilson, B., Chen, Y., Shalaev, V., Kildishev, A., Kais, S., Boltasseva, A.",
+    "venue": "Purdue Elmore Center (2021)",
+    "year": 2021
+  }
+]

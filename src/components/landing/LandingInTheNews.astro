@@ -1,0 +1,48 @@
+---
+import type { LandingNewsItem } from "@/types/data";
+
+interface Props {
+  items: LandingNewsItem[];
+}
+
+const { items } = Astro.props;
+---
+
+{
+  items.length > 0 && (
+    <section class="not-prose mt-20" aria-labelledby="news-heading">
+      <h2 id="news-heading" class="text-foreground mb-6 text-2xl font-semibold tracking-tight">
+        In the news
+      </h2>
+      <ul class="divide-border/80 divide-y rounded-xl border border-border/80">
+        {items.map((n) => (
+          <li class="hover:bg-muted/40 flex flex-col gap-1 px-4 py-4 transition-colors sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+            <div class="min-w-0 flex-1">
+              {n.link ? (
+                <a
+                  href={n.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-foreground text-base font-medium leading-snug hover:underline"
+                >
+                  {n.headline}
+                </a>
+              ) : (
+                <span class="text-foreground text-base font-medium leading-snug">{n.headline}</span>
+              )}
+              {n.source && (
+                <p class="text-muted-foreground mt-1 text-sm">{n.source}</p>
+              )}
+            </div>
+            <time
+              class="text-muted-foreground shrink-0 text-sm tabular-nums sm:text-right"
+              datetime={n.date}
+            >
+              {n.date}
+            </time>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}

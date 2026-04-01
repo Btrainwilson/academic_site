@@ -1,0 +1,59 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PublicationList from "@/components/PublicationList.astro";
+import SocialIconLinks from "@/components/SocialIconLinks.astro";
+import { conferenceProceedings } from "@/lib/conferenceProceedings";
+import { publications } from "@/lib/publications";
+import profileData from "@/data/cv/profile.json";
+import type { CvProfile } from "@/types/data";
+
+const profile = profileData as CvProfile;
+const scholarUrl = profile.urls?.googleScholar;
+---
+
+<BaseLayout
+  title="Publications"
+  description="Journal articles, preprints, and conference proceedings."
+>
+  <div class="mx-auto max-w-3xl px-4 py-12">
+    <div
+      class="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"
+    >
+      <h1 class="text-foreground text-3xl font-semibold tracking-tight">
+        Publications
+      </h1>
+      {
+        scholarUrl && (
+          <div class="flex flex-col gap-2 sm:items-end">
+            <span class="text-muted-foreground text-xs font-medium uppercase tracking-wide">
+              Google Scholar
+            </span>
+            <SocialIconLinks
+              urls={profile.urls}
+              onlyKeys={["googleScholar"]}
+              class="justify-start sm:justify-end"
+            />
+          </div>
+        )
+      }
+    </div>
+
+    <PublicationList
+      items={publications}
+      heading="Journals & preprints"
+      showHeading={true}
+    />
+
+    {
+      conferenceProceedings.length > 0 && (
+        <div class="mt-16">
+          <PublicationList
+            items={conferenceProceedings}
+            heading="Conference proceedings & talks"
+            showHeading={true}
+          />
+        </div>
+      )
+    }
+  </div>
+</BaseLayout>

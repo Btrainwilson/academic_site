@@ -1,0 +1,153 @@
+{
+  "roles": [
+    {
+      "id": "startup",
+      "head": {
+        "title": "Zephram",
+        "subtitle": "Co-Founder & Interim CEO (Former CTO)",
+        "location": "Oxford, UK",
+        "date": "2025 - "
+      },
+      "bullets": [
+        {
+          "text": "Appointed by the board (Abstract) to lead our $20M company during a $1.2M financial investigation and restructuring following insurmountable fiduciary breaches from previous leadership. Managed legal counsel and stakeholder communications to stabilize the entity. Initiated rebranding, stabilized operations, and pivoted to a new business model and product strategy. Brought in research partnerships with Cambridge, UC Berkeley, and Purdue."
+        },
+        {
+          "text": "As CTO, led a team of 8 Oxford-based engineers and scientists to build and deploy full-stack AI infrastructure for multi-agent systems and inference, spanning CUDA kernels, model serving, backend services, and web interfaces."
+        },
+        {
+          "text": "Proprietary Breakthroughs: Context compaction (5x speed-up + 80% cost reduction), simulated finetuning ($0.01 vs $1000x LORA), multi-agent swarm communication protocols (15% faster on small-medium scale models), CUDA kernels for multi-GPU optimization (300x speed-up over previous state-of-the-art), and more."
+        }
+      ]
+    },
+    {
+      "id": "quantinuum",
+      "head": {
+        "title": "AI for Quantum",
+        "subtitle": "Research Scientist III",
+        "location": "Quantinuum, Oxford & London",
+        "date": "2024 - 2025"
+      },
+      "bullets": [
+        {
+          "text": "Built and benchmarked multiGPU CUDA async kernels for UCCSD quantum circuits, achieving 4-20x speed-up for data collection. Modified token vocabulary and PPO/GRPO losses for better generative performance in GPT2 models."
+        },
+        {
+          "text": "Led RL infrastructure and algorithms for collaborating with Nvidia + Deepmind on generative modeling, quantum circuit generation, quantum chemistry and optimization that will fuel future publications and industry partnerships."
+        },
+        {
+          "text": "Developed generative AI for integrated photonics devices, new latent graph diffusion models for quantum circuit synthesis and transpilation, graph optimization for neural architecture search, and QNLP diagram generation."
+        }
+      ]
+    },
+    {
+      "id": "ml",
+      "head": {
+        "title": "NanoML",
+        "subtitle": "Team Lead and Founder",
+        "location": "Purdue University",
+        "link": "https://nanoml.org",
+        "date": "2021 - "
+      },
+      "bullets": [
+        {
+          "text": "Published machine learning algorithms for designing meta-optical devices, achieving a 16200% speed-up resulting in a major milestone for the Quantum Science Center with two news articles and 30 citations.",
+          "links": [
+            "https://pubs.aip.org/aip/sci/article/2021/53/531104/365746/Framework-maps-continuous-space-inverse-design",
+            "https://engineering.purdue.edu/ECE/News/2022/ece-researchers-develop-quantum-machine-learning-algorithm-for-optimizing-arbitrary-engineering-problems"
+          ]
+        },
+        {
+          "text": "Raised $27k in computing resources through grants, saved $40k in ML costs through server maintenance, and assisted in raising $200k+ for the QSC Summer Schools.",
+          "links": [
+            "https://www.ornl.gov/news/quantum-science-center-concludes-second-annual-summer-school-style"
+          ]
+        },
+        {
+          "text": "Led the development of attention-based models for tackling the $75B counterfeit chip market leading to a 55,000x speed-up and 41% accuracy increase in the verification of semiconductor devices.",
+          "links": [
+            "https://www.spiedigitallibrary.org/journals/advanced-photonics/volume-6/issue-5/056002/Authentication-through-residual-attention-based-processing-of-tampered-optical-responses/10.1117/1.AP.6.5.056002.full"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quera",
+      "head": {
+        "title": "Quantum Machine Learning",
+        "subtitle": "Algorithms Researcher",
+        "location": "QuEra Computing",
+        "date": "2022"
+      },
+      "bullets": [
+        {
+          "text": "Demonstrated comparative advantage on neutral atoms for generative AI sampling of photonic devices.",
+          "links": [
+            "https://arxiv.org/abs/2407.13830"
+          ]
+        },
+        {
+          "text": "Set team research objectives and wrote quantum simulation software in Python and Julia to simulate Rydberg atom systems for analysis.",
+          "links": [
+            "https://arxiv.org/abs/2407.13830"
+          ]
+        },
+        {
+          "text": "Verified early-access, open-source, flagship neutral atom simulation software Bloqade on machine learning sampling tasks.",
+          "links": [
+            "https://www.quera.com/bloqade/"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "uav",
+      "head": {
+        "title": "UAV Routing Algorithms",
+        "subtitle": "Researcher",
+        "location": "Air Force Research Lab",
+        "date": "2017 - 2022"
+      },
+      "bullets": [
+        {
+          "text": "Derived optimal UAV routes for search and rescue missions to choose deliveries based on a tradeoff of risk of failure and reward.",
+          "links": [
+            "https://arxiv.org/pdf/2110.09917.pdf"
+          ]
+        },
+        {
+          "text": "Created sweep-covers for partitioning road-networks for multi-UAV routing to capture ground-vehicles.",
+          "links": [
+            "https://arxiv.org/abs/2009.08549"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arm",
+      "head": {
+        "title": "Computer Architecture Design",
+        "subtitle": "Software Engineer",
+        "location": "ARM",
+        "date": "2019"
+      },
+      "bullets": [
+        {
+          "text": "Engineered verification software in Python, XML, and C++ for ARMv8 instruction set coverage, leading to a 250% improvement in Chi-Square randomness and immediate positive feedback from customers for improving test consistency."
+        },
+        {
+          "text": "Rebuilt 2 ARMv8 debug instruction tests in ARM's verification suite to reduce the complexity of debugging for customers."
+        },
+        {
+          "text": "Designed a 32-Bit MIPS RISC processor in Verilog with L1-Cache and 5-stage pipeline. Compiled C to MIPS IS and benchmarked on FPGAs."
+        },
+        {
+          "text": "Developed Python to RISCV transpiler for generating Verilog Read-Only-Memory for RISCV-based System-on-Chip.",
+          "links": [
+            "https://engineering.purdue.edu/SoC-Team/AFTx-Previous"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+/**
+ * Remap Starlight shell colors to match Violet Bloom (tweakcn) in src/styles/global.css.
+ * Starlight uses html[data-theme=light|dark]; the main site uses .dark on html for Tailwind.
+ */
+
+html[data-theme="light"] {
+  --sl-color-accent-low: oklch(0.9702 0 0);
+  --sl-color-accent: oklch(0.5393 0.2713 286.7462);
+  --sl-color-accent-high: oklch(0.4386 0 0);
+  --sl-color-text: oklch(0 0 0);
+  --sl-color-text-accent: oklch(0.5393 0.2713 286.7462);
+  --sl-color-text-invert: oklch(1 0 0);
+  --sl-color-bg: oklch(0.994 0 0);
+  --sl-color-bg-nav: oklch(0.994 0 0);
+  --sl-color-bg-sidebar: oklch(0.9777 0.0051 247.8763);
+  --sl-color-bg-inline-code: oklch(0.9702 0 0);
+  --sl-color-bg-accent: oklch(0.9393 0.0288 266.368);
+  --sl-color-hairline-light: oklch(0.93 0.0094 286.2156);
+  --sl-color-hairline: oklch(0.93 0.0094 286.2156);
+  --sl-color-hairline-shade: oklch(0.93 0.0094 286.2156);
+  --sl-color-white: oklch(0 0 0);
+  --sl-color-black: oklch(1 0 0);
+  --sl-color-gray-1: oklch(0 0 0);
+  --sl-color-gray-2: oklch(0.1344 0 0);
+  --sl-color-gray-3: oklch(0.4386 0 0);
+  --sl-color-gray-4: oklch(0.5445 0.1903 259.4848);
+  --sl-color-gray-5: oklch(0.93 0.0094 286.2156);
+  --sl-color-gray-6: oklch(0.9702 0 0);
+  --sl-color-gray-7: oklch(0.9777 0.0051 247.8763);
+  --sl-color-backdrop-overlay: oklch(0 0 0 / 0.45);
+  --sl-font: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+html[data-theme="dark"] {
+  --sl-color-accent-low: oklch(0.294 0.013 272.9312);
+  --sl-color-accent: oklch(0.6132 0.2294 291.7437);
+  --sl-color-accent-high: oklch(0.7058 0 0);
+  --sl-color-text: oklch(0.9551 0 0);
+  --sl-color-text-accent: oklch(0.6132 0.2294 291.7437);
+  --sl-color-text-invert: oklch(0.2223 0.006 271.1393);
+  --sl-color-bg: oklch(0.2223 0.006 271.1393);
+  --sl-color-bg-nav: oklch(0.2223 0.006 271.1393);
+  --sl-color-bg-sidebar: oklch(0.2011 0.0039 286.0396);
+  --sl-color-bg-inline-code: oklch(0.294 0.013 272.9312);
+  --sl-color-bg-accent: oklch(0.2795 0.0368 260.031);
+  --sl-color-hairline-light: oklch(0.3289 0.0092 268.3843);
+  --sl-color-hairline: oklch(0.3289 0.0092 268.3843);
+  --sl-color-hairline-shade: oklch(0.2223 0.006 271.1393);
+  --sl-color-white: oklch(1 0 0);
+  --sl-color-black: oklch(0.2223 0.006 271.1393);
+  --sl-color-gray-1: oklch(0.9551 0 0);
+  --sl-color-gray-2: oklch(0.7058 0 0);
+  --sl-color-gray-3: oklch(0.6132 0.2294 291.7437);
+  --sl-color-gray-4: oklch(0.6691 0.1569 260.1063);
+  --sl-color-gray-5: oklch(0.3289 0.0092 268.3843);
+  --sl-color-gray-6: oklch(0.2568 0.0076 274.6528);
+  --sl-color-gray-7: oklch(0.2011 0.0039 286.0396);
+  --sl-color-backdrop-overlay: oklch(0.2223 0.006 271.1393 / 0.66);
+  --sl-font: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+}

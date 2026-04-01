@@ -1,0 +1,254 @@
+{
+  "leadership": [
+    {
+      "title": "Zephram Co-Founder, Former CTO & Interim CEO",
+      "subtitle": "Zephram",
+      "date": "2025 - "
+    },
+    {
+      "title": "NanoML Team Lead",
+      "subtitle": "NanoML Team",
+      "date": "2021 - 2024"
+    },
+    {
+      "title": "Quantum Science Center Summer School Committee",
+      "subtitle": "Quantum Science Center",
+      "date": "2021 - 2023"
+    },
+    {
+      "title": "DOE Quantum Science Center PGA Team Lead",
+      "subtitle": "Quantum Science Center",
+      "date": "2021 - 2022"
+    },
+    {
+      "title": "SURF Graduate Mentor",
+      "subtitle": "Purdue SURF",
+      "date": "2022 - 2023"
+    },
+    {
+      "title": "Elmore Center Poster Session Committee",
+      "subtitle": "Elmore Center",
+      "date": "2022"
+    },
+    {
+      "title": "Graduate Teaching Assistant",
+      "subtitle": "Purdue ECE",
+      "date": "2020 - 2021"
+    },
+    {
+      "title": "SURF Graduate Assistant",
+      "subtitle": "Purdue SURF",
+      "date": "2020"
+    },
+    {
+      "title": "SURF Symposium Planning Committee",
+      "subtitle": "Purdue SURF",
+      "date": "2020"
+    },
+    {
+      "title": "Stories of Success: Fireside Chat Host",
+      "subtitle": "Purdue ECE",
+      "date": "2019 - 2020"
+    },
+    {
+      "title": "ECE Shop Graduate Assistant",
+      "subtitle": "Purdue ECE",
+      "date": "2019 - 2020"
+    },
+    {
+      "title": "Software Team Lead",
+      "subtitle": "SoCET Team, Purdue",
+      "date": "2018 - 2019"
+    },
+    {
+      "title": "Resident Assistant",
+      "subtitle": "Purdue University",
+      "date": "2020 - 2021"
+    },
+    {
+      "title": "Volunteer Robotics Teacher",
+      "subtitle": "Muslim Learning Society",
+      "date": "2014"
+    },
+    {
+      "title": "First Robotics Software Team Lead",
+      "subtitle": "Plainfield Earthquakers",
+      "date": "2013 - 2015"
+    },
+    {
+      "title": "Video Game Lead Developer",
+      "subtitle": "Wired Vision Games",
+      "date": "2012 - 2015"
+    }
+  ],
+  "speaking": [
+    {
+      "title": "Academic Research Panel Member",
+      "subtitle": "Qiskit Fall Fest",
+      "date": "2023"
+    },
+    {
+      "title": "Panel Moderator",
+      "subtitle": "QSC Summer School",
+      "date": "2022 - 2024"
+    },
+    {
+      "title": "American Controls Conference",
+      "subtitle": "ACC",
+      "date": "2022"
+    },
+    {
+      "title": "SURF Graduate Mentor",
+      "subtitle": "Purdue University",
+      "date": "2020 - 2023"
+    },
+    {
+      "title": "Fireside Chat Interviewer",
+      "subtitle": "Quantum Science Center",
+      "date": "2021 - 2022"
+    },
+    {
+      "title": "Stories of Success Fireside Chat Host",
+      "subtitle": "Purdue University",
+      "date": "2019 - 2020"
+    }
+  ],
+  "refereeRoles": [
+    {
+      "title": "Reviewer",
+      "subtitle": "Advanced Photonics",
+      "date": "2024"
+    },
+    {
+      "title": "Reviewer",
+      "subtitle": "Quantum",
+      "date": "2022 - 2024"
+    },
+    {
+      "title": "Reviewer",
+      "subtitle": "Nature Communications",
+      "date": "2022"
+    },
+    {
+      "title": "Reviewer",
+      "subtitle": "Advanced Materials",
+      "date": "2022"
+    },
+    {
+      "title": "Poster Session Committee",
+      "subtitle": "Elmore Center",
+      "date": "2022"
+    },
+    {
+      "title": "Online Research Symposium",
+      "subtitle": "Purdue SURF",
+      "date": "2020"
+    }
+  ],
+  "teachingRoles": [
+    {
+      "title": "First Time Researcher Fellowship Mentor",
+      "subtitle": "Purdue University",
+      "date": "2022 - 2024"
+    },
+    {
+      "title": "Graduate Mentor",
+      "subtitle": "Purdue SURF",
+      "date": "2020 - 2023"
+    },
+    {
+      "title": "Graduate Teaching Assistant (Data Structures and Algorithms)",
+      "subtitle": "Purdue University",
+      "date": "2021"
+    },
+    {
+      "title": "Graduate Assistant",
+      "subtitle": "Purdue SURF",
+      "date": "2020"
+    },
+    {
+      "title": "Graduate Teaching Assistant (Advanced C)",
+      "subtitle": "Purdue University",
+      "date": "2020"
+    },
+    {
+      "title": "Resident Assistant",
+      "subtitle": "Purdue University",
+      "date": "2016 - 2018"
+    }
+  ],
+  "competitions": [
+    {
+      "title": "2nd Place National Rube Goldberg Competition",
+      "subtitle": "Purdue University",
+      "date": "2016"
+    },
+    {
+      "title": "2nd Place Purdue First Robotics Regionals",
+      "subtitle": "Purdue University",
+      "date": "2014"
+    },
+    {
+      "title": "3rd Place IUPUI Mathematics Competition",
+      "subtitle": "Indiana University Purdue University of Indianapolis",
+      "date": "2014"
+    }
+  ],
+  "extWork": [
+    {
+      "title": "Graduate Research Assistant (Alexandra Boltasseva)",
+      "subtitle": "Purdue University",
+      "date": "2019 - 2024"
+    },
+    {
+      "title": "Committee Member",
+      "subtitle": "QSC Summer School",
+      "date": "2021 - 2023"
+    },
+    {
+      "title": "Advisor",
+      "subtitle": "Qiskit Fall Fest",
+      "date": "2023"
+    },
+    {
+      "title": "Quantum Algorithms Researcher",
+      "subtitle": "QuEra Computing",
+      "date": "2022"
+    },
+    {
+      "title": "Postdoctoral and Graduate Student Association Team Lead",
+      "subtitle": "Quantum Science Center",
+      "date": "2021 - 2022"
+    },
+    {
+      "title": "Graduate Research Assistant (Shreyas Sundaram)",
+      "subtitle": "Purdue University",
+      "date": "2021"
+    },
+    {
+      "title": "ECE Shop Graduate Assistant",
+      "subtitle": "Purdue University",
+      "date": "2019 - 2020"
+    },
+    {
+      "title": "Verification Team Engineer",
+      "subtitle": "ARM",
+      "date": "Summer 2019"
+    },
+    {
+      "title": "Software Team Lead",
+      "subtitle": "Purdue SoCET Team",
+      "date": "2018 - 2019"
+    },
+    {
+      "title": "SURF Fellow",
+      "subtitle": "Purdue University",
+      "date": "2017"
+    },
+    {
+      "title": "Undergraduate Research Assistant",
+      "subtitle": "Purdue University",
+      "date": "2016 - 2019"
+    }
+  ]
+}

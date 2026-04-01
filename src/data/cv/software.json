@@ -1,0 +1,97 @@
+[
+  {
+    "title": "Web Development",
+    "subtitle": "NanoML Team",
+    "date": "2023 -"
+  },
+  {
+    "title": "Custom Arch Linux Setup",
+    "subtitle": "Linux",
+    "date": "2022 -"
+  },
+  {
+    "title": "Neovim Personal Configuration",
+    "subtitle": "Linux",
+    "date": "2022 -"
+  },
+  {
+    "title": "ClearML Server Management",
+    "subtitle": "Linux",
+    "date": "2022 -"
+  },
+  {
+    "title": "Bloqade Rydberg Atom Simulations",
+    "subtitle": "QuEra Computing",
+    "date": "2022 -"
+  },
+  {
+    "title": "NanoML Experiment Manager",
+    "subtitle": "Python",
+    "date": "2023"
+  },
+  {
+    "title": "OpenAI Automatic Documentation Builder",
+    "subtitle": "OpenAI",
+    "date": "2023"
+  },
+  {
+    "title": "OpenAI + Alexa API Integration",
+    "subtitle": "OpenAI",
+    "date": "2022"
+  },
+  {
+    "title": "CEM Codes (Diffraction, Capacitor)",
+    "subtitle": "Purdue ECE",
+    "date": "2021"
+  },
+  {
+    "title": "ECE Shop Sign (RGB LED + Web Server)",
+    "subtitle": "Purdue ECE",
+    "date": "2019"
+  },
+  {
+    "title": "Bluetooth Controlled Powerstrip",
+    "subtitle": "Purdue ECE Embedded Sys.",
+    "date": "2018"
+  },
+  {
+    "title": "32-bit MIPS Processor from scratch",
+    "subtitle": "Purdue ECE 437",
+    "date": "2018"
+  },
+  {
+    "title": "VLSI Clock-Tree Synthesis Project",
+    "subtitle": "Purdue ECE 595",
+    "date": "2018"
+  },
+  {
+    "title": "Ethernet Packet Sniffer",
+    "subtitle": "Purdue ECE 337",
+    "date": "2018"
+  },
+  {
+    "title": "Multiple Pursuers and Sweep-Covers Enumeration",
+    "subtitle": "Purdue ECE Research",
+    "date": "2017"
+  },
+  {
+    "title": "8-bit Breadboard PC - Synchronized Clock",
+    "subtitle": "Personal Hobby",
+    "date": "2017"
+  },
+  {
+    "title": "Tanvas Image Processing and Material Analysis",
+    "subtitle": "Northwestern Hackathon",
+    "date": "2016"
+  },
+  {
+    "title": "Zombie Video Game",
+    "subtitle": "Wired Vision Games",
+    "date": "2014"
+  },
+  {
+    "title": "Falling Balls Android Game",
+    "subtitle": "Personal Hobby",
+    "date": "2013"
+  }
+]
