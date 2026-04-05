@@ -24,6 +24,17 @@ export interface CvItem {
   detail?: string;
 }
 
+export interface CvMentee {
+  name: string;
+  lastKnownLocation?: string;
+}
+
+/** Student highlights plus full mentee roster; see `src/data/cv/mentorship.json`. */
+export interface CvMentorshipData {
+  highlights: CvItem[];
+  mentees: CvMentee[];
+}
+
 /** @deprecated Legacy single-file CV shape; prefer `src/data/cv/*.json`. */
 export interface CvData {
   education: CvItem[];

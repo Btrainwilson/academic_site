@@ -1,6 +1,6 @@
 {
   "fullName": "Blake Anthony Wilson",
-  "currentPosition": "Co-Founder & Interim CEO, Zephram · Oxford, UK",
+  "currentPosition": "Co-founder & interim CEO, Zephram · Oxford, UK",
   "urls": {
     "github": "https://github.com/Btrainwilson",
     "bluesky": "https://bsky.app/profile/blakeawilson.bsky.social",
@@ -10,16 +10,19 @@
   },
   "interests": [
     "Machine Learning and Generative Modeling for Multiphysics and Design",
-    "Discrete Mathematics and Statistical Mechanics",
-    "Graph-Theoretic Analysis for Opimization",
-    "Nanophotonic Design for Quantum Computing",
-    "Software Engineering and Dev-Ops"
+    "Discrete Mathematics & Statistical Mechanics",
+    "Quantum Computing",
+    "Software Engineering & Dev-Ops"
   ],
   "skillList": [
     "C++",
     "CUDA",
     "Python",
     "PyTorch",
+    "Deep Learning",
+    "RL",
+    "Inference",
+    "Multi-GPU Optimization",
     "Numerical Simulations",
     "ML for Physics & Optimization",
     "Physics-Inspired Generative Modeling",

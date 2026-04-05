@@ -117,7 +117,10 @@ write("papers.json", old.pubs ?? []);
 write("conferences.json", old.confs ?? []);
 write("news.json", old.news ?? []);
 write("affiliations.json", tuplesToItems(old.affiliations));
-write("mentorship.json", menteesToItems(old.mentees));
+write("mentorship.json", {
+  highlights: menteesToItems(old.mentees),
+  mentees: [],
+});
 write("software.json", tuplesToItems(old.extSWE));
 write("references.json", referencesPublic);
 

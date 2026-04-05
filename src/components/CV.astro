@@ -4,6 +4,7 @@ import type {
   CvExperienceData,
   CvFundingData,
   CvItem,
+  CvMentorshipData,
   CvNewsItem,
   CvPaper,
   CvProfile,
@@ -21,7 +22,7 @@ interface Props {
   conferences: CvPaper[];
   news: CvNewsItem[];
   affiliations: CvItem[];
-  mentorship: CvItem[];
+  mentorship: CvMentorshipData;
   software: CvItem[];
   references: CvItem[];
 }
@@ -41,6 +42,11 @@ const {
   software,
   references,
 } = Astro.props;
+
+const mentorshipHighlights = mentorship.highlights ?? [];
+const menteesSorted = [...(mentorship.mentees ?? [])].sort((a, b) =>
+  a.name.localeCompare(b.name),
+);
 
 const summary = profile.summaries?.[summaryKey] ?? profile.summaries?.RS ?? "";
 
@@ -420,13 +426,13 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
   }
 
   {
-    mentorship.length > 0 && (
+    mentorshipHighlights.length > 0 && (
       <section class="not-prose">
         <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
           Student highlights &amp; mentorship
         </h2>
         <ul class="text-foreground list-none space-y-4 p-0">
-          {mentorship.map((item) => (
+          {mentorshipHighlights.map((item) => (
             <li>
               <div class="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
                 <div>
@@ -441,6 +447,30 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
                 {item.date && (
                   <p class="text-muted-foreground shrink-0 text-sm tabular-nums sm:text-right">
                     {item.date}
+                  </p>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    menteesSorted.length > 0 && (
+      <section class="not-prose">
+        <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+          Mentees
+        </h2>
+        <ul class="text-foreground list-none space-y-3 p-0">
+          {menteesSorted.map((m) => (
+            <li>
+              <div class="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                <p class="font-medium leading-snug">{m.name}</p>
+                {m.lastKnownLocation?.trim() && (
+                  <p class="text-muted-foreground shrink-0 text-sm sm:text-right">
+                    {m.lastKnownLocation.trim()}
                   </p>
                 )}
               </div>

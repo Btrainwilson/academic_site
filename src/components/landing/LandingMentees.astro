@@ -1,0 +1,36 @@
+---
+import type { CvMentee } from "@/types/data";
+
+interface Props {
+  mentees: CvMentee[];
+}
+
+const { mentees } = Astro.props;
+
+const sorted = [...mentees].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+{
+  sorted.length > 0 && (
+    <section class="not-prose mt-20" aria-labelledby="mentees-heading">
+      <h2
+        id="mentees-heading"
+        class="text-foreground mb-6 text-2xl font-semibold tracking-tight"
+      >
+        Mentees
+      </h2>
+      <ul class="divide-border/80 divide-y rounded-xl border border-border/80">
+        {sorted.map((m) => (
+          <li class="hover:bg-muted/40 flex flex-col gap-1 px-4 py-2 transition-colors sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+            <span class="text-foreground text-base font-medium leading-snug">{m.name}</span>
+            {m.lastKnownLocation?.trim() && (
+              <span class="text-muted-foreground shrink-0 text-md sm:text-right">
+                {m.lastKnownLocation.trim()}
+              </span>
+            )}
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}

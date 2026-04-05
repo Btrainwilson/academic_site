@@ -1,62 +1,122 @@
-[
-  {
-    "title": "First Time Researcher Fellowship",
-    "subtitle": "Advay Welling",
-    "date": "EURO 2024"
-  },
-  {
-    "title": "First Time Researcher Fellowship",
-    "subtitle": "Sarthak Tandon",
-    "date": "EURO 2024"
-  },
-  {
-    "title": "First Time Researcher Fellowship",
-    "subtitle": "Geetika Chitturi",
-    "date": "EURO 2024"
-  },
-  {
-    "title": "Qiskit Fall Fest Lead",
-    "subtitle": "Vaishnavi Iyer",
-    "date": "2023"
-  },
-  {
-    "title": "Best Poster Presentation",
-    "subtitle": "Daksh Kumar Singh",
-    "date": "SURF 2023"
-  },
-  {
-    "title": "Summer Undergraduate Research Fellowship",
-    "subtitle": "Daksh Kumar Singh",
-    "date": "SURF 2023"
-  },
-  {
-    "title": "First Time Researcher Fellowship",
-    "subtitle": "Daksh Kumar Singh",
-    "date": "EURO 2023"
-  },
-  {
-    "title": "First Time Researcher Fellowship",
-    "subtitle": "Michael Bezick",
-    "date": "EURO 2023"
-  },
-  {
-    "title": "IBM Watson Quantum Summer Internship",
-    "subtitle": "Vaishnavi Iyer",
-    "date": "2023"
-  },
-  {
-    "title": "Summer Undergraduate Research Fellowship",
-    "subtitle": "Vaishnavi Iyer",
-    "date": "2022"
-  },
-  {
-    "title": "Best First Time Researcher Award",
-    "subtitle": "David Czerwonki",
-    "date": "SURF 2020"
-  },
-  {
-    "title": "Best First Time Researcher Award",
-    "subtitle": "Rachel Zhang",
-    "date": "SURF 2020"
-  }
-]
+{
+  "highlights": [
+    {
+      "title": "First Time Researcher Fellowship",
+      "subtitle": "Advay Welling",
+      "date": "EURO 2024"
+    },
+    {
+      "title": "First Time Researcher Fellowship",
+      "subtitle": "Sarthak Tandon",
+      "date": "EURO 2024"
+    },
+    {
+      "title": "First Time Researcher Fellowship",
+      "subtitle": "Geetika Chitturi",
+      "date": "EURO 2024"
+    },
+    {
+      "title": "Qiskit Fall Fest Lead",
+      "subtitle": "Vaishnavi Iyer",
+      "date": "2023"
+    },
+    {
+      "title": "Best Poster Presentation",
+      "subtitle": "Daksh Kumar Singh",
+      "date": "SURF 2023"
+    },
+    {
+      "title": "Summer Undergraduate Research Fellowship",
+      "subtitle": "Daksh Kumar Singh",
+      "date": "SURF 2023"
+    },
+    {
+      "title": "First Time Researcher Fellowship",
+      "subtitle": "Daksh Kumar Singh",
+      "date": "EURO 2023"
+    },
+    {
+      "title": "First Time Researcher Fellowship",
+      "subtitle": "Michael Bezick",
+      "date": "EURO 2023"
+    },
+    {
+      "title": "IBM Watson Quantum Summer Internship",
+      "subtitle": "Vaishnavi Iyer",
+      "date": "2023"
+    },
+    {
+      "title": "Summer Undergraduate Research Fellowship",
+      "subtitle": "Vaishnavi Iyer",
+      "date": "2022"
+    },
+    {
+      "title": "Best First Time Researcher Award",
+      "subtitle": "David Czerwonki",
+      "date": "SURF 2020"
+    },
+    {
+      "title": "Best First Time Researcher Award",
+      "subtitle": "Rachel Zhang",
+      "date": "SURF 2020"
+    }
+  ],
+  "mentees": [
+    {
+      "name": "Advay Welling",
+      "lastKnownLocation": "Purdue SoCET and AMD"
+    },
+    {
+      "name": "Daksh Kumar Singh",
+      "lastKnownLocation": "Purdue MS student under Boltasseva/Shalaev group"
+    },
+    {
+      "name": "Daria Shkel",
+      "lastKnownLocation": "Cornell PhD student"
+    },
+    {
+      "name": "David Czerwonki",
+      "lastKnownLocation": "Purdue PhD student and Senior Graduate Professional at EURO"
+    },
+    {
+      "name": "Geetika Chitturi",
+      "lastKnownLocation": "Purdue NanoML and NanoX"
+    },
+    {
+      "name": "Lee Dongeun",
+      "lastKnownLocation": "VM"
+    },
+    {
+      "name": "Michael Bezick",
+      "lastKnownLocation": "Incoming PhD student at University of Maryland"
+    },
+    {
+      "name": "Rachel Zhang",
+      "lastKnownLocation": "University of Michigan Medical School"
+    },
+    {
+      "name": "Sarthak Tandon",
+      "lastKnownLocation": "Purdue and AMD"
+    },
+    {
+      "name": "Seoyoung Cho",
+      "lastKnownLocation": "KAIST"
+    },
+    {
+      "name": "Rohan Ojha",
+      "lastKnownLocation": "Conway"
+    },
+    {
+      "name": "Rohan Malavathu",
+      "lastKnownLocation": "Amazon"
+    },
+    {
+      "name": "Trang Do",
+      "lastKnownLocation": "Purdue and ORNL"
+    },
+    {
+      "name": "Vaishnavi Iyer",
+      "lastKnownLocation": "Purdue PhD student at Boltasseva/Shalaev group"
+    }
+  ]
+}

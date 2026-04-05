@@ -3,17 +3,20 @@
     {
       "id": "startup",
       "head": {
-        "title": "Zephram",
-        "subtitle": "Co-Founder & Interim CEO (Former CTO)",
+        "title": "Co-Founder & Interim CEO (Former CTO)",
+        "subtitle": "Zephram",
         "location": "Oxford, UK",
         "date": "2025 - "
       },
       "bullets": [
         {
-          "text": "Appointed by the board (Abstract) to lead our $20M company during a $1.2M financial investigation and restructuring following insurmountable fiduciary breaches from previous leadership. Managed legal counsel and stakeholder communications to stabilize the entity. Initiated rebranding, stabilized operations, and pivoted to a new business model and product strategy. Brought in research partnerships with Cambridge, UC Berkeley, and Purdue."
+          "text": "Appointed by the board (Abstract) to lead our $20M company during a $1.2M financial investigation and restructuring following insurmountable fiduciary breaches from previous leadership. Managed legal counsel and stakeholder communications to stabilize the entity. Initiated rebranding, stabilized operations, and pivoted to a new business model and product strategy."
         },
         {
           "text": "As CTO, led a team of 8 Oxford-based engineers and scientists to build and deploy full-stack AI infrastructure for multi-agent systems and inference, spanning CUDA kernels, model serving, backend services, and web interfaces."
+        },
+        {
+          "text": "Served as interim CEO leading R&D for CUDA optimizations and agentic type-safety, co-negotiated partnerships with hlevel.ai, Cambridge, and UC Berkeley, and co-led the development of pbj, the full-stack multi-agent finetuning+inference platform."
         },
         {
           "text": "Proprietary Breakthroughs: Context compaction (5x speed-up + 80% cost reduction), simulated finetuning ($0.01 vs $1000x LORA), multi-agent swarm communication protocols (15% faster on small-medium scale models), CUDA kernels for multi-GPU optimization (300x speed-up over previous state-of-the-art), and more."
@@ -23,8 +26,8 @@
     {
       "id": "quantinuum",
       "head": {
-        "title": "AI for Quantum",
-        "subtitle": "Research Scientist III",
+        "title": "Research Scientist III",
+        "subtitle": "Quantinuum",
         "location": "Quantinuum, Oxford & London",
         "date": "2024 - 2025"
       },
@@ -43,13 +46,15 @@
     {
       "id": "ml",
       "head": {
-        "title": "NanoML",
-        "subtitle": "Team Lead and Founder",
+        "title": "Team Lead and Founder",
+        "subtitle": "NanoML",
         "location": "Purdue University",
-        "link": "https://nanoml.org",
-        "date": "2021 - "
+        "date": "2021 - 2024"
       },
       "bullets": [
+        {
+          "text": "Founded and grew the team to 10 researchers and published in Applied Physics Reviews, Nature Partner Journal, CLEO, and APS with work funded by NSF, DOE, ORNL (OLCF), and AWS Braket."
+        },
         {
           "text": "Published machine learning algorithms for designing meta-optical devices, achieving a 16200% speed-up resulting in a major milestone for the Quantum Science Center with two news articles and 30 citations.",
           "links": [
@@ -74,9 +79,9 @@
     {
       "id": "quera",
       "head": {
-        "title": "Quantum Machine Learning",
-        "subtitle": "Algorithms Researcher",
-        "location": "QuEra Computing",
+        "title": "Algorithms Researcher",
+        "subtitle": "QuEra Computing",
+        "location": "Quantum Machine Learning",
         "date": "2022"
       },
       "bullets": [
@@ -103,8 +108,8 @@
     {
       "id": "uav",
       "head": {
-        "title": "UAV Routing Algorithms",
-        "subtitle": "Researcher",
+        "title": "Algorithms Researcher",
+        "subtitle": "Multi-agent systems and UAV routing",
         "location": "Air Force Research Lab",
         "date": "2017 - 2022"
       },
@@ -126,8 +131,8 @@
     {
       "id": "arm",
       "head": {
-        "title": "Computer Architecture Design",
-        "subtitle": "Software Engineer",
+        "title": "Software Engineer",
+        "subtitle": "System-on-Chip Verification",
         "location": "ARM",
         "date": "2019"
       },

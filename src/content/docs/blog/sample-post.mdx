@@ -1,20 +1,39 @@
 ---
-title: Writing math in the lab blog
-description: Inline and display equations with KaTeX.
-date: 2025-03-15
-draft: false
+title: Why it took me 10 years to finish my first paper
+description: The story behind Decorated Sweep Covers
+date: 2026-04-04
+draft: true
 ---
 
-This post uses **Markdown** with LaTeX via KaTeX (same pipeline as the rest of the site). Inline math: $E = mc^2$.
+*Sometimes you get so in over your head that you have to travel the world to find a solution for back home.*
 
-Display equation:
+One thing you notice if you hang around ``serious'' researchers is they often have day-to-day work which is motivated by deadlines, marketing, and most of all, funding.
+They work in an area that pays the bills and they're often good at it. It's the work they're paid to do.
+But, if you ask them what they're really working on, they'll tell you how over the weekend they were using category theory and string diagrams to study the permutation equivariance of transformer architectures. 
+You might be surprised at the number of people working in quantum computing who cringe at the headlines while promoting them on LinkedIn so they can do fun math with ~20% of their time. 
+Sometimes, that 20% of your time takes longer than you expect. 
 
-$$
-\int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
-$$
+All the way back in 2016, I approached Shreyas Sundaram to expand his algorithm for computing the optimal policy for a single pursuer to capture an evader in a road network.
+It's like cops and robbers but there's only one flying cop and they have to figure out where the robber is going before it escapes. 
+I had to take his original algorithm and expand it to work with a squad of cops.
+Like a lot of useful problems, this one is NP-hard and inapproximable so our solution is a heuristic.
+We assign sections of the road network to sub-groups of cops and then each cop is responsible for their section of the road network.
+Of course, it was my first research project so I was slow and made a lot of mistakes. Thankfully, I earned a spot in SURF 2017 to work on this project. Figuring out the specifics of the heuristic took me up until the end of summer 2017.
+But, the paper needed the algorithm's time complexity.
 
-You can cite matrices too:
+**Skip this section if you don't care about the algorithm details**
+Essentially, we restrict the cops policies so they can only move further into their section if they've determined the state of all their sensors before their depth.
+This means we can work backwards from the end of the road network to the start, computing the optimal policy for each section of the road network.
+However, we have the option of pursuers having overlapping sections of the road network.
+It turns out because of our policy restriction, we can assume that cops have to travel together .
 
-$$
-\mathbf{A} = \begin{pmatrix} a & b \\ c & d \end{pmatrix}
-$$
+
+**End of algorithm details**
+Welcome back. So, the main problem with figuring out the time complexity was to enumerate all ways of distributing the cops according to our policy. 
+At first, I tackled the problem head-on by deriving the recurrence relation for an infinite n-ary tree road network (assuming this was worst-case).
+This took me much longer than expected and I had to put the problem on the shelf for my junior year. 
+I was an RA and going through my junior year in Purdue ECE, which is a notoriously overbooked year. 
+So, I couldn't return to the problem again until 2018 when at the end of the summer of 2018 I found a couple weeks away from SoCET work to come back to the problem.
+
+
+

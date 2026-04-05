@@ -4,14 +4,17 @@ import Hero from "@/components/landing/Hero.astro";
 import { CollaboratorCarousel } from "@/components/landing/CollaboratorCarousel";
 import LandingAnnouncements from "@/components/landing/LandingAnnouncements.astro";
 import LandingInTheNews from "@/components/landing/LandingInTheNews.astro";
+import LandingMentees from "@/components/landing/LandingMentees.astro";
 import PublicationList from "@/components/PublicationList.astro";
 import type {
+  CvMentorshipData,
   CvProfile,
   LandingAnnouncement,
   LandingHero,
   LandingNewsItem,
 } from "@/types/data";
 import profileData from "@/data/cv/profile.json";
+import mentorshipData from "@/data/cv/mentorship.json";
 import heroData from "@/data/landing/hero.json";
 import announcementsData from "@/data/landing/announcements.json";
 import inTheNewsData from "@/data/landing/in-the-news.json";
@@ -19,6 +22,7 @@ import { loadAffiliationsFromFolder } from "@/lib/affiliations";
 import { publications } from "@/lib/publications";
 
 const profile = profileData as CvProfile;
+const mentorship = mentorshipData as CvMentorshipData;
 const hero = heroData as LandingHero;
 const collaborators = loadAffiliationsFromFolder();
 const announcements = announcementsData as LandingAnnouncement[];
@@ -62,7 +66,7 @@ const inTheNewsSorted = [...inTheNewsRaw].sort((a, b) => {
       )
     }
 
-    <LandingAnnouncements items={announcements} />
+    {/* <LandingAnnouncements items={announcements} /> */}
     <LandingInTheNews items={inTheNewsSorted} />
 
     <section class="mt-20">
@@ -71,5 +75,7 @@ const inTheNewsSorted = [...inTheNewsRaw].sort((a, b) => {
         <a href="/publications" class="text-primary font-medium hover:underline">View all →</a>
       </p>
     </section>
+
+    <LandingMentees mentees={mentorship.mentees} />
   </div>
 </BaseLayout>
