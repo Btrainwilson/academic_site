@@ -69,9 +69,9 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
 ];
 ---
 
-<div class="cv-panel not-prose space-y-10" data-panel="cv" data-active="true">
+<div class="cv-panel not-prose space-y-6" data-panel="cv" data-active="true">
   <header
-    class="not-prose flex flex-col gap-4 border-b border-border pb-6 sm:flex-row sm:items-start sm:justify-between sm:gap-6"
+    class="not-prose flex flex-col gap-4 border-b border-border sm:flex-row sm:items-start sm:justify-between sm:gap-6 !mb-2"
   >
     <div class="min-w-0 flex-1">
       <h1 class="text-foreground text-2xl font-semibold tracking-tight sm:text-3xl">
@@ -90,24 +90,45 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
 
   {
     (summary ||
+      profile.productHighlight ||
       (profile.interests?.length ?? 0) > 0 ||
       (profile.skillList?.length ?? 0) > 0) && (
-      <section class="not-prose space-y-6">
-        {summary && (
-          <p class="text-foreground text-sm leading-relaxed">{summary}</p>
-        )}
-        {(profile.interests?.length ?? 0) > 0 && (
-          <div>
-            <h2 class="text-foreground mb-2 text-sm font-semibold uppercase tracking-wide">
-              Research interests
-            </h2>
-            <ul class="text-muted-foreground list-disc space-y-1 pl-5 text-sm leading-relaxed">
-              {profile.interests.map((t) => (
-                <li>{t}</li>
-              ))}
-            </ul>
-          </div>
-        )}
+      <section class="not-prose space-y-6 !mt-0">
+        {
+          (summary || profile.productHighlight) && (
+            <p class="text-foreground  text-sm leading-relaxed">
+              {summary && <>{summary}</>}
+              {summary && profile.productHighlight && (
+                <>
+                  {" "}
+                  <span class="text-muted-foreground" aria-hidden="true">
+                    ·
+                  </span>{" "}
+                </>
+              )}
+              {
+                profile.productHighlight && (
+                  <>
+                    <a
+                      href={profile.productHighlight.url}
+                      class="text-primary font-medium hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {profile.productHighlight.label}
+                    </a>
+                    {profile.productHighlight.subtitle && (
+                      <span class="text-muted-foreground">
+                        {" "}
+                        — {profile.productHighlight.subtitle}
+                      </span>
+                    )}
+                  </>
+                )
+              }
+            </p>
+          )
+        }
         {(profile.skillList?.length ?? 0) > 0 && (
           <div>
             <h2 class="text-foreground mb-2 text-sm font-semibold uppercase tracking-wide">
@@ -156,12 +177,12 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
 
   {
     experience.roles.length > 0 && (
-      <section class="not-prose space-y-10">
+      <section class="not-prose space-y-5">
         <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
           Experience
         </h2>
         {experience.roles.map((role) => (
-          <div class="border-border/60 border-b border-dashed pb-8 last:border-0 last:pb-0">
+          <div class="border-border/60 border-b border-dashed pb-4 last:border-0 last:pb-0">
             <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
               <div>
                 <p class="text-foreground text-lg font-semibold leading-tight">
@@ -185,12 +206,12 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
                 {role.head.date}
               </p>
             </div>
-            <ul class="text-foreground mt-4 list-disc space-y-3 pl-5 text-sm leading-relaxed">
+            <ul class="text-foreground mt-4 list-disc space-y-1.5 pl-5 text-sm leading-relaxed">
               {role.bullets.map((b) => (
                 <li>
                   {b.text}
                   {b.links && b.links.length > 0 && (
-                    <span class="text-muted-foreground mt-1 block text-xs">
+                    <span class="text-muted-foreground ml-1 text-xs">
                       {b.links.map((href, i) => (
                         <span>
                           {i > 0 ? " · " : ""}
@@ -214,6 +235,19 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
       </section>
     )
   }
+
+        {(profile.interests?.length ?? 0) > 0 && (
+          <div>
+            <h2 class="text-foreground mb-2 text-sm font-semibold uppercase tracking-wide">
+              Research interests
+            </h2>
+            <ul class="text-muted-foreground list-disc space-y-1 pl-5 text-sm leading-relaxed">
+              {profile.interests.map((t) => (
+                <li>{t}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
   {
     papers.length > 0 && (
@@ -587,10 +621,6 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
         <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
           References
         </h2>
-        <p class="text-muted-foreground mb-4 text-xs">
-          Contact information is provided for academic use. Phone numbers are omitted on the public
-          site; see your private records if needed.
-        </p>
         <ul class="text-foreground list-none space-y-3 p-0 text-sm">
           {references.map((r) => (
             <li>
@@ -602,8 +632,6 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
       </section>
     )
   }
-
-  <slot name="additionalNotes" />
 </div>
 
 <div class="cv-panel not-prose space-y-6" data-panel="research" data-active="false" hidden>

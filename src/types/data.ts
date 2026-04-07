@@ -86,11 +86,21 @@ export interface CvContactBannerItem {
   link: string;
 }
 
+/** Flagship product or project link, shown prominently on the CV header. */
+export interface CvProductHighlight {
+  label: string;
+  url: string;
+  /** Short line beside the link (e.g. one-sentence pitch). */
+  subtitle?: string;
+}
+
 export interface CvProfile {
   /** Shown as the main CV heading (e.g. full legal name). */
   fullName?: string;
   /** One line under the name (e.g. current role and organization). */
   currentPosition?: string;
+  /** Optional prominent product URL (e.g. company flagship). */
+  productHighlight?: CvProductHighlight;
   urls: Record<string, string>;
   interests: string[];
   skillList: string[];

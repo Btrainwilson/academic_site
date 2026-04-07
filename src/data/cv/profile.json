@@ -1,6 +1,11 @@
 {
   "fullName": "Blake Anthony Wilson",
-  "currentPosition": "Co-founder & interim CEO, Zephram · Oxford, UK",
+  "currentPosition": "Co-founder & interim CEO, Zephram · Santa Barbara, CA",
+  "productHighlight": {
+    "label": "PBJ",
+    "url": "https://pbj-model-builder.vercel.app/",
+    "subtitle": "Visual multi-agent orchestration & fine-tuning"
+  },
   "urls": {
     "github": "https://github.com/Btrainwilson",
     "bluesky": "https://bsky.app/profile/blakeawilson.bsky.social",
@@ -30,12 +35,17 @@
     "Multi-Agent Systems",
     "SWE",
     "CloudOps",
+    "Model serving",
+    "MLOps",
+    "Observability",
+    "Distributed systems",
+    "A/B testing",
     "Public Speaking",
     "Grant Writing",
     "Research Leadership and Management"
   ],
   "summaries": {
-    "ceo": "Co-Founder and Interim CEO of Zephram $20M Oxford-based R&D company building multi-agent and inference technology for scientific research. 12+ years in software engineering, algorithm design and analysis, and former research scientist at Quantinuum and QuEra using machine learning for physics-inspired generative modeling and optimization.",
+    "ceo": "12+ years in software engineering, algorithm design and analysis, and former research scientist at Quantinuum and QuEra designing RL and transformer infrastructure for data collection, deployment, device design and optimization. Co-Founder and Interim CEO of Zephram $20M Oxford-based R&D company building multi-agent and inference technology for scientific research. ",
     "RS": "Electrical and Computer Engineering Ph.D. working on machine learning, physics-inspired generative models, and optimization. 12+ years of experience in software engineering and 9+ years in algorithm design and analysis.  ",
     "RS_cas": "I mainly work on machine learning, physics-inspired generative models, and optimization. I occasionally work on computational physics and math too. 12+ years of experience in software engineering and 9+ years in algorithm design and analysis.  ",
     "op": "Electrical and Computer Engineering Ph.D. with 12+ years of experience in software engineering and 9+ years in algorithm design and analysis. Leader of a team of 16 data scientists and engineers developing breakthroughs in machine learning assisted optimization algorithms for applications in computational electromagnetics and quantum optics.",

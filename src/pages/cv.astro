@@ -43,15 +43,12 @@ const references = referencesData as CvItem[];
 const cvEntries = await getCollection("cv");
 const byId = (id: string) => cvEntries.find((e) => e.id === id);
 
-const bodyEntry = byId("body");
 const researchEntry = byId("research-statement");
 const teachingEntry = byId("teaching-statement");
 
-const bodyRendered = bodyEntry ? await render(bodyEntry) : null;
 const researchRendered = researchEntry ? await render(researchEntry) : null;
 const teachingRendered = teachingEntry ? await render(teachingEntry) : null;
 
-const CvBody = bodyRendered?.Content;
 const ResearchContent = researchRendered?.Content;
 const TeachingContent = teachingRendered?.Content;
 ---
@@ -78,23 +75,6 @@ const TeachingContent = teachingRendered?.Content;
     software={software}
     references={references}
   >
-    {
-      CvBody && (
-        <div
-          slot="additionalNotes"
-          class="border-border not-prose border-t pt-10"
-        >
-          <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
-            Additional notes
-          </h2>
-          <div
-            class="prose prose-neutral dark:prose-invert cv-prose max-w-none text-[0.95rem] leading-snug prose-headings:mt-6 prose-headings:mb-2 prose-headings:text-base prose-headings:font-semibold prose-p:my-1.5 prose-li:my-0.5 prose-ul:my-2 prose-h1:text-xl prose-h2:text-base prose-h3:text-sm prose-a:text-primary"
-          >
-            <CvBody />
-          </div>
-        </div>
-      )
-    }
     {
       ResearchContent && (
         <div
