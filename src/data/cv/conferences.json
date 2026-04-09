@@ -118,5 +118,11 @@
     "title": "Machine Learning for Nanophotonic Design and Quantum Measurements",
     "citation": "Purdue Elmore Center (2021)",
     "link": ""
+  },
+  {
+    "authors": "Wilson, B., Kudyshev, Z., Kildishev, A., Shalaev, V., Kais, S., Boltasseva, A.",
+    "title": "Metasurface Design Optimization via D-Wave based Sampling",
+    "citation": "CLEO 2021",
+    "link": ""
   }
 ]

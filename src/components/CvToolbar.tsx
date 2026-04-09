@@ -23,7 +23,12 @@ export function CvToolbar() {
   }, [active]);
 
   const print = () => {
-    window.print();
+    // If we're on the CV tab, download the LaTeX PDF instead of browser printing
+    if (active === "cv") {
+      window.open("/cv.pdf", "_blank");
+    } else {
+      window.print();
+    }
   };
 
   return (
@@ -57,10 +62,10 @@ export function CvToolbar() {
         size="sm"
         className="shrink-0 gap-2"
         onClick={print}
-        aria-label="Print or save as PDF"
+        aria-label={active === "cv" ? "Download PDF CV" : "Print or save as PDF"}
       >
         <Printer className="size-4" aria-hidden />
-        Print / PDF
+        {active === "cv" ? "Download PDF" : "Print / PDF"}
       </Button>
     </div>
   );

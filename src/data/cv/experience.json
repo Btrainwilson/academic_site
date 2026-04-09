@@ -1,4 +1,11 @@
 {
+  "order": [
+    "startup",
+    "quantinuum",
+    "ml",
+    "quera",
+    "arm"
+  ],
   "roles": [
     {
       "id": "startup",
@@ -10,36 +17,42 @@
       },
       "bullets": [
         {
-          "text": "Appointed by the board (Abstract) to lead our $20M company during a $1.2M financial investigation and restructuring following insurmountable fiduciary breaches from previous leadership. Managed legal counsel and stakeholder communications to stabilize the entity. Initiated rebranding, stabilized operations, and pivoted to a new business model and product strategy."
+          "text": "Led a team of 8 Oxford engineers and scientists to develop AI infrastructure with modal, Lightning, FastAPI, PyTorch, and Next.js for building pbj, our full-stack multi-agent finetuning+inference no-code platform. Developed multi-GPU CUDA kernels for energy-model inference, achieving up to 600x speed-up over previous state-of-the-art.",
+          "links": [
+            "https://pbj-model-builder.vercel.app/"
+          ]
         },
         {
-          "text": "As CTO, led a team of 8 Oxford-based engineers and scientists to build and deploy full-stack AI infrastructure for multi-agent systems and inference, spanning CUDA kernels, model serving, backend services, and web interfaces."
+          "text": "Appointed by the board (Abstract) to lead our $20M company during a $1.2M financial investigation and restructuring following insurmountable fiduciary breaches from previous leadership. Negotiated partnerships with hlevel.ai, Cambridge, and UC Berkeley. Managed legal counsel and stakeholder communications to stabilize the entity. Initiated rebranding, stabilized operations, and pivoted to a new business model and product strategy."
         },
         {
-          "text": "Served as interim CEO leading R&D for CUDA optimizations and agentic type-safety, co-negotiated partnerships with hlevel.ai, Cambridge, and UC Berkeley, and co-led the development of pbj, the full-stack multi-agent finetuning+inference platform."
-        },
-        {
-          "text": "Proprietary Breakthroughs: Context compaction (5x speed-up + 80% cost reduction), simulated finetuning ($0.01 vs $1000x LORA), multi-agent swarm communication protocols (15% faster on small-medium scale models), CUDA kernels for multi-GPU optimization (300x speed-up over previous state-of-the-art), and more."
+          "text": "Proprietary Breakthroughs built on our stack: Context compaction (5x speed-up + 80% cost reduction), simulated finetuning ($0.01 vs $1000x LORA), multi-agent swarm communication protocols (15% faster on small-medium scale models), CUDA kernels for multi-GPU optimization (300x speed-up over previous state-of-the-art), and more."
         }
       ]
     },
     {
       "id": "quantinuum",
       "head": {
-        "title": "Research Scientist III",
+        "title": "Research Scientist III (AI for Quantum and NLP)",
         "subtitle": "Quantinuum",
         "location": "Quantinuum, Oxford & London",
         "date": "2024 - 2025"
       },
       "bullets": [
         {
-          "text": "Built and benchmarked multiGPU CUDA async kernels for UCCSD quantum circuits, achieving 4-20x speed-up for data collection. Modified token vocabulary and PPO/GRPO losses for better generative performance in GPT2 models."
+          "text": "Led the development of internal PyTorch and CUDA packages for RL+model infrastructure, custom transformer architectures (GPT-2 and decoder heads from scratch), and dataset generation pipelines (AWS, Lightning) to support collaborations with Nvidia + Deepmind for using GPT-2 models and agentic AI to generate quantum chemistry circuits and datasets. Fueled publications and industry partnerships.",
+          "links": [
+            "https://www.linkedin.com/posts/fabianfinger_ai4science-activity-7445132026497736704-jTrY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAAvnr8YB2OWo1sfIuB6RpDh3HVDB4rn_ICY"
+          ]
         },
         {
-          "text": "Led RL infrastructure and algorithms for collaborating with Nvidia + Deepmind on generative modeling, quantum circuit generation, quantum chemistry and optimization that will fuel future publications and industry partnerships."
+          "text": "Engineered new multi-GPU CUDA kernels for UCCSD quantum circuits, achieving a 20x speed-up over previous state-of-the-art methods for data collection. Built a constrained decoder architecture with custom PPO/GRPO losses for better generative performance in GPT-2 models."
         },
         {
-          "text": "Developed generative AI for integrated photonics devices, new latent graph diffusion models for quantum circuit synthesis and transpilation, graph optimization for neural architecture search, and QNLP diagram generation."
+          "text": "Co-developed and contributed to Lambeq, an open-source modular and composable NLP toolkit with 500+ stars and 80K+ downloads.",
+          "links": [
+            "https://github.com/Quantinuum/lambeq"
+          ]
         }
       ]
     },
@@ -53,17 +66,17 @@
       },
       "bullets": [
         {
-          "text": "Founded and grew the team to 10 researchers and published in Applied Physics Reviews, Nature Partner Journal, CLEO, and APS with work funded by NSF, DOE, ORNL (OLCF), and AWS Braket."
+          "text": "Founded a team of 10 researchers developing ML models and algorithms for photonic device design and optimization. Published papers in Applied Physics Reviews, Nature Partner Journal, CLEO, and APS with work funded by NSF, DOE, ORNL (OLCF), and AWS Braket."
         },
         {
-          "text": "Published machine learning algorithms for designing meta-optical devices, achieving a 16200% speed-up resulting in a major milestone for the Quantum Science Center with two news articles and 30 citations.",
+          "text": "Developed new autoencoder, GAN, and diffusion models for designing meta-optical devices, achieving a 16200% speed-up resulting in a major milestone for the Quantum Science Center with two news articles and 50 citations.",
           "links": [
             "https://pubs.aip.org/aip/sci/article/2021/53/531104/365746/Framework-maps-continuous-space-inverse-design",
             "https://engineering.purdue.edu/ECE/News/2022/ece-researchers-develop-quantum-machine-learning-algorithm-for-optimizing-arbitrary-engineering-problems"
           ]
         },
         {
-          "text": "Raised $27k in computing resources through grants, saved $40k in ML costs through server maintenance, and assisted in raising $200k+ for the QSC Summer Schools.",
+          "text": "Raised $27k in computing resources through grants, saved $40k in ML costs through server hosting, and assisted in raising $200k+ for the QSC Summer School.",
           "links": [
             "https://www.ornl.gov/news/quantum-science-center-concludes-second-annual-summer-school-style"
           ]
@@ -86,7 +99,7 @@
       },
       "bullets": [
         {
-          "text": "Demonstrated comparative advantage on neutral atoms for generative AI sampling of photonic devices.",
+          "text": "Developed Julia and PyTorch packages for simulating and analyzing the spectral gap of Rydberg atom systems . Demonstrated comparative advantage on neutral atoms for generative AI sampling of photonic devices.",
           "links": [
             "https://arxiv.org/abs/2407.13830"
           ]

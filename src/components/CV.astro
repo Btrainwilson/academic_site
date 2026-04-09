@@ -48,6 +48,12 @@ const menteesSorted = [...(mentorship.mentees ?? [])].sort((a, b) =>
   a.name.localeCompare(b.name),
 );
 
+const orderedRoles = experience.order
+  ? experience.order
+      .map((id) => experience.roles.find((r) => r.id === id))
+      .filter((r) => r !== undefined)
+  : experience.roles;
+
 const summary = profile.summaries?.[summaryKey] ?? profile.summaries?.RS ?? "";
 
 const displayName = profile.fullName?.trim() || "Curriculum vitae";
@@ -176,12 +182,12 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
   }
 
   {
-    experience.roles.length > 0 && (
+    orderedRoles.length > 0 && (
       <section class="not-prose space-y-5">
         <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
           Experience
         </h2>
-        {experience.roles.map((role) => (
+        {orderedRoles.map((role) => (
           <div class="border-border/60 border-b border-dashed pb-4 last:border-0 last:pb-0">
             <div class="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
               <div>
@@ -262,23 +268,24 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
                 {i + 1}.
               </span>
               <div class="min-w-0 flex-1 text-sm leading-relaxed">
-                <p class="font-medium leading-snug">{p.title}</p>
+                <p class="font-medium leading-snug">
+                  {p.link ? (
+                    <a
+                      href={p.link}
+                      class="text-primary hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {p.title}
+                    </a>
+                  ) : (
+                    p.title
+                  )}
+                </p>
                 <p class="text-muted-foreground mt-1">{p.authors}</p>
                 <p class="text-muted-foreground mt-0.5 italic">{p.citation}</p>
                 {p.additional_info && (
                   <p class="text-muted-foreground mt-1 text-xs">{p.additional_info}</p>
-                )}
-                {p.link && (
-                  <p class="mt-1.5">
-                    <a
-                      href={p.link}
-                      class="text-primary text-xs hover:underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Link
-                    </a>
-                  </p>
                 )}
               </div>
             </li>
@@ -301,23 +308,24 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
                 {i + 1}.
               </span>
               <div class="min-w-0 flex-1 text-sm leading-relaxed">
-                <p class="font-medium leading-snug">{p.title}</p>
+                <p class="font-medium leading-snug">
+                  {p.link ? (
+                    <a
+                      href={p.link}
+                      class="text-primary hover:underline"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {p.title}
+                    </a>
+                  ) : (
+                    p.title
+                  )}
+                </p>
                 <p class="text-muted-foreground mt-1">{p.authors}</p>
                 <p class="text-muted-foreground mt-0.5 italic">{p.citation}</p>
                 {p.additional_info && (
                   <p class="text-muted-foreground mt-1 text-xs">{p.additional_info}</p>
-                )}
-                {p.link && (
-                  <p class="mt-1.5">
-                    <a
-                      href={p.link}
-                      class="text-primary text-xs hover:underline"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Link
-                    </a>
-                  </p>
                 )}
               </div>
             </li>

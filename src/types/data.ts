@@ -63,6 +63,7 @@ export interface CvExperienceRole {
 
 export interface CvExperienceData {
   roles: CvExperienceRole[];
+  order?: string[];
 }
 
 export interface CvPaper {
