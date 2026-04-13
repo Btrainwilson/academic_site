@@ -8,7 +8,13 @@ const TABS = [
   { id: "cv" as const, label: "CV" },
   { id: "research" as const, label: "Research statement" },
   { id: "teaching" as const, label: "Teaching statement" },
-];
+] as const;
+
+const TAB_PDF: Record<(typeof TABS)[number]["id"], string> = {
+  cv: "/cv.pdf",
+  research: "/research-statement.pdf",
+  teaching: "/teaching-statement.pdf",
+};
 
 export function CvToolbar() {
   const [active, setActive] = React.useState<(typeof TABS)[number]["id"]>("cv");
@@ -23,12 +29,7 @@ export function CvToolbar() {
   }, [active]);
 
   const print = () => {
-    // If we're on the CV tab, download the LaTeX PDF instead of browser printing
-    if (active === "cv") {
-      window.open("/cv.pdf", "_blank");
-    } else {
-      window.print();
-    }
+    window.open(TAB_PDF[active], "_blank");
   };
 
   return (
@@ -62,10 +63,10 @@ export function CvToolbar() {
         size="sm"
         className="shrink-0 gap-2"
         onClick={print}
-        aria-label={active === "cv" ? "Download PDF CV" : "Print or save as PDF"}
+        aria-label="Download PDF"
       >
         <Printer className="size-4" aria-hidden />
-        {active === "cv" ? "Download PDF" : "Print / PDF"}
+        Download PDF
       </Button>
     </div>
   );

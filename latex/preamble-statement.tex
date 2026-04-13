@@ -1,0 +1,43 @@
+% Shared preamble for research / teaching statement PDFs (matches CV margins spirit).
+\ProvidesFile{preamble-statement.tex}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=black}
+
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\parskip}{0.65em}
+\setlength{\parindent}{0pt}
+
+\setlist[itemize]{leftmargin=1.5em, itemsep=0.2em, topsep=0.35em}
+
+\newcommand{\StatementLetterhead}{%
+  \begin{center}
+    {\large\bfseries \StatementAuthorName}\\[0.35em]
+    {\small\color{gray}\StatementAuthorTagline}%
+  \end{center}
+  \vspace{1.25em}%
+}
+
+\newcommand{\StatementDocTitle}[1]{%
+  \begin{center}
+    {\LARGE\bfseries #1}
+  \end{center}
+  \vspace{0.75em}%
+  {\color{black}\hrule height 0.4pt\relax}%
+  \vspace{1em}%
+}

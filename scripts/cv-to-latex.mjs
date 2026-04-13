@@ -2,12 +2,16 @@
  * Generates latex/cv-content.tex from src/data/cv/*.json (same sources as src/pages/cv.astro).
  * Targeting the Sourabh Bajaj resume template format.
  */
-import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
-import { dirname, join } from "node:path";
-import { fileURLToPath } from "node:url";
+import { mkdirSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
+import { pathToFileURL } from "node:url";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const root = join(__dirname, "..");
+import {
+  escapeHrefUrl,
+  escapeLatex,
+  latexRoot,
+  loadJson,
+} from "./lib/latex-shared.mjs";
 
 const SUMMARY_KEY = process.env.CV_SUMMARY_KEY ?? "ceo";
 
@@ -29,37 +33,6 @@ const SERVICE_BLOCKS = [
   { key: "competitions", title: "Competitions" },
   { key: "extWork", title: "Additional appointments" },
 ];
-
-/** Escape text that appears in LaTeX body (not inside \\url). */
-function escapeLatex(s) {
-  if (s == null || s === undefined) return "";
-  return String(s)
-    .replace(/\\/g, "\\textbackslash{}")
-    .replace(/\{/g, "\\{")
-    .replace(/\}/g, "\\}")
-    .replace(/\$/g, "\\$")
-    .replace(/#/g, "\\#")
-    .replace(/%/g, "\\%")
-    .replace(/&/g, "\\&")
-    .replace(/_/g, "\\_")
-    .replace(/\^/g, "\\textasciicircum{}")
-    .replace(/~/g, "\\textasciitilde{}");
-}
-
-/** Escape URL for hyperref first argument (%, #, &, ~ are problematic). */
-function escapeHrefUrl(u) {
-  if (!u) return "";
-  return String(u)
-    .replace(/%/g, "\\%")
-    .replace(/#/g, "\\#")
-    .replace(/&/g, "\\&")
-    .replace(/~/g, "\\textasciitilde{}");
-}
-
-function loadJson(rel) {
-  const p = join(root, rel);
-  return JSON.parse(readFileSync(p, "utf8"));
-}
 
 function buildSocialLinks(urls) {
   const known = new Set(SOCIAL_ORDER.map((s) => s.key));
@@ -95,21 +68,30 @@ function renderCvItemBlock(item) {
   const title = escapeLatex(item.title);
   const date = item.date ? escapeLatex(item.date) : "";
   const subtitle = item.subtitle ? escapeLatex(item.subtitle) : "";
-  
+
   let out = "";
   if (subtitle) {
-    out += "    \\resumeSubheading\n" +
-           "      {" + title + "}{" + date + "}\n" +
-           "      {" + subtitle + "}{}";
+    out +=
+      "    \\resumeSubheading\n" +
+      "      {" +
+      title +
+      "}{" +
+      date +
+      "}\n" +
+      "      {" +
+      subtitle +
+      "}{}";
   } else {
-    out += "    \\resumeSubheadingSimple\n" +
-           "      {" + title + "}{" + date + "}";
+    out += "    \\resumeSubheadingSimple\n" + "      {" + title + "}{" + date + "}";
   }
-  
+
   if (item.detail) {
-    out += "\n      \\resumeItemListStart\n" +
-           "        \\resumeItemPlain{" + escapeLatex(item.detail) + "}\n" +
-           "      \\resumeItemListEnd";
+    out +=
+      "\n      \\resumeItemListStart\n" +
+      "        \\resumeItemPlain{" +
+      escapeLatex(item.detail) +
+      "}\n" +
+      "      \\resumeItemListEnd";
   }
   return out;
 }
@@ -118,10 +100,8 @@ function renderPaperList(papers, sectionTitle) {
   if (!papers?.length) return "";
   const out = ["\\section{" + sectionTitle + "}", "  \\resumeSubHeadingListStart"];
   for (const p of papers) {
-    const extra = p.additional_info
-      ? " " + escapeLatex(p.additional_info)
-      : "";
-    
+    const extra = p.additional_info ? " " + escapeLatex(p.additional_info) : "";
+
     const titleTex = p.link
       ? "\\href{" + escapeHrefUrl(p.link) + "}{" + escapeLatex(p.title) + "}"
       : escapeLatex(p.title);
@@ -136,7 +116,10 @@ function renderPaperList(papers, sectionTitle) {
   return out.join("\n");
 }
 
-function main() {
+/**
+ * Writes latex/cv-content.tex from JSON sources.
+ */
+export function generateCvContent() {
   const profile = loadJson("src/data/cv/profile.json");
   const education = loadJson("src/data/cv/education.json");
   const experience = loadJson("src/data/cv/experience.json");
@@ -182,32 +165,49 @@ function main() {
       "}}",
   );
 
-  // ----------HEADING-----------------
   const mailto = mailtoFromContactBanner(profile.contactBanner);
   const email = mailto ? mailto.replace(/^mailto:/i, "") : "";
-  
+
   const links = buildSocialLinks(profile.urls);
-  const website = links.find(l => l.key === 'website');
-  
-  // Create a 2-column heading like the template
+  const website = links.find((l) => l.key === "website");
+
   chunks.push("%----------HEADING-----------------");
   chunks.push("\\begin{tabular*}{\\textwidth}{l@{\\extracolsep{\\fill}}r}");
-  
+
   let left1 = "\\textbf{\\Large " + escapeLatex(displayName) + "}";
   if (website) {
-    left1 = "\\textbf{\\href{" + escapeHrefUrl(website.href) + "}{\\Large " + escapeLatex(displayName) + "}}";
+    left1 =
+      "\\textbf{\\href{" +
+      escapeHrefUrl(website.href) +
+      "}{\\Large " +
+      escapeLatex(displayName) +
+      "}}";
   }
-  
-  let right1 = email ? "Email : \\href{" + escapeHrefUrl(mailto) + "}{" + escapeLatex(email) + "}" : "";
-  
+
+  const right1 = email
+    ? "Email : \\href{" + escapeHrefUrl(mailto) + "}{" + escapeLatex(email) + "}"
+    : "";
+
   chunks.push("  " + left1 + " & " + right1 + "\\\\");
-  
-  let left2 = website ? "\\href{" + escapeHrefUrl(website.href) + "}{" + escapeLatex(website.href.replace(/^https?:\/\//, '')) + "}" : "";
-  
-  // Just grab the next available link for the right side if we don't have a phone number
-  const otherLink = links.find(l => l.key !== 'website');
-  let right2 = otherLink ? escapeLatex(otherLink.label) + " : \\href{" + escapeHrefUrl(otherLink.href) + "}{" + escapeLatex(otherLink.href.replace(/^https?:\/\//, '')) + "}" : "";
-  
+
+  const left2 = website
+    ? "\\href{" +
+      escapeHrefUrl(website.href) +
+      "}{" +
+      escapeLatex(website.href.replace(/^https?:\/\//, "")) +
+      "}"
+    : "";
+
+  const otherLink = links.find((l) => l.key !== "website");
+  const right2 = otherLink
+    ? escapeLatex(otherLink.label) +
+      " : \\href{" +
+      escapeHrefUrl(otherLink.href) +
+      "}{" +
+      escapeLatex(otherLink.href.replace(/^https?:\/\//, "")) +
+      "}"
+    : "";
+
   chunks.push("  " + left2 + " & " + right2 + " \\\\");
   chunks.push("\\end{tabular*}");
   chunks.push("");
@@ -244,7 +244,11 @@ function main() {
       chunks.push("\\section{Skills}");
       chunks.push(" \\resumeSubHeadingListStart");
       chunks.push("   \\item{");
-      chunks.push("     \\textbf{Technologies}{: " + escapeLatex(profile.skillList.join(", ")) + "}");
+      chunks.push(
+        "     \\textbf{Technologies}{: " +
+          escapeLatex(profile.skillList.join(", ")) +
+          "}",
+      );
       chunks.push("   }");
       chunks.push(" \\resumeSubHeadingListEnd");
       chunks.push("");
@@ -264,22 +268,40 @@ function main() {
   if (orderedRoles?.length > 0) {
     chunks.push("\\section{Experience}");
     chunks.push("  \\resumeSubHeadingListStart");
-    
+
     for (const role of orderedRoles) {
       const h = role.head;
       const titleTex = h.link
         ? "\\href{" + escapeHrefUrl(h.link) + "}{" + escapeLatex(h.title) + "}"
         : escapeLatex(h.title);
-        
+
       if (h.subtitle || h.date) {
         chunks.push("    \\resumeSubheading");
-        chunks.push("      {" + titleTex + "}{" + (h.location ? escapeLatex(h.location) : "") + "}");
-        chunks.push("      {" + (h.subtitle ? escapeLatex(h.subtitle) : "") + "}{" + (h.date ? escapeLatex(h.date) : "") + "}");
+        chunks.push(
+          "      {" +
+            titleTex +
+            "}{" +
+            (h.location ? escapeLatex(h.location) : "") +
+            "}",
+        );
+        chunks.push(
+          "      {" +
+            (h.subtitle ? escapeLatex(h.subtitle) : "") +
+            "}{" +
+            (h.date ? escapeLatex(h.date) : "") +
+            "}",
+        );
       } else {
         chunks.push("    \\resumeSubheadingSimple");
-        chunks.push("      {" + titleTex + "}{" + (h.location ? escapeLatex(h.location) : "") + "}");
+        chunks.push(
+          "      {" +
+            titleTex +
+            "}{" +
+            (h.location ? escapeLatex(h.location) : "") +
+            "}",
+        );
       }
-      
+
       if (role.bullets?.length) {
         chunks.push("      \\resumeItemListStart");
         for (const b of role.bullets) {
@@ -291,7 +313,6 @@ function main() {
             );
             line += "\\, " + linkParts.join("\\, ");
           }
-          // Using resumeItemPlain since the bullets don't have explicit bold titles
           chunks.push("        \\resumeItemPlain{" + line + "}");
         }
         chunks.push("      \\resumeItemListEnd");
@@ -341,7 +362,9 @@ function main() {
     }
   }
 
-  const anyService = SERVICE_BLOCKS.some(({ key }) => (service[key] ?? []).length > 0);
+  const anyService = SERVICE_BLOCKS.some(
+    ({ key }) => (service[key] ?? []).length > 0,
+  );
   if (anyService) {
     for (const { key, title } of SERVICE_BLOCKS) {
       const items = service[key] ?? [];
@@ -368,7 +391,9 @@ function main() {
     chunks.push("\\section{Mentees}");
     chunks.push("  \\resumeSubHeadingListStart");
     for (const m of menteesSorted) {
-      const loc = m.lastKnownLocation?.trim() ? escapeLatex(m.lastKnownLocation.trim()) : "";
+      const loc = m.lastKnownLocation?.trim()
+        ? escapeLatex(m.lastKnownLocation.trim())
+        : "";
       chunks.push("    \\resumeSubheadingSimple");
       chunks.push("      {" + escapeLatex(m.name) + "}{" + loc + "}");
     }
@@ -390,9 +415,13 @@ function main() {
     for (const n of news) {
       const dateCol = n.date ? escapeLatex(n.date) : "";
       const titlePart = n.link
-        ? "\\href{" + escapeHrefUrl(n.link) + "}{" + escapeLatex(n.title) + "}"
+        ? "\\href{" +
+          escapeHrefUrl(n.link) +
+          "}{" +
+          escapeLatex(n.title) +
+          "}"
         : escapeLatex(n.title);
-      
+
       chunks.push("    \\resumeSubheading");
       chunks.push("      {" + titlePart + "}{" + dateCol + "}");
       chunks.push("      {" + escapeLatex(n.location) + "}{}");
@@ -425,7 +454,7 @@ function main() {
     chunks.push("  \\resumeSubHeadingListEnd");
   }
 
-  const outDir = join(root, "latex");
+  const outDir = join(latexRoot, "latex");
   mkdirSync(outDir, { recursive: true });
   const outPath = join(outDir, "cv-content.tex");
   const body = chunks.filter(Boolean).join("\n") + "\n";
@@ -433,4 +462,13 @@ function main() {
   console.log(`Wrote ${outPath}`);
 }
 
-main();
+function main() {
+  generateCvContent();
+}
+
+const isMain =
+  process.argv[1] &&
+  import.meta.url === pathToFileURL(process.argv[1]).href;
+if (isMain) {
+  main();
+}

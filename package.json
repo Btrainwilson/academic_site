@@ -7,11 +7,11 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run cv:pdf && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "cv:tex": "node scripts/cv-to-latex.mjs",
-    "cv:pdf": "node scripts/cv-to-latex.mjs && (cd latex && pdflatex -interaction=nonstopmode cv.tex && pdflatex -interaction=nonstopmode cv.tex) && mkdir -p public && cp latex/cv.pdf public/cv.pdf"
+    "cv:pdf": "node scripts/build-latex.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.3",

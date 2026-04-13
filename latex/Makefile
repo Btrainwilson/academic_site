@@ -3,6 +3,9 @@
 # From repo root:
 #   make -C latex
 #
+# Full site PDF set (CV + research + teaching statements) uses the Node orchestrator:
+#   npm run cv:pdf
+#
 # Regenerate cv-content.tex from JSON without building PDF:
 #   make content
 
