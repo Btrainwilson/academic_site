@@ -1,0 +1,137 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import type { ResearchDirection } from "@/types/data";
+import researchDirectionsData from "@/data/landing/research-directions.json";
+import { FlaskConical, Sigma, Cpu, ExternalLink, ArrowLeft } from "lucide-react";
+
+const iconMap: Record<string, typeof FlaskConical> = {
+  FlaskConical,
+  Sigma,
+  Cpu,
+};
+
+const directions = researchDirectionsData as ResearchDirection[];
+
+export function getStaticPaths() {
+  const dirs = researchDirectionsData as ResearchDirection[];
+  return dirs.map((d) => ({ params: { id: d.id } }));
+}
+
+const { id } = Astro.params;
+const direction = directions.find((d) => d.id === id)!;
+const Icon = iconMap[direction.icon];
+const paragraphs = (direction.longDescription ?? direction.description)
+  .split("\n\n")
+  .filter(Boolean);
+---
+
+<BaseLayout title={direction.title} description={direction.description}>
+  <div class="mx-auto max-w-3xl px-4 py-12">
+    {/* Back link */}
+    <a
+      href="/"
+      class="text-muted-foreground hover:text-foreground mb-8 inline-flex items-center gap-1.5 text-sm transition-colors"
+    >
+      <ArrowLeft className="size-3.5" />
+      Back to home
+    </a>
+
+    {/* Banner image */}
+    {
+      direction.image && (
+        <div class="mt-6 overflow-hidden rounded-xl">
+          <img
+            src={direction.image}
+            alt={direction.title}
+            class="h-48 w-full object-cover sm:h-56"
+          />
+        </div>
+      )
+    }
+
+    {/* Header */}
+    <div class="mt-8">
+      <div class="flex items-center gap-3">
+        {
+          Icon && (
+            <div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <Icon className="size-5" />
+            </div>
+          )
+        }
+        <h1 class="text-foreground text-3xl font-semibold tracking-tight">
+          {direction.title}
+        </h1>
+      </div>
+
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        {
+          direction.tags.map((tag) => (
+            <span class="inline-flex h-5 items-center rounded-full bg-secondary px-2 text-xs font-medium text-secondary-foreground">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </div>
+
+    {/* Long description */}
+    <div class="mt-8 space-y-4">
+      {
+        paragraphs.map((p) => (
+          <p class="text-foreground/90 leading-relaxed">{p}</p>
+        ))
+      }
+    </div>
+
+    {/* Publications & works */}
+    <section class="mt-12">
+      <h2 class="text-foreground mb-4 text-lg font-semibold">
+        Selected works
+      </h2>
+      <ol class="text-foreground list-none space-y-4 p-0">
+        {
+          direction.works.map((work) => (
+            <li class="border-border/60 border-b pb-4 last:border-0">
+              {work.type === "project" ? (
+                <>
+                  <p class="font-medium leading-snug">{work.title}</p>
+                  <p class="text-muted-foreground mt-1 text-sm">
+                    {work.description}
+                  </p>
+                </>
+              ) : (
+                <>
+                  <p class="font-medium leading-snug">{work.title}</p>
+                  {work.authors && (
+                    <p class="text-muted-foreground mt-1 text-sm">
+                      {work.authors}
+                    </p>
+                  )}
+                  {work.venue && (
+                    <p class="text-muted-foreground mt-0.5 text-sm">
+                      <em>{work.venue}</em>
+                    </p>
+                  )}
+                  {work.url && (
+                    <p class="mt-2 text-sm">
+                      <a
+                        href={work.url}
+                        class="text-primary inline-flex items-center gap-1 hover:underline"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        View paper
+                        <ExternalLink className="size-3" />
+                      </a>
+                    </p>
+                  )}
+                </>
+              )}
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+  </div>
+</BaseLayout>

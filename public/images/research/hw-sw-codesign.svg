@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="800" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1c1917"/>
+      <stop offset="100%" stop-color="#292524"/>
+    </linearGradient>
+    <linearGradient id="copper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg3)"/>
+  <!-- Central chip die -->
+  <rect x="320" y="120" width="160" height="160" rx="8" fill="#292524" stroke="#fb923c" stroke-width="2" opacity="0.9"/>
+  <rect x="340" y="140" width="120" height="120" rx="4" fill="#1c1917" stroke="#fdba74" stroke-width="1" opacity="0.6"/>
+  <!-- Grid pattern inside chip -->
+  <line x1="370" y1="140" x2="370" y2="260" stroke="#fb923c" stroke-width="0.5" opacity="0.25"/>
+  <line x1="400" y1="140" x2="400" y2="260" stroke="#fb923c" stroke-width="0.5" opacity="0.25"/>
+  <line x1="430" y1="140" x2="430" y2="260" stroke="#fb923c" stroke-width="0.5" opacity="0.25"/>
+  <line x1="340" y1="170" x2="460" y2="170" stroke="#fb923c" stroke-width="0.5" opacity="0.25"/>
+  <line x1="340" y1="200" x2="460" y2="200" stroke="#fb923c" stroke-width="0.5" opacity="0.25"/>
+  <line x1="340" y1="230" x2="460" y2="230" stroke="#fb923c" stroke-width="0.5" opacity="0.25"/>
+  <!-- Pins - top -->
+  <line x1="355" y1="120" x2="355" y2="80" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <line x1="385" y1="120" x2="385" y2="80" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <line x1="415" y1="120" x2="415" y2="80" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <line x1="445" y1="120" x2="445" y2="80" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <!-- Pins - bottom -->
+  <line x1="355" y1="280" x2="355" y2="320" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <line x1="385" y1="280" x2="385" y2="320" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <line x1="415" y1="280" x2="415" y2="320" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <line x1="445" y1="280" x2="445" y2="320" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <!-- Pins - left -->
+  <line x1="320" y1="155" x2="270" y2="155" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <line x1="320" y1="185" x2="270" y2="185" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <line x1="320" y1="215" x2="270" y2="215" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <line x1="320" y1="245" x2="270" y2="245" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <!-- Pins - right -->
+  <line x1="480" y1="155" x2="530" y2="155" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <line x1="480" y1="185" x2="530" y2="185" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <line x1="480" y1="215" x2="530" y2="215" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <line x1="480" y1="245" x2="530" y2="245" stroke="#fdba74" stroke-width="2" opacity="0.5"/>
+  <!-- PCB traces - left side -->
+  <path d="M 270 155 L 180 155 L 140 120" stroke="#fb923c" stroke-width="1.2" opacity="0.3"/>
+  <path d="M 270 185 L 160 185 L 120 160" stroke="#fb923c" stroke-width="1.2" opacity="0.25"/>
+  <path d="M 270 215 L 160 215 L 100 260" stroke="#fb923c" stroke-width="1.2" opacity="0.25"/>
+  <path d="M 270 245 L 180 245 L 140 290" stroke="#fb923c" stroke-width="1.2" opacity="0.3"/>
+  <!-- PCB traces - right side -->
+  <path d="M 530 155 L 620 155 L 660 120" stroke="#fb923c" stroke-width="1.2" opacity="0.3"/>
+  <path d="M 530 185 L 640 185 L 680 160" stroke="#fb923c" stroke-width="1.2" opacity="0.25"/>
+  <path d="M 530 215 L 640 215 L 700 260" stroke="#fb923c" stroke-width="1.2" opacity="0.25"/>
+  <path d="M 530 245 L 620 245 L 660 290" stroke="#fb923c" stroke-width="1.2" opacity="0.3"/>
+  <!-- PCB traces - top -->
+  <path d="M 355 80 L 355 50 L 300 30" stroke="#fb923c" stroke-width="1.2" opacity="0.25"/>
+  <path d="M 445 80 L 445 50 L 500 30" stroke="#fb923c" stroke-width="1.2" opacity="0.25"/>
+  <!-- PCB traces - bottom -->
+  <path d="M 355 320 L 355 350 L 300 370" stroke="#fb923c" stroke-width="1.2" opacity="0.25"/>
+  <path d="M 445 320 L 445 350 L 500 370" stroke="#fb923c" stroke-width="1.2" opacity="0.25"/>
+  <!-- Peripheral components -->
+  <rect x="100" y="100" width="30" height="40" rx="3" fill="none" stroke="#fdba74" stroke-width="1" opacity="0.3"/>
+  <rect x="670" y="100" width="30" height="40" rx="3" fill="none" stroke="#fdba74" stroke-width="1" opacity="0.3"/>
+  <rect x="100" y="260" width="30" height="40" rx="3" fill="none" stroke="#fdba74" stroke-width="1" opacity="0.3"/>
+  <rect x="670" y="260" width="30" height="40" rx="3" fill="none" stroke="#fdba74" stroke-width="1" opacity="0.3"/>
+  <!-- Binary text decoration -->
+  <text x="60" y="50" fill="#fdba74" opacity="0.1" font-family="monospace" font-size="11">01101001</text>
+  <text x="640" y="50" fill="#fdba74" opacity="0.1" font-family="monospace" font-size="11">10110100</text>
+  <text x="60" y="380" fill="#fdba74" opacity="0.1" font-family="monospace" font-size="11">11010010</text>
+  <text x="640" y="380" fill="#fdba74" opacity="0.1" font-family="monospace" font-size="11">01001101</text>
+</svg>

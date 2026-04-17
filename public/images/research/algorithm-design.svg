@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="800" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="400" fill="url(#bg2)"/>
+  <!-- Tree structure / poset -->
+  <!-- Root -->
+  <circle cx="400" cy="60" r="14" fill="#34d399" opacity="0.9"/>
+  <!-- Level 1 -->
+  <line x1="400" y1="74" x2="260" y2="136" stroke="#34d399" stroke-width="1.5" opacity="0.4"/>
+  <line x1="400" y1="74" x2="540" y2="136" stroke="#34d399" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="260" cy="150" r="12" fill="#34d399" opacity="0.8"/>
+  <circle cx="540" cy="150" r="12" fill="#34d399" opacity="0.8"/>
+  <!-- Level 2 -->
+  <line x1="260" y1="162" x2="160" y2="226" stroke="#34d399" stroke-width="1.5" opacity="0.35"/>
+  <line x1="260" y1="162" x2="320" y2="226" stroke="#34d399" stroke-width="1.5" opacity="0.35"/>
+  <line x1="540" y1="162" x2="480" y2="226" stroke="#34d399" stroke-width="1.5" opacity="0.35"/>
+  <line x1="540" y1="162" x2="640" y2="226" stroke="#34d399" stroke-width="1.5" opacity="0.35"/>
+  <circle cx="160" cy="240" r="11" fill="#34d399" opacity="0.7"/>
+  <circle cx="320" cy="240" r="11" fill="#34d399" opacity="0.7"/>
+  <circle cx="480" cy="240" r="11" fill="#34d399" opacity="0.7"/>
+  <circle cx="640" cy="240" r="11" fill="#34d399" opacity="0.7"/>
+  <!-- Level 3 -->
+  <line x1="160" y1="251" x2="110" y2="306" stroke="#34d399" stroke-width="1.2" opacity="0.3"/>
+  <line x1="160" y1="251" x2="200" y2="306" stroke="#34d399" stroke-width="1.2" opacity="0.3"/>
+  <line x1="320" y1="251" x2="290" y2="306" stroke="#34d399" stroke-width="1.2" opacity="0.3"/>
+  <line x1="320" y1="251" x2="360" y2="306" stroke="#34d399" stroke-width="1.2" opacity="0.3"/>
+  <line x1="480" y1="251" x2="450" y2="306" stroke="#34d399" stroke-width="1.2" opacity="0.3"/>
+  <line x1="480" y1="251" x2="510" y2="306" stroke="#34d399" stroke-width="1.2" opacity="0.3"/>
+  <line x1="640" y1="251" x2="610" y2="306" stroke="#34d399" stroke-width="1.2" opacity="0.3"/>
+  <line x1="640" y1="251" x2="680" y2="306" stroke="#34d399" stroke-width="1.2" opacity="0.3"/>
+  <circle cx="110" cy="320" r="9" fill="#34d399" opacity="0.6"/>
+  <circle cx="200" cy="320" r="9" fill="#34d399" opacity="0.6"/>
+  <circle cx="290" cy="320" r="9" fill="#34d399" opacity="0.6"/>
+  <circle cx="360" cy="320" r="9" fill="#34d399" opacity="0.6"/>
+  <circle cx="450" cy="320" r="9" fill="#34d399" opacity="0.6"/>
+  <circle cx="510" cy="320" r="9" fill="#34d399" opacity="0.6"/>
+  <circle cx="610" cy="320" r="9" fill="#34d399" opacity="0.6"/>
+  <circle cx="680" cy="320" r="9" fill="#34d399" opacity="0.6"/>
+  <!-- Sweep path overlay -->
+  <path d="M 90 330 Q 200 280 320 330 Q 440 270 560 330 Q 640 290 700 330" stroke="#6ee7b7" stroke-width="2" opacity="0.25" fill="none" stroke-dasharray="8 4"/>
+  <path d="M 100 350 Q 250 310 400 350 Q 550 310 700 350" stroke="#a7f3d0" stroke-width="1.5" opacity="0.15" fill="none" stroke-dasharray="6 3"/>
+  <!-- Math symbols scattered -->
+  <text x="70" y="80" fill="#6ee7b7" opacity="0.2" font-family="serif" font-size="28" font-style="italic">&#x2211;</text>
+  <text x="700" y="90" fill="#6ee7b7" opacity="0.18" font-family="serif" font-size="24" font-style="italic">&#x2202;</text>
+  <text x="720" y="370" fill="#6ee7b7" opacity="0.15" font-family="serif" font-size="22" font-style="italic">&#x221e;</text>
+  <text x="50" y="370" fill="#6ee7b7" opacity="0.15" font-family="serif" font-size="26" font-style="italic">&#x2200;</text>
+</svg>

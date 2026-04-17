@@ -5,6 +5,7 @@ import { CollaboratorCarousel } from "@/components/landing/CollaboratorCarousel"
 import LandingAnnouncements from "@/components/landing/LandingAnnouncements.astro";
 import LandingInTheNews from "@/components/landing/LandingInTheNews.astro";
 import LandingMentees from "@/components/landing/LandingMentees.astro";
+import LandingResearch from "@/components/landing/LandingResearch.astro";
 import PublicationList from "@/components/PublicationList.astro";
 import type {
   CvMentorshipData,
@@ -12,12 +13,14 @@ import type {
   LandingAnnouncement,
   LandingHero,
   LandingNewsItem,
+  ResearchDirection,
 } from "@/types/data";
 import profileData from "@/data/cv/profile.json";
 import mentorshipData from "@/data/cv/mentorship.json";
 import heroData from "@/data/landing/hero.json";
 import announcementsData from "@/data/landing/announcements.json";
 import inTheNewsData from "@/data/landing/in-the-news.json";
+import researchDirectionsData from "@/data/landing/research-directions.json";
 import { loadAffiliationsFromFolder } from "@/lib/affiliations";
 import { publications } from "@/lib/publications";
 
@@ -39,6 +42,8 @@ const description =
 const pageTitle = profile.fullName?.trim() || "Research";
 const metaDescription =
   description.length > 160 ? `${description.slice(0, 157)}…` : description;
+
+const researchDirections = researchDirectionsData as ResearchDirection[];
 
 const inTheNewsSorted = [...inTheNewsRaw].sort((a, b) => {
   const ta = Date.parse(a.date);
@@ -65,6 +70,8 @@ const inTheNewsSorted = [...inTheNewsRaw].sort((a, b) => {
         </section>
       )
     }
+
+    <LandingResearch directions={researchDirections} />
 
     {/* <LandingAnnouncements items={announcements} /> */}
     <LandingInTheNews items={inTheNewsSorted} />

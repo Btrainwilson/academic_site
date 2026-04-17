@@ -1,0 +1,133 @@
+[
+  {
+    "id": "ai-for-science",
+    "title": "AI for Science",
+    "image": "/images/research/ai-for-science.svg",
+    "description": "ML and generative models for scientific discovery, from inverse design of nanophotonic devices to quantum circuit synthesis.",
+    "longDescription": "My work in AI for Science centers on developing machine learning architectures that can navigate the vast, high-dimensional design spaces inherent to physical systems. Traditional simulation-driven approaches to device design — particularly in nanophotonics — are computationally prohibitive when searching over continuous parameter spaces with complex physical constraints.\n\nTo address this, I have developed and led teams building generative models (autoencoders, GANs, diffusion models, and annealing-based samplers) that learn compressed representations of physically valid designs. Our Machine Learning Framework for Quantum Sampling (Applied Physics Reviews, 2021) introduced adversarial training on quantum hardware to sample from highly-constrained optimization landscapes, resulting in a 16,200% speed-up over conventional methods and becoming a major milestone for the DOE Quantum Science Center.\n\nMore recently, PearSAN (Advanced Optical Materials, 2026) introduced Pearson-correlated surrogate annealing for inverse design, enabling optimization in learned latent spaces without differentiable simulators. Our review in npj Nanophotonics (2026) synthesizes the field's progress and identifies open challenges in bridging data-driven and physics-informed paradigms.\n\nOn the application side, our attention-based authentication system (Advanced Photonics, 2024) tackled the $75B counterfeit semiconductor market by detecting tampered optical responses with a 55,000x speed-up and 41% accuracy improvement. At Quantinuum, I led development of transformer architectures (GPT-2 with constrained decoders and custom PPO/GRPO losses) for generating quantum chemistry circuits in collaboration with NVIDIA and DeepMind.\n\nAcross these efforts, the unifying theme is building ML systems that respect physical law while dramatically accelerating the path from concept to validated design.",
+    "icon": "FlaskConical",
+    "tags": ["Machine Learning", "Inverse Design", "Generative Models", "Nanophotonics"],
+    "works": [
+      {
+        "title": "Deep learning in photonic device development: nuances and opportunities",
+        "authors": "Iyer, V., Wilson, B.A., Chen, Y., Kildishev, A.V., Shalaev, V.M., Boltasseva, A.",
+        "venue": "npj Nanophotonics 3, 5 (2026)",
+        "year": 2026,
+        "url": "https://doi.org/10.1038/s44310-025-00097-y"
+      },
+      {
+        "title": "PearSAN: A Machine Learning Method for Inverse Design Using Pearson Correlated Surrogate Annealing",
+        "authors": "Bezick, M., Wilson, B.A., Iyer, V., Chen, Y., Shalaev, V.M., Kais, S., Kildishev, A.V., Lackey, B., Boltasseva, A.",
+        "venue": "Advanced Optical Materials (2026)",
+        "year": 2026,
+        "url": "https://doi.org/10.1002/adom.202500249"
+      },
+      {
+        "title": "Machine-learning-assisted photonic device development: a multiscale approach",
+        "authors": "Chen, Y., Montes McNeil, A., Park, T., Wilson, B., et al.",
+        "venue": "Nanophotonics, Vol. 14, Issue 23 (2025)",
+        "year": 2025,
+        "url": "https://doi.org/10.1515/nanoph-2025-0049"
+      },
+      {
+        "title": "Authentication Through Residual, Attention-based Processing of Tampered Optical Responses",
+        "authors": "Wilson, B., Chen, Y., Singh, D.K., Ojha, R., Pottle, J., Bezick, M., Boltasseva, A., Shalaev, V., Kildishev, A.",
+        "venue": "Advanced Photonics, Vol. 6, Issue 5 (2024)",
+        "year": 2024,
+        "url": "https://doi.org/10.1117/1.AP.6.5.056002"
+      },
+      {
+        "title": "Machine Learning Framework for Quantum Sampling of Highly-Constrained, Continuous Optimization Problems",
+        "authors": "Wilson, B., Kudyshev, Z., Kildishev, A., Shalaev, V., Kais, S., Boltasseva, A.",
+        "venue": "Applied Physics Reviews, 8, 041418 (2021)",
+        "year": 2021,
+        "url": "https://pubs.aip.org/aip/apr/article-abstract/8/4/041418/1076301"
+      }
+    ]
+  },
+  {
+    "id": "algorithm-design",
+    "title": "Algorithm Design & Analysis",
+    "image": "/images/research/algorithm-design.svg",
+    "description": "Discrete mathematics, combinatorial optimization, and multi-agent systems — from sweep-covers in posets to stochastic routing.",
+    "longDescription": "This research direction explores the mathematical structures underlying optimization and coordination problems, with applications ranging from UAV routing to theoretical computer science.\n\nA central thread is the study of sweep-covers in partially ordered sets. Sweep-covers generalize pursuit-evasion problems on graphs: given a poset (such as a road network modeled as a tree), how many agents are needed to \"sweep\" all elements, and how can we enumerate or bound the number of valid sweep strategies? My solo work \"Bounds on Sweep-Covers by Raney Numbers\" (2020) established novel combinatorial bounds using Raney numbers — a generalization of Catalan numbers — connecting pursuit-evasion to enumerative combinatorics. The follow-up \"Bounds on Decorated Sweep Covers in Tree Posets\" (2026, with Krawchuk) extends these results to decorated variants with tighter bounds and new structural insights.\n\nOn the applied side, my work at the Air Force Research Lab developed multi-epoch planning algorithms for UAV package delivery under stochastic risk (American Controls Conference, 2022). The key challenge is balancing delivery reward against failure probability across sequential missions — a problem we formulated as a constrained stochastic optimization and solved with dynamic programming approaches.\n\nThe multi-agent pursuit problem (\"Multiple Pursuers Under Partial Information from Sensors\") addresses coordination under incomplete observability: how should multiple pursuers on a network allocate effort when sensors provide only partial information about an evader's location?\n\nAt the foundational level, \"A Relative Church-Turing-Deutsch Thesis from Special Relativity and Undecidability\" (2022) investigates the computational power of physical systems, proposing a relativized version of the Church-Turing-Deutsch thesis that accounts for the causal structure of spacetime and undecidability results.\n\nThese threads share a focus on deriving provable guarantees and structural results for problems where heuristic or simulation-only approaches are insufficient.",
+    "icon": "Sigma",
+    "tags": ["Discrete Mathematics", "Combinatorics", "Multi-Agent Systems", "Optimization"],
+    "works": [
+      {
+        "title": "Bounds on Decorated Sweep Covers in Tree Posets",
+        "authors": "Wilson, B.A., Krawchuk, C.",
+        "venue": "arXiv preprint arXiv:2604.03165 (2026)",
+        "year": 2026,
+        "url": "https://arxiv.org/abs/2604.03165"
+      },
+      {
+        "title": "Planning for Package Deliveries in Risky Environments Over Multiple Epochs",
+        "authors": "Wilson, B., Hudack, J., Sundaram, S.",
+        "venue": "American Controls Conference (2022)",
+        "year": 2022,
+        "url": "https://arxiv.org/pdf/2110.09917.pdf"
+      },
+      {
+        "title": "A Relative Church-Turing-Deutsch Thesis from Special Relativity and Undecidability",
+        "authors": "Wilson, B., Dickey, E., Iyer, V., Kais, S.",
+        "venue": "arXiv:2206.06419 (2022)",
+        "year": 2022,
+        "url": "https://arxiv.org/pdf/2206.06419.pdf"
+      },
+      {
+        "title": "Multiple Pursuers Under Partial Information from Sensors",
+        "authors": "Wilson, B., Prasad, A., Sundaram, S.",
+        "venue": "Preprint (2022)",
+        "year": 2022,
+        "url": "https://www.blakewilson.org/publications"
+      },
+      {
+        "title": "Bounds on Sweep-Covers by Raney Numbers",
+        "authors": "Wilson, B.",
+        "venue": "arXiv:2009.08549 (2020)",
+        "year": 2020,
+        "url": "https://arxiv.org/pdf/2009.08549"
+      }
+    ]
+  },
+  {
+    "id": "hw-sw-codesign",
+    "title": "Hardware-Software Co-Design",
+    "image": "/images/research/hw-sw-codesign.svg",
+    "description": "High-performance systems bridging algorithms and hardware — CUDA kernels, quantum hardware-aware models, and SoC verification.",
+    "longDescription": "This direction focuses on the tight feedback loop between algorithm design and hardware constraints. Many of my most impactful results have come from co-designing software with specific hardware targets, whether that means writing custom CUDA kernels, mapping generative models onto quantum processors, or building verification infrastructure for system-on-chip designs.\n\nAt Zephram, I developed multi-GPU CUDA kernels for energy-model inference that achieved a 600x speed-up over prior state-of-the-art. These kernels were purpose-built for the memory access patterns and numerical precision requirements of our energy-based generative models, demonstrating that algorithm-hardware co-optimization can unlock order-of-magnitude gains that are invisible to generic GPU programming.\n\nAt Quantinuum, this philosophy extended to quantum-classical hybrid systems. I engineered CUDA kernels for simulating UCCSD quantum circuits (20x speed-up), enabling the large-scale data collection needed for training transformer models on quantum chemistry tasks. The \"Non-native Quantum Generative Optimization with Adversarial Autoencoders\" paper (2024) directly addresses the hardware mapping problem: how to compile generative models onto quantum devices with non-native gate sets, using adversarial autoencoders to bridge the gap between ideal and hardware-constrained representations.\n\nThe D-Wave work (CLEO 2021) explored quantum annealing hardware for metasurface optimization — mapping continuous photonic design problems onto the Ising model structure native to D-Wave's quantum processing units.\n\nMy earlier experience at ARM grounded this work in classical hardware-software co-design. There, I built verification software for ARMv8 instruction set coverage (250% improvement in Chi-Square test randomness) and developed a Python-to-RISC-V transpiler for generating Verilog ROM for SoC designs. This experience — from processor microarchitecture to verification methodology — informs how I approach the problem of making algorithms maximally efficient on target hardware.\n\nThe common principle is that the best performance comes not from optimizing algorithms in isolation, but from understanding the hardware execution model and designing algorithms that exploit it.",
+    "icon": "Cpu",
+    "tags": ["CUDA", "Quantum Computing", "SoC Verification", "HPC"],
+    "works": [
+      {
+        "title": "Non-native Quantum Generative Optimization with Adversarial Autoencoders",
+        "authors": "Wilson, B., Wurtz, J., Mkhitaryan, V., Bezick, M., Wang, S.T., Kais, S., Shalaev, V., Boltasseva, A.",
+        "venue": "arXiv:2407.13830 (2024)",
+        "year": 2024,
+        "url": "https://arxiv.org/abs/2407.13830"
+      },
+      {
+        "title": "Metasurface Design Optimization via D-Wave based Sampling",
+        "authors": "Wilson, B., Kudyshev, Z., Kildishev, A., Shalaev, V., Kais, S., Boltasseva, A.",
+        "venue": "CLEO (2021)",
+        "year": 2021
+      },
+      {
+        "title": "Multi-GPU CUDA Kernels for Energy-Model Inference",
+        "type": "project",
+        "description": "Developed custom CUDA kernels for multi-GPU optimization at Zephram, achieving 600x speed-up over previous state-of-the-art for energy-model inference."
+      },
+      {
+        "title": "CUDA-accelerated Quantum Circuit Simulation",
+        "type": "project",
+        "description": "Engineered multi-GPU CUDA kernels for UCCSD quantum circuits at Quantinuum, achieving 20x speed-up for data collection pipelines."
+      },
+      {
+        "title": "ARMv8 SoC Verification Infrastructure",
+        "type": "project",
+        "description": "Built verification software in Python, XML, and C++ for ARMv8 instruction set coverage at ARM, achieving 250% improvement in test randomness."
+      }
+    ]
+  }
+]

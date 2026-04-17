@@ -172,3 +172,29 @@ export interface LandingNewsItem {
   link?: string;
   source?: string;
 }
+
+export interface ResearchWork {
+  title: string;
+  authors?: string;
+  venue?: string;
+  year?: number;
+  url?: string;
+  /** "project" for non-publication items; omit for papers. */
+  type?: "project";
+  description?: string;
+}
+
+export interface ResearchDirection {
+  id: string;
+  title: string;
+  /** Short description shown on landing page cards. */
+  description: string;
+  /** Extended description shown on the detail page. */
+  longDescription?: string;
+  /** Path to card/banner image (relative to public/). */
+  image?: string;
+  /** Lucide icon name. */
+  icon: string;
+  tags: string[];
+  works: ResearchWork[];
+}
