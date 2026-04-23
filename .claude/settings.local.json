@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run:*)"
+      "Bash(npm run:*)",
+      "Bash(ls -la /Users/mercury/dev/web/personal_site/src/data/*.json)",
+      "Bash(npx shadcn@latest:*)"
     ]
   }
 }

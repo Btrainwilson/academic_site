@@ -1,0 +1,56 @@
+[
+  {
+    "id": "quantum-sampling-framework",
+    "researchDirectionId": "ai-for-science",
+    "figure": "/images/research/highlights/quantum-sampling-framework.webp",
+    "caption": "Machine learning framework for quantum sampling of highly-constrained optimization problems",
+    "title": "Machine Learning Framework for Quantum Sampling of Highly-Constrained, Continuous Optimization Problems",
+    "venue": "Applied Physics Reviews, 2021",
+    "url": "https://pubs.aip.org/aip/apr/article-abstract/8/4/041418/1076301",
+    "layout": "hero",
+    "description": "Adversarial training on quantum hardware to sample from highly-constrained optimization landscapes, achieving a 162x speed-up over conventional methods."
+  },
+  {
+    "id": "raptor-authentication",
+    "researchDirectionId": "ai-for-science",
+    "figure": "/images/research/highlights/raptor-authentication.webp",
+    "caption": "RAPTOR: Attention-based authentication of tampered optical responses for counterfeit chip detection",
+    "title": "Authentication Through Residual, Attention-based Processing of Tampered Optical Responses",
+    "layout": "hero",
+    "venue": "Advanced Photonics, 2024",
+    "url": "https://doi.org/10.1117/1.AP.6.5.056002",
+    "description": "The global chip industry is grappling with dual challenges: a profound shortage of new chips and a surge of counterfeit chips valued at $75 billion, introducing substantial risks of malfunction and unwanted surveillance. To counteract this, we propose an optical anti-counterfeiting detection method for semiconductor devices that is robust under adversarial tampering features, such as malicious package abrasions, compromised thermal treatment, and adversarial tearing. Our new deep-learning approach uses a RAPTOR (residual, attention-based processing of tampered optical response) discriminator, showing the capability of identifying adversarial tampering to an optical, physical unclonable function based on randomly patterned arrays of gold nanoparticles. "
+  },
+  {
+    "id": "sweep-covers",
+    "researchDirectionId": "algorithm-design",
+    "figure": "/images/research/highlights/sweep-covers.webp",
+    "caption": "Bounds on decorated sweep covers in tree posets",
+    "title": "Bounds on Decorated Sweep Covers in Tree Posets",
+    "venue": "arXiv, 2026",
+    "url": "https://arxiv.org/abs/2604.03165",
+    "description": "I focus on hard controls problems, requiring new insights and algorithms via complexity, analytic combinatorics, and controls. For example, we invented decorated sweep covers as a colouring on maximal antichains in tree posets. DSCs appear in applications wherever maximal antichains require structural differentiation among parallel options that have a common ancestry, e.g., distributed systems, drone routing in logistics, and Monte Carlo Tree Search. We establish novel combinatorial bounds using Raney numbers connecting pursuit-evasion to enumerative combinatorics, with new structural insights for decorated variants."
+  },
+  {
+    "id": "pdd",
+    "researchDirectionId": "ai-for-science",
+    "figure": "/images/research/highlights/pdd.webp",
+    "caption": "Machine-learning-assisted photonic device development: a multiscale approach from theory to characterization",
+    "title": "Machine-learning-assisted photonic device development: a multiscale approach from theory to characterization",
+    "venue": "Nanophotonics, 2025",
+    "layout": "hero",
+    "url": "https://www.degruyterbrill.com/document/doi/10.1515/nanoph-2025-0049/html",
+    "description": "In this review, we present a comprehensive perspective on ML methods to enable machine-learning-assisted PDD (ML-PDD) for efficient design optimization with powerful generative models, fast simulation and characterization modeling under noisy measurements, and reinforcement learning for fabrication. This review provides researchers from diverse backgrounds with valuable insights into this emerging topic, fostering interdisciplinary efforts to accelerate the development of complex photonic devices and systems."
+  },
+  {
+    "id": "aqam",
+    "researchDirectionId": "hw-sw-codesign",
+    "figure": "/images/research/highlights/quantum-generative-optimization.webp",
+    "caption": "Non-native quantum generative optimization with adversarial autoencoders",
+    "title": "Non-native Quantum Generative Optimization with Adversarial Autoencoders",
+    "venue": "arXiv, 2024",
+    "url": "https://arxiv.org/abs/2407.13830",
+    "layout": "hero",
+    "description": "We introduce the adversarial quantum autoencoder model (AQAM) that can be used to map large-scale optimization problems onto existing quantum samplers while simultaneously optimizing the problem through latent quantum-enhanced Boltzmann sampling. We demonstrate the AQAM on a neutral atom sampler, and showcase the model by optimizing 64px by 64px unit cells that represent a broad-angle filter metasurface applicable to improving the coherence of neutral atom devices. Using 12-atom simulations, we demonstrate that the AQAM achieves a lower Renyi divergence and a larger spectral gap when compared to classical Markov Chain Monte Carlo samplers. Our work paves the way to more efficient mapping of conventional optimization problems into existing quantum samplers."
+  }
+]

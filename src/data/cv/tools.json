@@ -1,0 +1,38 @@
+[
+    {
+      "title": "PBJ",
+      "subtitle": "Full-Stack visual multi-agent orchestration & fine-tuning platform",
+      "date": "2025 -",
+      "link": "https://pbj-model-builder.vercel.app/"
+    },
+    {
+        "title": "Loomlib",
+      "subtitle": "Type-safe Transformer Logits for Action Spaces (PyTorch).",
+      "date": "2025 -",
+      "link": "https://github.com/btrainwilson/loom"
+    },
+    {
+      "title": "Moles (Internal Package Quantinuum)",
+      "subtitle": "Molecular data collection pipeline for RL-based molecular optimization.",
+      "date": "2025 -",
+      "link": "https://www.quantinuum.com/products-solutions/inquanto"
+    },
+    {
+        "title": "Lambeq (Open-Source Package Quantinuum)",
+        "subtitle": "Modular and composable NLP toolkit for quantum chemistry. 500+ stars",
+        "date": "2024 -",
+        "link": "https://github.com/Quantinuum/lambeq"
+    },
+    {
+      "title": "NanoMCMC + Polytensor",
+      "subtitle": "CUDA Accelerated MCMC Sampling and Polynomial Tensor Evaluation",
+      "date": "2024",
+      "link": "https://github.com/Btrainwilson/polytensor"
+    },
+    {
+      "title": "Bloqade-Analog (Open-Source Package QuEra Computing)",
+      "subtitle": "Analog quantum simulations with Rydberg atoms. 90+ stars",
+      "date": "2022",
+      "link": "https://github.com/QuEraComputing/bloqade-analog"
+    }
+  ]

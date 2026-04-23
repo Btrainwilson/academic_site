@@ -14,6 +14,7 @@ import type {
   LandingHero,
   LandingNewsItem,
   ResearchDirection,
+  ResearchHighlight,
 } from "@/types/data";
 import profileData from "@/data/cv/profile.json";
 import mentorshipData from "@/data/cv/mentorship.json";
@@ -21,6 +22,7 @@ import heroData from "@/data/landing/hero.json";
 import announcementsData from "@/data/landing/announcements.json";
 import inTheNewsData from "@/data/landing/in-the-news.json";
 import researchDirectionsData from "@/data/landing/research-directions.json";
+import researchHighlightsData from "@/data/landing/research-highlights.json";
 import { loadAffiliationsFromFolder } from "@/lib/affiliations";
 import { publications } from "@/lib/publications";
 
@@ -44,6 +46,7 @@ const metaDescription =
   description.length > 160 ? `${description.slice(0, 157)}…` : description;
 
 const researchDirections = researchDirectionsData as ResearchDirection[];
+const researchHighlights = researchHighlightsData as ResearchHighlight[];
 
 const inTheNewsSorted = [...inTheNewsRaw].sort((a, b) => {
   const ta = Date.parse(a.date);
@@ -71,7 +74,7 @@ const inTheNewsSorted = [...inTheNewsRaw].sort((a, b) => {
       )
     }
 
-    <LandingResearch directions={researchDirections} />
+    <LandingResearch directions={researchDirections} highlights={researchHighlights} />
 
     {/* <LandingAnnouncements items={announcements} /> */}
     <LandingInTheNews items={inTheNewsSorted} />

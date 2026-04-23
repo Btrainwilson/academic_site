@@ -1,11 +1,7 @@
 {
   "fullName": "Blake Anthony Wilson",
-  "currentPosition": "Co-founder & interim CEO, Zephram · Santa Barbara, CA",
-  "productHighlight": {
-    "label": "PBJ",
-    "url": "https://pbj-model-builder.vercel.app/",
-    "subtitle": "Visual multi-agent orchestration & fine-tuning"
-  },
+  "currentPosition": "AI for Science · Santa Barbara, CA",
+  "productHighlight": null,
   "urls": {
     "github": "https://github.com/Btrainwilson",
     "bluesky": "https://bsky.app/profile/blakeawilson.bsky.social",
@@ -21,6 +17,7 @@
   ],
   "skillList": [
     "C/C++/CUDA",
+    "Software-Hardware Co-Design",
     "Python/Julia",
     "FastAPI/PyTorch/Lightning/modal",
     "Next.js/React/Astro",
@@ -28,13 +25,14 @@
     "RL/PPO/GRPO",
     "Inference/Model Serving",
     "ML for Physics & Optimization",
-    "Public Speaking",
     "Technical/Grant Writing",
     "Engineering Leadership and Management"
   ],
   "summaries": {
     "founder": "5+ years of ML research scientist designing RL and transformer infrastructure for data collection, deployment, and optimization with applications in deep-tech. 13+ years in software engineering and algorithm design and analysis. Co-Founder and interim CEO of Zephram, a $20M Oxford-based R&D company building multi-agent and inference technology for scientific research.",
-    "ceo": "Senior ML Scientist | 13+ years software & algorithm design. Specialist in designing RL and transformer infrastructure for deep-tech applications. Proven track record in optimizing data collection and deployment pipelines. Currently, co-founder and interim CEO of Zephram ($20M valuation), where I lead the development of multi-agent inference systems for frontier scientific research.",
+    "ceo_old": "Senior ML Scientist | 2+ years software & algorithm design. Specialist in designing RL and transformer infrastructure for deep-tech applications. Proven track record in optimizing data collection and deployment pipelines. Currently, co-founder and interim CEO of Zephram ($20M valuation), where I lead the development of multi-agent inference systems for frontier scientific research.",
+    "ceo_o1": "Scientist and engineer with 13+ years of experience spanning high-performance computing, quantum algorithms, and machine learning for physical systems. Ph.D. from Purdue University in Electrical and Computer Engineering. Currently building multi-agent inference infrastructure at Zephram. Previously led AI for quantum chemistry at Quantinuum in collaboration with Nvidia and DeepMind, and developed quantum sampling algorithms at QuEra Computing. Published in Applied Physics Reviews, Advanced Materials, and npj Nanophotonics.",
+    "ceo": "Ph.D. in Electrical and Computer Engineering from Purdue University. I specialize in designing high-performance software and ML systems for scientific applications — from custom CUDA kernels and transformer architectures to quantum simulation and generative modeling. Co-founder of Zephram, formerly at Quantinuum, QuEra Computing, and ARM. 10+ publications in venues including Applied Physics Reviews and Advanced Materials.",
     "RS": "Electrical and Computer Engineering Ph.D. working on machine learning, physics-inspired generative models, and optimization. 12+ years of experience in software engineering and 9+ years in algorithm design and analysis.  ",
     "RS_cas": "I mainly work on machine learning, physics-inspired generative models, and optimization. I occasionally work on computational physics and math too. 12+ years of experience in software engineering and 9+ years in algorithm design and analysis.  ",
     "op": "Electrical and Computer Engineering Ph.D. with 12+ years of experience in software engineering and 9+ years in algorithm design and analysis. Leader of a team of 16 data scientists and engineers developing breakthroughs in machine learning assisted optimization algorithms for applications in computational electromagnetics and quantum optics.",

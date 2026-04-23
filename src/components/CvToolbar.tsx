@@ -5,27 +5,35 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const TABS = [
-  { id: "cv" as const, label: "CV" },
-  { id: "research" as const, label: "Research statement" },
-  { id: "teaching" as const, label: "Teaching statement" },
+  { id: "cv", label: "CV", panel: "cv", variant: "executive" },
+  { id: "cv-academic", label: "Academic CV", panel: "cv", variant: "academic" },
+  { id: "research", label: "Research statement", panel: "research" },
+  { id: "teaching", label: "Teaching statement", panel: "teaching" },
 ] as const;
 
-const TAB_PDF: Record<(typeof TABS)[number]["id"], string> = {
+type TabId = (typeof TABS)[number]["id"];
+
+const TAB_PDF: Record<TabId, string> = {
   cv: "/cv.pdf",
+  "cv-academic": "/cv-academic.pdf",
   research: "/research-statement.pdf",
   teaching: "/teaching-statement.pdf",
 };
 
 export function CvToolbar() {
-  const [active, setActive] = React.useState<(typeof TABS)[number]["id"]>("cv");
+  const [active, setActive] = React.useState<TabId>("cv");
 
   React.useEffect(() => {
+    const tab = TABS.find((t) => t.id === active)!;
     document.querySelectorAll<HTMLElement>(".cv-panel").forEach((el) => {
-      const panel = el.dataset.panel;
-      const isActive = panel === active;
+      const isActive = el.dataset.panel === tab.panel;
       el.dataset.active = isActive ? "true" : "false";
       el.hidden = !isActive;
     });
+    const cvPanel = document.querySelector<HTMLElement>('.cv-panel[data-panel="cv"]');
+    if (cvPanel && "variant" in tab) {
+      cvPanel.dataset.variant = tab.variant;
+    }
   }, [active]);
 
   const print = () => {

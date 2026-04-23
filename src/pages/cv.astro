@@ -26,6 +26,7 @@ import profileData from "@/data/cv/profile.json";
 import referencesData from "@/data/cv/references.json";
 import serviceData from "@/data/cv/service.json";
 import softwareData from "@/data/cv/software.json";
+import toolsData from "@/data/cv/tools.json";
 
 const profile = profileData as CvProfileData;
 const education = educationData as CvItem[];
@@ -38,6 +39,7 @@ const news = newsData as CvNewsItem[];
 const affiliations = affiliationsData as CvItem[];
 const mentorship = mentorshipData as CvMentorshipData;
 const software = softwareData as CvItem[];
+const tools = toolsData as CvItem[];
 const references = referencesData as CvItem[];
 
 const cvEntries = await getCollection("cv");
@@ -73,6 +75,7 @@ const TeachingContent = teachingRendered?.Content;
     affiliations={affiliations}
     mentorship={mentorship}
     software={software}
+    tools={tools}
     references={references}
   >
     {

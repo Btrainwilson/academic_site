@@ -22,6 +22,7 @@ export interface CvItem {
   subtitle?: string;
   date?: string;
   detail?: string;
+  link?: string;
 }
 
 export interface CvMentee {
@@ -181,6 +182,26 @@ export interface ResearchWork {
   url?: string;
   /** "project" for non-publication items; omit for papers. */
   type?: "project";
+  description?: string;
+}
+
+export interface ResearchHighlight {
+  id: string;
+  /** Which research direction this belongs to */
+  researchDirectionId: string;
+  /** Path to figure image(s), relative to public/. Single string or array for multi-figure slides. */
+  figure: string | string[];
+  /** Figure caption / alt text */
+  caption: string;
+  /** Publication title */
+  title: string;
+  /** Venue + year string */
+  venue: string;
+  /** Optional link to the paper */
+  url?: string;
+  /** Slide layout: "figure" (full-width image, text below) or "hero" (side-by-side image + text). Defaults to "figure". */
+  layout?: "figure" | "hero";
+  /** Longer description shown in hero layout */
   description?: string;
 }
 
