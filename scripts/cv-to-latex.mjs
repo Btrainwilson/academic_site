@@ -246,6 +246,26 @@ function buildTools(tools) {
   return chunks.join("\n");
 }
 
+function buildProfessionalCareer(orderedRoles) {
+  if (!orderedRoles?.length) return "";
+  const chunks = [];
+  chunks.push("\\section{Professional Career}");
+  chunks.push("  \\resumeSubHeadingListStart");
+  for (const role of orderedRoles) {
+    const h = role.head;
+    chunks.push("    \\resumeSubheading");
+    chunks.push(
+      "      {" + escapeLatex(h.title) + "}{" +
+        (h.date ? escapeLatex(h.date) : "") + "}",
+    );
+    chunks.push(
+      "      {" + (h.subtitle ? escapeLatex(h.subtitle) : "") + "}{}",
+    );
+  }
+  chunks.push("  \\resumeSubHeadingListEnd");
+  return chunks.join("\n");
+}
+
 function buildExperience(orderedRoles) {
   if (!orderedRoles?.length) return "";
   const chunks = [];
@@ -511,6 +531,7 @@ export function generateCvContent() {
     skills: buildSkills(profile),
     education: buildEducation(education),
     tools: buildTools(tools),
+    professionalCareer: buildProfessionalCareer(orderedRoles),
     experience: buildExperience(orderedRoles),
     interests: buildInterests(profile),
     publications: renderPaperList(papers, "Publications"),
@@ -528,10 +549,12 @@ export function generateCvContent() {
   const order = isAcademic
     ? [
         "header", "summary", "skills", "education",
-        "publications", "conferences", "interests",
-        "experience", "tools", "funding",
+        "professionalCareer", "funding",
+        "publications", "conferences",
+        "affiliations",
+        "interests", "tools",
         "service", "mentorship",
-        "affiliations", "references",
+        "references",
       ]
     : [
         "header", "summary", "skills", "education",

@@ -245,6 +245,33 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
     )
   }
 
+  {
+    orderedRoles.length > 0 && (
+      <section class="not-prose" data-cv-section="professional-career">
+        <h2 class="text-foreground mb-3 border-b border-border pb-1 text-sm font-semibold uppercase tracking-wide">
+          Professional Career
+        </h2>
+        <ul class="text-foreground list-none space-y-4 p-0">
+          {orderedRoles.map((role) => (
+            <li>
+              <div class="flex flex-col gap-0.5 sm:flex-row sm:justify-between sm:gap-4">
+                <div>
+                  <p class="font-medium leading-snug">{role.head.title}</p>
+                  <p class="text-muted-foreground text-sm">{role.head.subtitle}</p>
+                </div>
+                {role.head.date && (
+                  <p class="text-muted-foreground shrink-0 text-sm tabular-nums sm:text-right">
+                    {role.head.date}
+                  </p>
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
   {(profile.interests?.length ?? 0) > 0 && (
     <div data-cv-section="interests">
       <h2 class="text-foreground mb-2 text-sm font-semibold uppercase tracking-wide">
@@ -709,33 +736,42 @@ const serviceBlocks: { key: keyof CvServiceData; title: string }[] = [
   [data-cv-section="summary"] { order: 1; }
   [data-cv-section="education"] { order: 2; }
   [data-cv-section="experience"] { order: 3; }
-  [data-cv-section="interests"] { order: 4; }
-  [data-cv-section="publications"] { order: 5; }
-  [data-cv-section="conferences"] { order: 6; }
-  [data-cv-section="funding"] { order: 7; }
-  [data-cv-section="service"] { order: 8; }
-  [data-cv-section="mentorship-highlights"] { order: 9; }
-  [data-cv-section="mentees"] { order: 10; }
-  [data-cv-section="tools"] { order: 11; }
-  [data-cv-section="software"] { order: 12; }
-  [data-cv-section="news"] { order: 13; }
-  [data-cv-section="affiliations"] { order: 14; }
-  [data-cv-section="references"] { order: 15; }
+  [data-cv-section="professional-career"] { order: 4; }
+  [data-cv-section="interests"] { order: 5; }
+  [data-cv-section="publications"] { order: 6; }
+  [data-cv-section="conferences"] { order: 7; }
+  [data-cv-section="funding"] { order: 8; }
+  [data-cv-section="service"] { order: 9; }
+  [data-cv-section="mentorship-highlights"] { order: 10; }
+  [data-cv-section="mentees"] { order: 11; }
+  [data-cv-section="tools"] { order: 12; }
+  [data-cv-section="software"] { order: 13; }
+  [data-cv-section="news"] { order: 14; }
+  [data-cv-section="affiliations"] { order: 15; }
+  [data-cv-section="references"] { order: 16; }
+
+  /* Executive: hide professional career (shown as full Experience instead) */
+  [data-variant="executive"] [data-cv-section="professional-career"] {
+    display: none !important;
+  }
 
   /* Academic variant: reorder sections */
-  [data-variant="academic"] [data-cv-section="publications"] { order: 3; }
-  [data-variant="academic"] [data-cv-section="conferences"] { order: 4; }
-  [data-variant="academic"] [data-cv-section="interests"] { order: 5; }
-  [data-variant="academic"] [data-cv-section="experience"] { order: 6; }
-  [data-variant="academic"] [data-cv-section="tools"] { order: 7; }
-  [data-variant="academic"] [data-cv-section="funding"] { order: 8; }
-  [data-variant="academic"] [data-cv-section="service"] { order: 9; }
-  [data-variant="academic"] [data-cv-section="mentorship-highlights"] { order: 10; }
-  [data-variant="academic"] [data-cv-section="mentees"] { order: 11; }
-  [data-variant="academic"] [data-cv-section="affiliations"] { order: 12; }
+  /* Summary (1), Education (2), Professional Career (3), Funding/Awards (4),
+     Publications (5), Conferences (6), Affiliations (7), then remaining */
+  [data-variant="academic"] [data-cv-section="professional-career"] { order: 3; }
+  [data-variant="academic"] [data-cv-section="funding"] { order: 4; }
+  [data-variant="academic"] [data-cv-section="publications"] { order: 5; }
+  [data-variant="academic"] [data-cv-section="conferences"] { order: 6; }
+  [data-variant="academic"] [data-cv-section="affiliations"] { order: 7; }
+  [data-variant="academic"] [data-cv-section="interests"] { order: 8; }
+  [data-variant="academic"] [data-cv-section="tools"] { order: 9; }
+  [data-variant="academic"] [data-cv-section="service"] { order: 10; }
+  [data-variant="academic"] [data-cv-section="mentorship-highlights"] { order: 11; }
+  [data-variant="academic"] [data-cv-section="mentees"] { order: 12; }
   [data-variant="academic"] [data-cv-section="references"] { order: 13; }
 
   /* Academic variant: hide non-academic sections */
+  [data-variant="academic"] [data-cv-section="experience"],
   [data-variant="academic"] [data-cv-section="software"],
   [data-variant="academic"] [data-cv-section="news"] {
     display: none !important;
